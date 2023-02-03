@@ -2,9 +2,6 @@
 
 Explore how well large language models (LLMs) perform history taking, and how to enhance such ability.
 
-## Testing Github Branch Protection
-For testing whether branch protection rules have been applied.
-
 ## How to Contribute
 The following documentation specify the standard formats for commit messages and pull requests.
 ### Commit Message
