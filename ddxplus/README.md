@@ -13,6 +13,7 @@ The original dataset contains the following files:
 
 ### Our Addition
 We further add the following files:
+* `our_evidences_to_qa.json` (WIP)
 
 ## Reference
 Tchango, A. F., Goel, R., Wen, Z., Martel, J., & Ghosn, J. DDXPlus: A New Dataset For Automatic Medical Diagnosis. In Thirty-sixth Conference on Neural Information Processing Systems Datasets and Benchmarks Track.
