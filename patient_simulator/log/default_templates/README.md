@@ -1,0 +1,2 @@
+# Log Files of Default Patient Templates
+These are the log files of the patient simulator's responses based on the default patient templates provided by [DDXPlus](https://arxiv.org/pdf/2205.09148.pdf). The experiments are conducted using the OpenAI [Playground](https://platform.openai.com/playground).
