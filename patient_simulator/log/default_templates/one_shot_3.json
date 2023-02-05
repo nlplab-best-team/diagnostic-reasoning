@@ -1,5 +1,5 @@
 {
-    "name": "default-template_one-shot-2",
+    "name": "default-template_one-shot-3",
     "instruction": "I am a patient consulting with a doctor during history taking. I will respond to the doctor's question according to my background information.",
     "shots": [
         {
