@@ -20,15 +20,44 @@ class Bot(object):
         self._dialogue_history = dialogue_history
         self._model = model
 
-    def refresh_prompt(self) -> None:
+        self._instruction_prefix = "<Instruction>"
+        self._profile_prefix = "\n<Background information>"
+        self._dialogue_prefix = "\n<History taking>"
+
+    def _refresh_prompt(self) -> None:
+        shots = [
+            (
+                self._instruction_prefix + '\n' +
+                self._instruction + '\n' +
+                self._profile_prefix + '\n' +
+                str(shot._profile) + '\n' +
+                self._dialogue_prefix + '\n' +
+                str(shot._dialogue)
+            ) for shot in self._shots
+        ]
+        current_dialogue = [
+            self._instruction_prefix + '\n' +
+            self._instruction + '\n' +
+            self._profile_prefix + '\n' +
+            str(self._profile) + '\n' +
+            self._dialogue_prefix + '\n' +
+            str(self._dialogue_history)
+        ]
+        self._prompt = '\n'.join(shots + current_dialogue)
+    
+    def set_model_config(self) -> None:
+        # TODO: delegate ModelAPI to set config
         raise NotImplementedError
 
     def generate(self) -> str:
         """
             Generate completion according to the current prompt.
         """
-        raise NotImplementedError
-
+        self._refresh_prompt()
+        # TODO: call the api
+        results = self._prompt
+        return results
+        
     def add_to_history(self, utterance: str) -> None:
         """
             Append an utterance to the dialogue history.
