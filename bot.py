@@ -20,9 +20,11 @@ class Bot(object):
         self._dialogue_history = dialogue_history
         self._model = model
 
-        self._instruction_prefix = "<Instruction>"
+        self._instruction_prefix = "\n<Instruction>"
         self._profile_prefix = "\n<Background information>"
         self._dialogue_prefix = "\n<History taking>"
+        
+        self._refresh_prompt()
 
     def _refresh_prompt(self) -> None:
         shots = [
@@ -43,26 +45,26 @@ class Bot(object):
             self._dialogue_prefix + '\n' +
             str(self._dialogue_history)
         ]
-        self._prompt = '\n'.join(shots + current_dialogue)
+        self._prompt = '\n'.join(shots + current_dialogue).strip()
     
     def set_model_config(self) -> None:
         # TODO: delegate ModelAPI to set config
         raise NotImplementedError
 
-    def generate(self) -> str:
+    def generate(self, prefix: str = '') -> str:
         """
-            Generate completion according to the current prompt.
+            Generate completion according to the current prompt and an additional prefix.
         """
         self._refresh_prompt()
         # TODO: call the api
-        results = self._prompt
-        return results
+        res = self._model.complete(prompt=self._prompt + prefix)
+        return res["choices"][0]["text"]
         
-    def add_to_history(self, utterance: str) -> None:
-        """
-            Append an utterance to the dialogue history.
-        """
-        raise NotImplementedError
+    # def add_to_history(self, utterance: str) -> None:
+    #     """
+    #         Append an utterance to the dialogue history.
+    #     """
+    #     raise NotImplementedError
 
     def log(self) -> None:
         raise NotImplementedError
@@ -83,7 +85,10 @@ class PatientBot(Bot):
         raise NotImplementedError
 
     def answer(self, question: str) -> str:
-        raise NotImplementedError
+        self._dialogue_history.add_doctor_utter(question)
+        answer = self.generate(prefix="\nPatient:")
+        self._dialogue_history.add_patient_utter(answer)
+        return answer
 
 class DoctorBot(Bot):
     def __init__(
@@ -100,4 +105,7 @@ class DoctorBot(Bot):
         raise NotImplementedError
     
     def question(self, prev_answer: str) -> str:
-        raise NotImplementedError
+        self._dialogue_history.add_patient_utter(prev_answer)
+        question = self.generate()
+        self._dialogue_history.add_doctor_utter(question)
+        return question

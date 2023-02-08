@@ -34,7 +34,7 @@ class Dialogue(object):
     def add_patient_utter(self, utter: str) -> None:
         self._patient_utters.append(utter)
     
-    def add_doctor_turn(self, utter: str) -> None:
+    def add_doctor_utter(self, utter: str) -> None:
         self._doctor_utters.append(utter)
 
     def __repr__(self) -> str:
