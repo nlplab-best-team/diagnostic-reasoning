@@ -1,14 +1,72 @@
+import json
 from typing import List
+from pathlib import Path
 from dataclasses import dataclass
 
-@dataclass
 class Profile(object):
     # TODO: hide text and change initialization to initialize from a patient data point
-    def __init__(self, text: str) -> None:
+    def __init__(self, text: str = ''):
         self._text = text
 
     def __repr__(self) -> str:
         return self._text
+
+class PatientProfile(Profile):
+    delimiter = "_@_"
+    release_evidences = json.loads((Path(__file__).parent / "ddxplus/release_evidences.json").read_bytes())
+    evidence2desc = json.loads((Path(__file__).parent / "ddxplus/our_evidences_to_qa.json").read_bytes())
+    
+    def __init__(self, evidences: List[str]):
+        # TODO: parse evidences into text
+        self._parsed = self._parse_evidences(evidences)
+        
+    def __repr__(self) -> str:
+        raise NotImplementedError
+        
+    def _parse_evidences(self, evidences: List[str]) -> dict:
+        """
+            Parse the evidences into the following format:
+            {
+                "B": [key1, key2, ...],
+                "C": {
+                    key1: value1,
+                    key2: value2,
+                    ...
+                },
+                "M": {
+                    key1: [value1, value2, ...],
+                    key2: [value1, value2, ...],
+                    ...
+                }
+            }
+        """
+        d = {'B': [], 'C': {}, 'M': {}}
+        for evidence in evidences:
+            evidence = evidence.split(self.delimiter)
+            evidence_name = evidence[0]
+            if evidence_name not in self.release_evidences:
+                raise KeyError(f"There is no evidence called {evidence_name}")
+            data_type = self.release_evidences[evidence_name]["data_type"]
+            
+            if len(evidence) == 1: # binary
+                if data_type != 'B':
+                    raise ValueError(f"The date_type of evidence {evidence_name} should be binary (B). Please check!")
+                d[data_type].append(evidence_name)
+                
+            elif len(evidence) == 2: # categorical or multichoice
+                if data_type not in ['C', 'M']:
+                    raise ValueError(f"The date_type of evidence {evidence_name} should be either categorical (C) or multichoice (M). Please check!")
+                evidence_value = evidence[1]
+                if data_type == 'C': # categorical
+                    d[data_type][evidence_name] = evidence_value
+                else: # multichoice
+                    d[data_type][evidence_name] = d[data_type].get(evidence_name, []) + [evidence_value]
+                    
+            else:
+                raise ValueError(f"After spliiting with {self.delimiter}, the length of {evidence} should be either 1 or 2.")
+        
+        return d
+        
 
 class Dialogue(object):
 
