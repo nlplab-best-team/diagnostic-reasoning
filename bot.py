@@ -87,8 +87,7 @@ class PatientBot(Bot):
     def answer(self, question: str) -> str:
         self._dialogue_history.add_doctor_utter(question)
         answer = self.generate(prefix="\nPatient:")
-        self._dialogue_history.add_patient_utter(answer)
-        return answer
+        return answer.strip()
 
 class DoctorBot(Bot):
     def __init__(
@@ -107,5 +106,4 @@ class DoctorBot(Bot):
     def question(self, prev_answer: str) -> str:
         self._dialogue_history.add_patient_utter(prev_answer)
         question = self.generate()
-        self._dialogue_history.add_doctor_utter(question)
-        return question
+        return question.strip()
