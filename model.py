@@ -11,6 +11,9 @@ class ModelAPI(object):
 
     def complete(self, prompt: str) -> dict:
         return self._openai.Completion.create(prompt=prompt, **vars(self._config))
+    
+    def set_api_key(self, key: str) -> None:
+        self._openai.api_key = key
 
 if __name__ == "__main__":
     # unit testing
