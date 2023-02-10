@@ -6,7 +6,7 @@
     },
     "douleurxx_endroitducorps": {
         "question_en": "Do you feel pain somewhere?",
-        "affirmative_en": "I feel pain somewhere.",
+        "affirmative_en": "The pain locations are:",
         "data_type": "M"
     },
     "douleurxx": {
@@ -16,27 +16,27 @@
     },
     "douleurxx_irrad": {
         "question_en": "Does the pain radiate to another location?",
-        "affirmative_en": "The pain radiate to another location.",
+        "affirmative_en": "The pain radiates to these locations:",
         "data_type": "M"
     },
     "douleurxx_carac": {
         "question_en": "Characterize your pain:",
-        "affirmative_en": "I am able to characterize my pain.",
+        "affirmative_en": "The pain is:",
         "data_type": "M"
     },
     "douleurxx_soudain": {
         "question_en": "How fast did the pain appear?",
-        "affirmative_en": "On a scale of 0-10, the pace at which the pain appear is [pace]",
+        "affirmative_en": "On a scale of 0-10, the pace at which the pain appear is [choice]",
         "data_type": "C"
     },
     "douleurxx_intens": {
         "question_en": "How intense is the pain?",
-        "affirmative_en": "On a scale of 0-10, the pain intensity is [intensity]",
+        "affirmative_en": "On a scale of 0-10, the pain intensity is [choice]",
         "data_type": "C"
     },
     "douleurxx_precis": {
         "question_en": "How precisely is the pain located?",
-        "affirmative_en": "On a scale of 0-10, the pain\u2019s location precision is [precision]",
+        "affirmative_en": "On a scale of 0-10, the pain's location precision is [choice]",
         "data_type": "C"
     },
     "pdc": {
@@ -46,7 +46,7 @@
     },
     "lesions_peau_endroitducorps": {
         "question_en": "Where is the affected region located?",
-        "affirmative_en": "The affected region is located at [specified location].",
+        "affirmative_en": "The affected regions are:",
         "data_type": "M"
     },
     "lesions_peau": {
@@ -56,22 +56,22 @@
     },
     "lesions_peau_couleur": {
         "question_en": "What color is the rash?",
-        "affirmative_en": "The rash is [specified color].",
+        "affirmative_en": "The color of the rash is [choice].",
         "data_type": "C"
     },
     "lesions_peau_intens": {
         "question_en": "How intense is the pain caused by the rash?",
-        "affirmative_en": "On a scale of 0-10, the pain intensity caused by the rash is [intensity]",
+        "affirmative_en": "On a scale of 0-10, the pain intensity caused by the rash is [choice]",
         "data_type": "C"
     },
     "lesions_peau_elevee": {
-        "question_en": "Is the rash swollen?",
-        "affirmative_en": "The rash is swollen.",
+        "question_en": "How swollen is the rash?",
+        "affirmative_en": "On a scale of 0-10, the rash swelling is [choice]",
         "data_type": "C"
     },
     "lesions_peau_prurit": {
         "question_en": "How severe is the itching?",
-        "affirmative_en": "The itching is severe.",
+        "affirmative_en": "On a scale of 0-10, the severity of the rash itching is [choice]",
         "data_type": "C"
     },
     "lesions_peau_plusqu1cm": {
@@ -381,7 +381,7 @@
     },
     "oedeme_endroitducorps": {
         "question_en": "Where is the swelling located?",
-        "affirmative_en": "The swelling is located [at a specific location].",
+        "affirmative_en": "The swelling locations are:",
         "data_type": "M"
     },
     "oedeme": {
@@ -691,7 +691,7 @@
     },
     "trav1": {
         "question_en": "Have you traveled out of the country in the last 4 weeks?",
-        "affirmative_en": "I have traveled out of the country in the last 4 weeks.",
+        "affirmative_en": "I have traveled out of the country to [choice] in the last 4 weeks.",
         "data_type": "C"
     },
     "cancer_m\u00e9ta": {

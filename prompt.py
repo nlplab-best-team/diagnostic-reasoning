@@ -1,3 +1,4 @@
+import re
 import json
 from typing import List
 from pathlib import Path
@@ -15,13 +16,37 @@ class PatientProfile(Profile):
     delimiter = "_@_"
     release_evidences = json.loads((Path(__file__).parent / "ddxplus/release_evidences.json").read_bytes())
     evidence2desc = json.loads((Path(__file__).parent / "ddxplus/our_evidences_to_qa.json").read_bytes())
+    desc_field = "affirmative_en"
     
     def __init__(self, evidences: List[str]):
         # TODO: parse evidences into text
         self._parsed = self._parse_evidences(evidences)
         
     def __repr__(self) -> str:
-        raise NotImplementedError
+        """
+            Convert parsed evidences to text representation.
+        """
+        sents = list()
+        # TODO: sex & age
+        
+        # binary
+        for key in self._parsed['B']:
+            sent = self.evidence2desc[key][self.desc_field]
+            sents.append(f"- {sent}")
+        # categorical
+        for key, value in self._parsed['C'].items():
+            sent = self.evidence2desc[key][self.desc_field]
+            sent = re.sub(pattern=r"\[choice\]", string=sent, repl=str(value))
+            sents.append(f"- {sent}")
+        # multichoice
+        for key, values in self._parsed['M'].items():
+            header = self.evidence2desc[key][self.desc_field]
+            sents.append(f"- {header}")
+            for value in values:
+                item = self.release_evidences[key]["value_meaning"][value]["en"]
+                sents.append(f"* {item}")
+        
+        return '\n'.join(sents)
         
     def _parse_evidences(self, evidences: List[str]) -> dict:
         """
