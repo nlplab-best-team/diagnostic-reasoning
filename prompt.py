@@ -18,8 +18,18 @@ class PatientProfile(Profile):
     evidence2desc = json.loads((Path(__file__).parent / "ddxplus/our_evidences_to_qa.json").read_bytes())
     desc_field = "affirmative_en"
     
-    def __init__(self, evidences: List[str]):
-        # TODO: parse evidences into text
+    def __init__(
+        self,
+        sex: str,
+        age: int,
+        initial_evidence: str,
+        evidences: List[str]
+    ):
+        if sex not in ['M', 'F']:
+            raise ValueError(f"Sex should be either 'M' or 'F'")
+        self._sex = sex
+        self._age = age
+        self._initial_evidence = initial_evidence
         self._parsed = self._parse_evidences(evidences)
         
     def __repr__(self) -> str:
@@ -27,7 +37,10 @@ class PatientProfile(Profile):
             Convert parsed evidences to text representation.
         """
         sents = list()
-        # TODO: sex & age
+        # Sex & age
+        sex_name = 'Male' if self._sex == 'M' else 'Female'
+        sent = f"Sex: {sex_name}, Age: {str(self._age)}"
+        sents.append(sent)
         
         # binary
         for key in self._parsed['B']:
@@ -91,6 +104,10 @@ class PatientProfile(Profile):
                 raise ValueError(f"After spliiting with {self.delimiter}, the length of {evidence} should be either 1 or 2.")
         
         return d
+    
+    @property
+    def initial_evidence(self) -> str:
+        return self.evidence2desc[self._initial_evidence][self.desc_field]
         
 
 class Dialogue(object):
