@@ -1,0 +1,47 @@
+{
+    "Pharyngite virale": {
+        "cond-name-eng": "Viral pharyngitis"
+    },
+    "IVRS ou vir\u00e9mie": {
+        "cond-name-eng": "URTI"
+    },
+    "Asthme exacerb\u00e9 ou bronchospasme": {
+        "cond-name-eng": "Bronchospasm / acute asthma exacerbation"
+    },
+    "Tuberculose": {
+        "cond-name-eng": "Tuberculosis"
+    },
+    "Rhinosinusite chronique": {
+        "cond-name-eng": "Chronic rhinosinusitis"
+    },
+    "Bronchiectasies": {
+        "cond-name-eng": "Bronchiectasis"
+    },
+    "Laryngite aigue": {
+        "cond-name-eng": "Acute laryngitis"
+    },
+    "RGO": {
+        "cond-name-eng": "GERD"
+    },
+    "Bronchite": {
+        "cond-name-eng": "Bronchitis"
+    },
+    "Otite moyenne aigue (OMA)": {
+        "cond-name-eng": "Acute otitis media"
+    },
+    "Exacerbation aigue de MPOC et/ou surinfection associ\u00e9e": {
+        "cond-name-eng": "Acute COPD exacerbation / infection"
+    },
+    "Rhinite allergique": {
+        "cond-name-eng": "Allergic sinusitis"
+    },
+    "Possible influenza ou syndrome vir\u00e9mique typique": {
+        "cond-name-eng": "Influenza"
+    },
+    "Rhinosinusite aigue": {
+        "cond-name-eng": "Acute rhinosinusitis"
+    },
+    "Pneumonie": {
+        "cond-name-eng": "Pneumonia"
+    }
+}
