@@ -108,7 +108,17 @@ class PatientProfile(Profile):
     @property
     def initial_evidence(self) -> str:
         return self.evidence2desc[self._initial_evidence][self.desc_field]
-        
+
+class DoctorProfile(Profile):
+    diagnoses_prefix: str = "Possible diagnoses: "
+    delimiter: str = ", "
+    
+    def __init__(self, possible_diagnoses: List[str]):
+        self._possible_diagnoses = possible_diagnoses
+        self._text = self._parse_diagnoses(possible_diagnoses)
+    
+    def _parse_diagnoses(self, diagnoses: List[str]) -> str:
+        return self.diagnoses_prefix + self.delimiter.join(diagnoses)
 
 class Dialogue(object):
 

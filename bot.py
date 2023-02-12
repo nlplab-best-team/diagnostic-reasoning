@@ -1,7 +1,7 @@
 from typing import List
 
 from model import ModelAPI
-from prompt import Shot, Profile, Dialogue
+from prompt import Shot, Profile, PatientProfile, DoctorProfile, Dialogue
 
 class Bot(object):
 
@@ -75,7 +75,7 @@ class PatientBot(Bot):
         self,
         instruction: str,
         shots: List[Shot],
-        profile: Profile,
+        profile: PatientProfile,
         dialogue_history: Dialogue,
         model: ModelAPI
     ):
@@ -94,7 +94,7 @@ class DoctorBot(Bot):
         self,
         instruction: str,
         shots: List[Shot],
-        profile: Profile,
+        profile: DoctorProfile,
         dialogue_history: Dialogue,
         model: ModelAPI
     ):
