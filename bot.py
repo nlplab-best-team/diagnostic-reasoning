@@ -84,9 +84,10 @@ class PatientBot(Bot):
     def inform_initial_evidence(self) -> str:
         raise NotImplementedError
 
-    def answer(self, question: str) -> str:
+    def answer(self, question: str, answer: str = '') -> str:
         self._dialogue_history.add_doctor_utter(question)
-        answer = self.generate(prefix="\nPatient:")
+        if not answer:
+            answer = self.generate(prefix="\nPatient:")
         return answer.strip()
 
 class DoctorBot(Bot):
@@ -103,7 +104,8 @@ class DoctorBot(Bot):
     def inform_diagnosis(self) -> str:
         raise NotImplementedError
     
-    def question(self, prev_answer: str) -> str:
+    def question(self, prev_answer: str, question: str = '') -> str:
         self._dialogue_history.add_patient_utter(prev_answer)
-        question = self.generate()
+        if not question:
+            question = self.generate()
         return question.strip()
