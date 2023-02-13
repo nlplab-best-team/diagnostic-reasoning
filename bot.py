@@ -1,4 +1,5 @@
 from typing import List
+from pathlib import Path
 
 from model import ModelAPI
 from prompt import Shot, Profile, PatientProfile, DoctorProfile, Dialogue
@@ -66,8 +67,9 @@ class Bot(object):
     #     """
     #     raise NotImplementedError
 
-    def log(self) -> None:
-        raise NotImplementedError
+    def log(self, mode: str, file: str) -> None:
+        if mode == "text":
+            Path(file).write_text(self._prompt)
 
 class PatientBot(Bot):
 
