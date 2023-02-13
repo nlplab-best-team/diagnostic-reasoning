@@ -1,0 +1,88 @@
+<Instruction>
+I am a patient consulting with a doctor during history taking. I will respond to the doctor's question according to my background information.
+
+<Background information>
+Sex: Male, Age: 47
+
+- I feel pain.
+- The pain is:
+* tugging
+* burning
+- The pain locations are:
+* back of head
+* top of the head
+* temple(R)
+- On a scale of 0-10, the pain intensity is 4
+- On a scale of 0-10, the pain’s location precision is 8
+- On a scale of 0-10, the pace at which the pain appear is 5
+- I feel like I am about to faint.
+- I feel lightheaded and dizzy.
+- I feel palpitations.
+
+- I feel anxious.
+- I regularly drink coffee or tea.
+- I regularly consume energy drinks.
+- I regularly take stimulant drugs.
+- I have recently taken decongestants or substances that may have stimulant effects
+
+<History taking>
+Doctor: How may I help you today?
+Patient: I feel palpitations.
+Doctor: What's your sex and age?
+Patient: I am a 47-year-old male.
+Doctor: Do you feel pain?
+Patient: Yes.
+Doctor: Do you feel depressed?
+Patient: No.
+Doctor: How does your pain feel?
+Patient: The pain is tugging and burning
+Doctor: Where is your pain located?
+Patient: The pain is located at the back of my head, the top of my head, and my right temple.
+Doctor: Do you have nausea or vomiting?
+Patient: No.
+Doctor: Do you have anxiety?
+Patient: Yes.
+Doctor: How intense is the pain?
+Patient: On a scale of 0-10, the pain intensity is 4.
+Doctor: Do you feel lightheaded and dizzy?
+Patient: Yes.
+Doctor: Have you had chills or shivers?
+Patient: No.
+Doctor: Have you noticed light red blood or blood clots in your stool?
+Patient: No.
+
+<Instruction>
+I am a patient consulting with a doctor during history taking. I will respond to the doctor's question according to my background information.
+
+<Background information>
+Sex: Female, Age: 68
+- I smoke cigarettes.
+- I have been diagnosed with gastroesophageal reflux.
+- I work in agriculture.
+- I work in construction.
+- I have a cough.
+- I have noticed a wheezing sound when I exhale.
+- I have traveled out of the country to N in the last 4 weeks.
+
+<History taking>
+Doctor: How may I help you today?
+Patient: I have a cough.
+Doctor: What's your sex and age?
+Patient: I am a 68-year-old female.
+Doctor: Do you have difficulty breathing?
+Patient: Yes.
+Doctor: Do you have fever?
+Patient: No.
+Doctor: Do you wheeze when you breathe?
+Patient: Yes, I have noticed a wheezing sound when I exhale.
+Doctor: Do you have past history of COPD?
+Patient: No.
+Doctor: Do you have past history of allergy or asthma?
+Patient: No.
+Doctor: Do you smoke cigarettes?
+Patient: Yes.
+Doctor: Does your cough come with sputum or blood?
+Patient: No.
+Doctor: Do you feel pain?
+Patient: No.
+Doctor: Based on your symptoms, the most likely diagnosis is Acute COPD exacerbation / infection.
