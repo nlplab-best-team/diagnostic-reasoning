@@ -83,6 +83,4 @@ Doctor: Do you smoke cigarettes?
 Patient: Yes.
 Doctor: Does your cough come with sputum or blood?
 Patient: No.
-Doctor: Do you feel pain?
-Patient: No.
 Doctor: Based on your symptoms, the most likely diagnosis is Acute COPD exacerbation / infection.
