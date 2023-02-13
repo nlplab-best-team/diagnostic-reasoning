@@ -103,6 +103,4 @@ Doctor: Do you smoke?
 Patient: No.
 Doctor: Have you been in contact with many people or people of similar symptoms before?
 Patient: No, I have not been in contact with many people or people of similar symptoms before.
-Doctor: What's your work?
-Patient: I am a teacher.
 Doctor: Based on your symptoms, the most likely diagnosis is Pneumonia.
