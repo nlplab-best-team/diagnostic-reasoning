@@ -103,6 +103,26 @@ class DoctorBot(Bot):
     ):
         super().__init__(instruction, shots, profile, dialogue_history, model)
 
+        self._instruction_prefix = "\n<Instruction>"
+        self._profile_prefix = "\n<Background knowledge>"
+        self._dialogue_prefix = "\n<History taking>"
+        
+        self._refresh_prompt()
+
+    def _refresh_prompt(self) -> None:
+        prefix = '\n'.join([self._instruction_prefix, self._instruction, self._profile_prefix, self._profile])
+        shots = [
+            (
+                self._dialogue_prefix + '\n' +
+                str(shot._dialogue)
+            ) for shot in self._shots
+        ]
+        current_dialogue = [
+            self._dialogue_prefix + '\n' +
+            str(self._dialogue_history)
+        ]
+        self._prompt = prefix + '\n'.join(shots + current_dialogue).strip()
+
     def inform_diagnosis(self) -> str:
         raise NotImplementedError
     
