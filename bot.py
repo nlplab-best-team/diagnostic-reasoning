@@ -25,7 +25,9 @@ class Bot(object):
         self._profile_prefix = "\n<Background information>"
         self._dialogue_prefix = "\n<History taking>"
         
+    def get_prompt(self) -> str:
         self._refresh_prompt()
+        return self._prompt
 
     def _refresh_prompt(self) -> None:
         shots = [
@@ -89,8 +91,9 @@ class PatientBot(Bot):
     def answer(self, question: str, answer: str = '') -> str:
         self._dialogue_history.add_doctor_utter(question)
         if not answer:
-            answer = self.generate(prefix="\nPatient:")
-        return answer.strip()
+            answer = self.generate(prefix="\nPatient: ").strip()
+        self._dialogue_history.add_patient_utter(answer)
+        return answer
 
 class DoctorBot(Bot):
     def __init__(
@@ -106,11 +109,9 @@ class DoctorBot(Bot):
         self._instruction_prefix = "\n<Instruction>"
         self._profile_prefix = "\n<Background knowledge>"
         self._dialogue_prefix = "\n<History taking>"
-        
-        self._refresh_prompt()
 
     def _refresh_prompt(self) -> None:
-        prefix = '\n'.join([self._instruction_prefix, self._instruction, self._profile_prefix, self._profile])
+        prefix = '\n'.join([self._instruction_prefix, self._instruction, self._profile_prefix, str(self._profile)])
         shots = [
             (
                 self._dialogue_prefix + '\n' +
@@ -121,7 +122,7 @@ class DoctorBot(Bot):
             self._dialogue_prefix + '\n' +
             str(self._dialogue_history)
         ]
-        self._prompt = prefix + '\n'.join(shots + current_dialogue).strip()
+        self._prompt = prefix + '\n\n' + '\n'.join(shots + current_dialogue).strip()
 
     def inform_diagnosis(self) -> str:
         raise NotImplementedError
@@ -129,5 +130,6 @@ class DoctorBot(Bot):
     def question(self, prev_answer: str, question: str = '') -> str:
         self._dialogue_history.add_patient_utter(prev_answer)
         if not question:
-            question = self.generate()
-        return question.strip()
+            question = self.generate(prefix="\nDoctor: ").strip()
+        self._dialogue_history.add_doctor_utter(question)
+        return question
