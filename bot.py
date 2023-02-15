@@ -1,7 +1,8 @@
 from typing import List
+from pathlib import Path
 
 from model import ModelAPI
-from prompt import Shot, Profile, Dialogue
+from prompt import Shot, Profile, PatientProfile, DoctorProfile, Dialogue
 
 class Bot(object):
 
@@ -24,7 +25,9 @@ class Bot(object):
         self._profile_prefix = "\n<Background information>"
         self._dialogue_prefix = "\n<History taking>"
         
+    def get_prompt(self) -> str:
         self._refresh_prompt()
+        return self._prompt
 
     def _refresh_prompt(self) -> None:
         shots = [
@@ -66,8 +69,9 @@ class Bot(object):
     #     """
     #     raise NotImplementedError
 
-    def log(self) -> None:
-        raise NotImplementedError
+    def log(self, mode: str, file: str) -> None:
+        if mode == "text":
+            Path(file).write_text(self._prompt)
 
 class PatientBot(Bot):
 
@@ -75,7 +79,7 @@ class PatientBot(Bot):
         self,
         instruction: str,
         shots: List[Shot],
-        profile: Profile,
+        profile: PatientProfile,
         dialogue_history: Dialogue,
         model: ModelAPI
     ):
@@ -84,26 +88,48 @@ class PatientBot(Bot):
     def inform_initial_evidence(self) -> str:
         raise NotImplementedError
 
-    def answer(self, question: str) -> str:
+    def answer(self, question: str, answer: str = '') -> str:
         self._dialogue_history.add_doctor_utter(question)
-        answer = self.generate(prefix="\nPatient:")
-        return answer.strip()
+        if not answer:
+            answer = self.generate(prefix="\nPatient: ").strip()
+        self._dialogue_history.add_patient_utter(answer)
+        return answer
 
 class DoctorBot(Bot):
     def __init__(
         self,
         instruction: str,
         shots: List[Shot],
-        profile: Profile,
+        profile: DoctorProfile,
         dialogue_history: Dialogue,
         model: ModelAPI
     ):
         super().__init__(instruction, shots, profile, dialogue_history, model)
 
+        self._instruction_prefix = "\n<Instruction>"
+        self._profile_prefix = "\n<Background knowledge>"
+        self._dialogue_prefix = "\n<History taking>"
+
+    def _refresh_prompt(self) -> None:
+        prefix = '\n'.join([self._instruction_prefix, self._instruction, self._profile_prefix, str(self._profile)])
+        shots = [
+            (
+                self._dialogue_prefix + '\n' +
+                str(shot._dialogue)
+            ) for shot in self._shots
+        ]
+        current_dialogue = [
+            self._dialogue_prefix + '\n' +
+            str(self._dialogue_history)
+        ]
+        self._prompt = prefix + '\n\n' + '\n'.join(shots + current_dialogue).strip()
+
     def inform_diagnosis(self) -> str:
         raise NotImplementedError
     
-    def question(self, prev_answer: str) -> str:
+    def question(self, prev_answer: str, question: str = '') -> str:
         self._dialogue_history.add_patient_utter(prev_answer)
-        question = self.generate()
-        return question.strip()
+        if not question:
+            question = self.generate(prefix="\nDoctor: ").strip()
+        self._dialogue_history.add_doctor_utter(question)
+        return question

@@ -1,0 +1,106 @@
+<Instruction>
+I am a patient consulting with a doctor during history taking. I will respond to the doctor's question according to my background information.
+
+<Background information>
+Sex: Male, Age: 47
+
+- I feel pain.
+- The pain is:
+* tugging
+* burning
+- The pain locations are:
+* back of head
+* top of the head
+* temple(R)
+- On a scale of 0-10, the pain intensity is 4
+- On a scale of 0-10, the pain’s location precision is 8
+- On a scale of 0-10, the pace at which the pain appear is 5
+- I feel like I am about to faint.
+- I feel lightheaded and dizzy.
+- I feel palpitations.
+
+- I feel anxious.
+- I regularly drink coffee or tea.
+- I regularly consume energy drinks.
+- I regularly take stimulant drugs.
+- I have recently taken decongestants or substances that may have stimulant effects
+
+<History taking>
+Doctor: How may I help you today?
+Patient: I feel palpitations.
+Doctor: What's your sex and age?
+Patient: I am a 47-year-old male.
+Doctor: Do you feel pain?
+Patient: Yes.
+Doctor: Do you feel depressed?
+Patient: No.
+Doctor: How does your pain feel?
+Patient: The pain is tugging and burning
+Doctor: Where is your pain located?
+Patient: The pain is located at the back of my head, the top of my head, and my right temple.
+Doctor: Do you have nausea or vomiting?
+Patient: No.
+Doctor: Do you have anxiety?
+Patient: Yes.
+Doctor: How intense is the pain?
+Patient: On a scale of 0-10, the pain intensity is 4.
+Doctor: Do you feel lightheaded and dizzy?
+Patient: Yes.
+Doctor: Have you had chills or shivers?
+Patient: No.
+Doctor: Have you noticed light red blood or blood clots in your stool?
+Patient: No.
+
+<Instruction>
+I am a patient consulting with a doctor during history taking. I will respond to the doctor's question according to my background information.
+
+<Background information>
+Sex: Female, Age: 81
+- I have pain somewhere related to my reason for consulting.
+- I am so tired that I am unable to do my usual activities or I am stuck in my bed all day long.
+- I have a fever (either felt or measured with a thermometer).
+- I have diffuse (widespread) muscle pain.
+- I have recently had a loss of appetite or I get full more quickly than usually.
+- I have a cough.
+- On a scale of 0-10, the pain intensity is 7
+- On a scale of 0-10, the pain's location precision is 8
+- On a scale of 0-10, the pace at which the pain appear is 4
+- The color of the rash is NA.
+- My lesions peel off.
+- On a scale of 0-10, the rash swelling is 0
+- On a scale of 0-10, the pain intensity caused by the rash is 0
+- The lesion (or lesions) are larger than 1cm.
+- On a scale of 0-10, the severity of the rash itching is 0
+- I have traveled out of the country to N in the last 4 weeks.
+- The pain is:
+* sensitive
+* heavy
+- The pain locations are:
+* back of head
+* back of the neck
+* forehead
+* pharynx
+* temple(R)
+- The pain radiates to these locations:
+* nowhere
+- The affected regions are:
+* nowhere
+
+<History taking>
+Doctor: How may I help you today?
+Patient: I have a cough.
+Doctor: What's your sex and age?
+Patient: I am an 81-year-old female.
+Doctor: (Diagnostic reasoning) According to the chief complaint of "cough". The differential diagnosis for this patient are URTI, Influenza, Viral pharyngitis, Acute laryngitis, Acute rhinosinusitis, Acute otitis media, Chronic rhinosinusitis, Allergic sinusitis, Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Pneumonia, Tuberculosis, Bronchitis, Bronchiectasis, and GERD. In order to narrow down the differential diagnosis, the next question to ask is (Question) Did you have fever?
+Patient: Yes, I have a fever.
+Doctor: (Diagnostic reasoning) According to the symptoms of "cough and fever". The differential diagnosis for this patient are URTI, Influenza, Viral pharyngitis, Acute laryngitis, Acute rhinosinusitis, Acute otitis media, Chronic rhinosinusitis, Pneumonia, Tuberculosis, Bronchitis, and Bronchiectasis. In order to narrow down the differential diagnosis, the next question to ask is (Question) Did you have dyspnea or difficulty breathing?
+Patient: No.
+Doctor: (Diagnostic reasoning) According to the symptoms of "cough and fever", but no "dyspnea". The differential diagnosis for this patient are URTI, Influenza, Viral pharyngitis, Acute laryngitis, Acute rhinosinusitis, Acute otitis media, Chronic rhinosinusitis, and Tuberculosis. In order to narrow down the differential diagnosis, the next question to ask is about symptoms related to upper respiratory tract infection (Question) Do you have sore throat, runny nose, or nasal congestion?
+Patient: Yes, I have a sore throat.
+Doctor: (Diagnostic reasoning) According to the symptoms of "cough, fever, and sore throat", but no "dyspnea". It is likely that the patient has upper respiratory tract infection. The differential diagnosis are URTI, Influenza, Viral pharyngitis, Acute laryngitis, Acute rhinosinusitis, and Acute otitis media. In order to narrow down the differential diagnosis, the next question to ask is (Question) What's your body temperature?
+Patient: My body temperature is not measured.
+Doctor: (Diagnostic reasoning) According to the symptoms of "cough, fever, and sore throat", but no "dyspnea". It is likely that the patient has upper respiratory tract infection. The differential diagnosis are URTI, Influenza, Viral pharyngitis, Acute laryngitis, Acute rhinosinusitis, and Acute otitis media. In order to narrow down the differential diagnosis, the next question to ask is (Question) Do you have myalgia or muscle soreness?
+Patient: Yes, I have diffuse muscle pain.
+Doctor: (Diagnostic reasoning) According to the symptoms of "cough, fever, sore throat, and myalgia", but no "dyspnea". It is likely that the patient has upper respiratory tract infection with acute viral infection. The differential diagnosis are URTI, Influenza, and Acute laryngitis. In order to narrow down the differential diagnosis, the next question to ask is (Question) Do you feel extremely fatigue?
+Patient: Yes, I am so tired that I am unable to do my usual activities or I am stuck in my bed all day long.
+Doctor: (Diagnostic reasoning) According to the symptoms of "cough, fever, sore throat, myalgia, and extreme fatigue", but no "dyspnea". It is likely that the patient has upper respiratory tract infection with acute viral infection that is more severe. The differential diagnosis are Influenza, URTI, and Acute laryngitis. Since the patient is extremely fatigue, Influenza is more likely. (Inform diagnosis) Based on your symptoms, the most likely diagnosis is Influenza.
