@@ -11,10 +11,10 @@ initial_evidence: "toux"
 group: "baseline"
 
 # patient simulator
-pat_exemplar_path: "./patient_simulator/exemplars"
+pat_config_path: "./patient_simulator/exemplars"
 
 # doctor
-doc_exemplar_path: "./doctor_model/exemplars"
+doc_config_path: "./doctor_model/exemplars"
 
 # history taking
 ask_turns: 8

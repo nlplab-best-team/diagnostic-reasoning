@@ -86,7 +86,10 @@ class PatientBot(Bot):
         super().__init__(instruction, shots, profile, dialogue_history, model)
 
     def inform_initial_evidence(self) -> str:
-        raise NotImplementedError
+        return self._profile.initial_evidence
+    
+    def inform_basic_info(self) -> str:
+        return self._profile.basic_info
 
     def answer(self, question: str, answer: str = '') -> str:
         self._dialogue_history.add_doctor_utter(question)
@@ -96,6 +99,7 @@ class PatientBot(Bot):
         return answer
 
 class DoctorBot(Bot):
+
     def __init__(
         self,
         instruction: str,
@@ -109,6 +113,9 @@ class DoctorBot(Bot):
         self._instruction_prefix = "\n<Instruction>"
         self._profile_prefix = "\n<Background knowledge>"
         self._dialogue_prefix = "\n<History taking>"
+
+        self._greeting = "How may I help you today?"
+        self._basic_info_q = "What's your sex and age?"
 
     def _refresh_prompt(self) -> None:
         prefix = '\n'.join([self._instruction_prefix, self._instruction, self._profile_prefix, str(self._profile)])
@@ -124,8 +131,11 @@ class DoctorBot(Bot):
         ]
         self._prompt = prefix + '\n\n' + '\n'.join(shots + current_dialogue).strip()
 
-    def inform_diagnosis(self) -> str:
-        raise NotImplementedError
+    def greeting(self) -> str:
+        return self._greeting
+    
+    def ask_basic_info(self) -> str:
+        return self._basic_info_q
     
     def question(self, prev_answer: str, question: str = '') -> str:
         self._dialogue_history.add_patient_utter(prev_answer)
@@ -133,3 +143,6 @@ class DoctorBot(Bot):
             question = self.generate(prefix="\nDoctor: ").strip()
         self._dialogue_history.add_doctor_utter(question)
         return question
+    
+    def inform_diagnosis(self) -> str:
+        raise NotImplementedError

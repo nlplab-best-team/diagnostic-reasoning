@@ -108,6 +108,10 @@ class PatientProfile(Profile):
     @property
     def initial_evidence(self) -> str:
         return self.evidence2desc[self._initial_evidence][self.desc_field]
+    
+    @property
+    def basic_info(self) -> str:
+        return f"I am a {self._age}-year-old {'male' if self._sex == 'M' else 'female'}."
 
 class DoctorProfile(Profile):
     diagnoses_prefix: str = "Possible diagnoses: "
