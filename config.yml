@@ -1,0 +1,20 @@
+# experiment
+name: sanity_check-baseline
+
+# samples
+dataset_path: "./ddxplus/release_test_patients.csv"
+sample_id_path: "./experiments/sanity_check_ids.json"
+sample_size: 5
+initial_evidence: "toux"
+
+# group
+group: "baseline"
+
+# patient simulator
+pat_exemplar_path: "./patient_simulator/exemplars"
+
+# doctor
+doc_exemplar_path: "./doctor_model/exemplars"
+
+# history taking
+ask_turns: 8
