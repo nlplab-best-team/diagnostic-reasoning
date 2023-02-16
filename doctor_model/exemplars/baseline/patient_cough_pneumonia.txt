@@ -89,8 +89,6 @@ Doctor: Do you have fever?
 Patient: Yes, I have a fever.
 Doctor: Do you have difficulty breathing or shortness of breath?
 Patient: Yes, I am experiencing shortness of breath.
-Doctor: What's your body temperature?
-Patient: My body temperature is 38 degrees Celsius.
 Doctor: Do you have myalgia (muscular aches)?
 Patient: No.
 Doctor: Do you have productive cough?
@@ -103,4 +101,4 @@ Doctor: Do you smoke?
 Patient: No.
 Doctor: Have you been in contact with many people or people of similar symptoms before?
 Patient: No, I have not been in contact with many people or people of similar symptoms before.
-Doctor: Based on your symptoms, the most likely diagnosis is Pneumonia.
+Doctor: Based on your symptoms, the most likely diagnosis is Bronchitis.
