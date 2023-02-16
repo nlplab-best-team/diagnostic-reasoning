@@ -120,3 +120,46 @@ def plot_catagorical_feature_distribution_for_each_pathology(
         plt.savefig(save_path, bbox_inches='tight')
     else:
         plt.show()
+        
+"""
+    For gettinng diagnosis distribution
+"""
+def engs_to_keys(evidences: List[str], mappings: Dict[str, str]) -> List[str]:
+    return list(map(lambda eng: mappings[eng], evidences))
+
+def get_dx_distribution(df: pd.DataFrame, positives: List[str], negatives: List[str]) -> Dict[str, float]:
+    def list_contains(l: List[str], contents: List[str]) -> bool:
+        s = set(l)
+        for content in contents:
+            if not (content in s):
+                return False
+        return True
+    
+    def list_excludes(l: List[str], contents: List[str]) -> bool:
+        s = set(l)
+        for content in contents:
+            if content in s:
+                return False
+        return True
+    
+    ddx_count = df[df.EVIDENCES.map(lambda l: list_contains(l, positives) and list_excludes(l, negatives))].groupby("PATHOLOGY_ENG").size().sort_values(ascending=False)
+    return (ddx_count / ddx_count.sum()).to_dict() # return percentage
+
+common_mappings = {
+    "cough": "toux",
+    "fever": "fievre",
+    "dyspnea": "dyspn",
+    "wheezing": "wheez",
+    "COPD history": "j44_j42",
+    "allergy tendency": "z84.89",
+    "asthma": "j45",
+    "smoking": "f17.210",
+    "sputum": "expecto",
+    "sore throat": "gorge_dlr",
+    "diffuse muscle pain": "msk_dlr",
+    "extremely fatigue": "fatig_ext",
+    "nasal congestion or a clear runny nose": "rhino_clair",
+    "GERD sensation": "pyrosis",
+    "voice change": "volume_parole",
+    "chest pain": "douleurxx_endroitducorps_@_c\u00f4t\u00e9_du_thorax_D_"
+}
