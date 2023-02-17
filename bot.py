@@ -1,3 +1,4 @@
+import re
 from typing import List
 from pathlib import Path
 
@@ -99,6 +100,9 @@ class PatientBot(Bot):
         return answer
 
 class DoctorBot(Bot):
+    ask_prefix = "[ask]"
+    inform_prefix = "[inform]"
+    question_prefix = "[Question]"
 
     def __init__(
         self,
@@ -106,9 +110,15 @@ class DoctorBot(Bot):
         shots: List[Shot],
         profile: DoctorProfile,
         dialogue_history: Dialogue,
-        model: ModelAPI
+        model: ModelAPI,
+        mode: str = "" # Either "baseline" or "reasoning"
     ):
+        if mode not in ["baseline", "reasoning"]:
+            raise ValueError("The argument 'mode' should be 'baseline' or 'reasoning'.")
+        
         super().__init__(instruction, shots, profile, dialogue_history, model)
+
+        self._mode = mode
 
         self._instruction_prefix = "\n<Instruction>"
         self._profile_prefix = "\n<Background knowledge>"
@@ -132,18 +142,31 @@ class DoctorBot(Bot):
         self._prompt = prefix + '\n\n' + '\n'.join(shots + current_dialogue).strip()
 
     def greeting(self) -> str:
-        self._dialogue_history.add_doctor_utter(self._greeting)
-        return self._greeting
+        greeting_text = self.ask_prefix + ' ' + self._greeting
+        self._dialogue_history.add_doctor_utter(greeting_text)
+        return greeting_text
     
     def ask_basic_info(self) -> str:
         return self._basic_info_q
     
-    def question(self, prev_answer: str, question: str = '') -> str:
+    def ask(self, prev_answer: str, question: str = '') -> str:
         self._dialogue_history.add_patient_utter(prev_answer)
         if not question:
-            question = self.generate(prefix="\nDoctor: ").strip()
-        self._dialogue_history.add_doctor_utter(question)
-        return question
+            question = self.generate(prefix=f"\nDoctor: {self.ask_prefix} ").strip()
+        self._dialogue_history.add_doctor_utter(f"{self.ask_prefix} {question}")
+                 
+        if (self._mode == "baseline") or (question == self.ask_basic_info()):
+            reasoning = ''
+        elif self._mode == "reasoning":
+            question_index = question.find(self.question_prefix)
+            if question_index == -1:
+                raise ValueError(f"Question index not found by prefix {self.question_prefix}.")
+            reasoning = question[0:question_index]
+            question = question[question_index + len(self.question_prefix) + 1:]
+        else:
+            raise ValueError(f"self._model should be either 'baseline' or 'reasoning'.")
+            
+        return reasoning, question
     
     def inform_diagnosis(self, prev_answer: str) -> str:
         self._dialogue_history.add_patient_utter(prev_answer)

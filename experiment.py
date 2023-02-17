@@ -97,24 +97,26 @@ class Experiment(object):
                 shots=self._doc_shots,
                 profile=self._doc_profile,
                 dialogue_history=Dialogue([], []),
-                model=self._doc_model
+                model=self._doc_model,
+                mode=self._group
             )
             logging.info(f"Doctor initialized.")
             # logging.info(patient._dialogue_history is doctor._dialogue_history)
             # History taking
             a = patient.answer(question=doctor.greeting(), answer=patient.inform_initial_evidence())
-            q = doctor.question(prev_answer=a, question=doctor.ask_basic_info())
+            q = doctor.ask(prev_answer=a, question=doctor.ask_basic_info())
             a = patient.answer(question=q, answer=patient.inform_basic_info())
             for j in range(self._ask_turns):
-                q = doctor.question(prev_answer=a, question=f"Q{j}" if self._debug else '')
+                r, q = doctor.ask(prev_answer=a, question=f"{'R [Question] ' if (self._group == 'reasoning') else ''}Q{j}" if self._debug else '')
                 time.sleep(api_interval)
                 a = patient.answer(question=q, answer=f"A{j}" if self._debug else '')
                 time.sleep(api_interval)
                 logging.info(f"Turn {j + 1} completed:")
-                logging.info(f"Doctor: {q}")
+                logging.info(f"Doctor: [reasoning] {r}[question] {q}")
                 logging.info(f"Patient: {a}")
             doctor.inform_diagnosis(prev_answer=a)
             logging.info(f"===== Sample {i + 1} completed =====")
+            logging.info(doctor._dialogue_history)
     
 if __name__ == "__main__":
     logging.basicConfig(
@@ -128,4 +130,4 @@ if __name__ == "__main__":
         logging.info(f"Configuration loaded: {json.dumps(config, indent=4)}")
     
     exp = Experiment(**config, debug=True)
-    exp.run(api_interval=0.5)
+    exp.run(api_interval=0)
