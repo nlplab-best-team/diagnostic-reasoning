@@ -1,0 +1,28 @@
+{
+    "doctor_first": true,
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] How old are you?",
+        "[ask] Do you have fever?",
+        "[ask] Do you have difficulty breathing or shortness of breath?",
+        "[ask] Do you have myalgia (muscular aches)?",
+        "[ask] Do you have productive cough?",
+        "[ask] Do you feel pain? If yes, where is the pain located?",
+        "[ask] Did you have any respiratory diseases before?",
+        "[ask] Do you smoke?",
+        "[ask] Have you been in contact with many people or people of similar symptoms before?",
+        "[inform] Based on your symptoms, the most likely diagnosis is Bronchitis."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am 51 years old.",
+        "Yes, I have a fever.",
+        "Yes, I am experiencing shortness of breath.",
+        "No.",
+        "Yes, I have a cough that produces colored or more abundant sputum than usual.",
+        "Yes, I feel pain. The pain is located on the side of my chest, my pharynx, my right and left breast, and my right posterior chest wall.",
+        "Yes, I have a chronic obstructive pulmonary disease (COPD).",
+        "No.",
+        "No, I have not been in contact with many people or people of similar symptoms before."
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "doctor_first": true,
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Did you have fever?",
+        "[ask] Did you have dyspnea or difficulty breathing?",
+        "[ask] Do you have sore throat, runny nose, or nasal congestion?",
+        "[ask] What's your body temperature?",
+        "[ask] Do you have myalgia or muscle soreness?",
+        "[ask] Do you feel extremely fatigue?",
+        "[inform] Based on your symptoms, the most likely diagnosis is Influenza."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am an 81-year-old female.",
+        "Yes, I have a fever.",
+        "No.",
+        "Yes, I have a sore throat.",
+        "My body temperature is not measured.",
+        "Yes, I have diffuse muscle pain.",
+        "Yes, I am so tired that I am unable to do my usual activities or I am stuck in my bed all day long."
+    ]
+}
