@@ -1,5 +1,6 @@
 import sys
 import ast
+import time
 import json
 import yaml
 import logging
@@ -75,7 +76,7 @@ class Experiment(object):
             Run the experiment. The interval between API calls is set to [api_interval] seconds.
         """
         for i, pat in enumerate(self._samples.itertuples()):
-            logging.info(f"Running with sample {i + 1} -> PATHOLOGY: {pat.PATHOLOGY}")
+            logging.info(f"===== Running with sample {i + 1} -> PATHOLOGY: {pat.PATHOLOGY} =====")
             # Initialize the patient
             patient = PatientBot(
                 instruction=self._pat_instruction,
@@ -104,11 +105,16 @@ class Experiment(object):
             a = patient.answer(question=doctor.greeting(), answer=patient.inform_initial_evidence())
             q = doctor.question(prev_answer=a, question=doctor.ask_basic_info())
             a = patient.answer(question=q, answer=patient.inform_basic_info())
-            for i in range(self._ask_turns):
-                q = doctor.question(prev_answer=a, question=f"Q{i}" if self._debug else '')
-                a = patient.answer(question=q, answer=f"A{i}" if self._debug else '')
+            for j in range(self._ask_turns):
+                q = doctor.question(prev_answer=a, question=f"Q{j}" if self._debug else '')
+                time.sleep(api_interval)
+                a = patient.answer(question=q, answer=f"A{j}" if self._debug else '')
+                time.sleep(api_interval)
+                logging.info(f"Turn {j + 1} completed:")
+                logging.info(f"Doctor: {q}")
+                logging.info(f"Patient: {a}")
             doctor.inform_diagnosis(prev_answer=a)
-            logging.info(doctor._dialogue_history)
+            logging.info(f"===== Sample {i + 1} completed =====")
     
 if __name__ == "__main__":
     logging.basicConfig(
@@ -122,4 +128,4 @@ if __name__ == "__main__":
         logging.info(f"Configuration loaded: {json.dumps(config, indent=4)}")
     
     exp = Experiment(**config, debug=True)
-    exp.run()
+    exp.run(api_interval=0.5)
