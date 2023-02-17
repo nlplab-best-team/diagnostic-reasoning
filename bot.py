@@ -132,6 +132,7 @@ class DoctorBot(Bot):
         self._prompt = prefix + '\n\n' + '\n'.join(shots + current_dialogue).strip()
 
     def greeting(self) -> str:
+        self._dialogue_history.add_doctor_utter(self._greeting)
         return self._greeting
     
     def ask_basic_info(self) -> str:
@@ -144,5 +145,6 @@ class DoctorBot(Bot):
         self._dialogue_history.add_doctor_utter(question)
         return question
     
-    def inform_diagnosis(self) -> str:
-        raise NotImplementedError
+    def inform_diagnosis(self, prev_answer: str) -> str:
+        self._dialogue_history.add_patient_utter(prev_answer)
+        return "Not Implemented Yet"

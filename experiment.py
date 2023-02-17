@@ -25,11 +25,13 @@ class Experiment(object):
         group: str,
         pat_config_path: str,
         doc_config_path: str,
-        ask_turns: int
+        ask_turns: int,
+        debug: bool = True # for sanity checking the script
     ):
         logging.info(f"Conducting experiment: {name}")
         self._group = group
         self._ask_turns = ask_turns
+        self._debug = debug
 
         # Select samples
         pats = pd.read_csv(dataset_path)
@@ -58,14 +60,20 @@ class Experiment(object):
         # Doctor
         self._doc_config = json.loads((Path(doc_config_path) / f"{name}.json").read_bytes())
         self._doc_instruction = self._doc_config["instruction"][group]
-        self._doc_shots = ...
-        self._diagnoses_set = load_all_diagnoses()
+        self._doc_profile = DoctorProfile(possible_diagnoses=load_all_diagnoses())
+        self._doc_shots = [Shot(
+            profile=self._doc_profile,
+            dialogue=Dialogue(**json.loads((Path(doc_config_path) / group / f"{shot}.json").read_bytes()))
+        ) for shot in self._doc_config["shots"]]
         self._doc_model = ModelAPI(self._doc_config["model_config"])
 
     def estimate_cost(self) -> float:
         raise NotImplementedError
     
-    def run(self) -> None:
+    def run(self, api_interval: int) -> None:
+        """
+            Run the experiment. The interval between API calls is set to [api_interval] seconds.
+        """
         for i, pat in enumerate(self._samples.itertuples()):
             logging.info(f"Running with sample {i + 1} -> PATHOLOGY: {pat.PATHOLOGY}")
             # Initialize the patient
@@ -78,7 +86,7 @@ class Experiment(object):
                     initial_evidence=pat.INITIAL_EVIDENCE,
                     evidences=ast.literal_eval(pat.EVIDENCES)
                 ),
-                dialogue_history=Dialogue(),
+                dialogue_history=Dialogue([], []),
                 model=self._pat_model
             )
             logging.info(f"Patient initialized. Chief complaint: {patient.inform_initial_evidence()}; Basic info: {patient.inform_basic_info()}")
@@ -86,12 +94,21 @@ class Experiment(object):
             doctor = DoctorBot(
                 instruction=self._doc_instruction,
                 shots=self._doc_shots,
-                profile=DoctorProfile(possible_diagnoses=self._diagnoses_set),
-                dialogue_history=Dialogue(),
+                profile=self._doc_profile,
+                dialogue_history=Dialogue([], []),
                 model=self._doc_model
             )
             logging.info(f"Doctor initialized.")
+            # logging.info(patient._dialogue_history is doctor._dialogue_history)
             # History taking
+            a = patient.answer(question=doctor.greeting(), answer=patient.inform_initial_evidence())
+            q = doctor.question(prev_answer=a, question=doctor.ask_basic_info())
+            a = patient.answer(question=q, answer=patient.inform_basic_info())
+            for i in range(self._ask_turns):
+                q = doctor.question(prev_answer=a, question=f"Q{i}" if self._debug else '')
+                a = patient.answer(question=q, answer=f"A{i}" if self._debug else '')
+            doctor.inform_diagnosis(prev_answer=a)
+            logging.info(doctor._dialogue_history)
     
 if __name__ == "__main__":
     logging.basicConfig(
@@ -104,5 +121,5 @@ if __name__ == "__main__":
         config = yaml.safe_load(f)
         logging.info(f"Configuration loaded: {json.dumps(config, indent=4)}")
     
-    exp = Experiment(**config)
+    exp = Experiment(**config, debug=True)
     exp.run()
