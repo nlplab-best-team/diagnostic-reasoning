@@ -159,7 +159,8 @@ class DoctorBot(Bot):
         elif self._mode == "reasoning":
             question_index = question.find(self.question_prefix)
             if question_index == -1:
-                raise ValueError(f"Question index not found by prefix {self.question_prefix}.")
+                print(f"Question index not found by prefix {self.question_prefix} in question {question}.")
+                return question, ''
             reasoning = question[0:question_index]
             question = question[question_index + len(self.question_prefix) + 1:]
         else:
