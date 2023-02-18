@@ -19,6 +19,7 @@ class Experiment(object):
     def __init__(
         self,
         name: str,
+        log_path: str,
         dataset_path: str,
         sample_id_path: str,
         sample_size: int,
@@ -33,6 +34,8 @@ class Experiment(object):
         self._group = group
         self._ask_turns = ask_turns
         self._debug = debug
+        self._log_path = Path(log_path) / name
+        self._log_path.mkdir(parents=True, exist_ok=True)
 
         # Select samples
         pats = pd.read_csv(dataset_path)
@@ -101,6 +104,7 @@ class Experiment(object):
                 mode=self._group
             )
             logging.info(f"Doctor initialized.")
+            logging.info(doctor.get_prompt())
             # logging.info(patient._dialogue_history is doctor._dialogue_history)
             # History taking
             a = patient.answer(question=doctor.greeting(), answer=patient.inform_initial_evidence())
@@ -116,7 +120,7 @@ class Experiment(object):
                 logging.info(f"Patient: {a}")
             doctor.inform_diagnosis(prev_answer=a)
             logging.info(f"===== Sample {i + 1} completed =====")
-            logging.info(doctor._dialogue_history)
+            (self._log_path / f"{i + 1}.txt").write_text(str(doctor._dialogue_history))
     
 if __name__ == "__main__":
     logging.basicConfig(

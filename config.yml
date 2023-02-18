@@ -1,5 +1,6 @@
 # experiment
 name: sanity_check-baseline
+log_path: "./experiments/log"
 
 # samples
 dataset_path: "./ddxplus/release_test_patients.csv"
