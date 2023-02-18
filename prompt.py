@@ -15,6 +15,7 @@ class Profile(object):
 class PatientProfile(Profile):
     delimiter = "_@_"
     release_evidences = json.loads((Path(__file__).parent / "ddxplus/release_evidences.json").read_bytes())
+    release_conditions = json.loads((Path(__file__).parent / "ddxplus/release_conditions.json").read_bytes())
     evidence2desc = json.loads((Path(__file__).parent / "ddxplus/our_evidences_to_qa.json").read_bytes())
     desc_field = "affirmative_en"
     

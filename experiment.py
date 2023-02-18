@@ -54,7 +54,6 @@ class Experiment(object):
 
         # Patient
         self._pat_config = json.loads((Path(pat_config_path) / f"{name}.json").read_bytes())
-        logging.info(f"Patient configuration loaded: {json.dumps(self._pat_config, indent=4)}")
         self._pat_instruction = self._pat_config["instruction"]
         self._pat_shots = [Shot(
             profile=Profile(self._pat_config["shots"][0]["profile"]),
@@ -75,6 +74,10 @@ class Experiment(object):
     def estimate_cost(self) -> float:
         return 2 * len(self._samples) * 2048 * self._ask_turns * ModelAPI.cost_per_1000tokens / 1000
     
+    def save_dialogues(self, role: str, idx: int, dialogue: Dialogue) -> None:
+        assert role in ["patient", "doctor"]
+        (self._log_path / f"{role}-{idx}.json").write_text(json.dumps({"doctor_utters": dialogue._doctor_utters, "patient_utters": dialogue._patient_utters}, indent=4))
+    
     def run(self, api_interval: int) -> None:
         """
             Run the experiment. The interval between API calls is set to [api_interval] seconds.
@@ -87,7 +90,7 @@ class Experiment(object):
             return
         
         for i, pat in enumerate(self._samples.itertuples()):
-            logging.info(f"===== Running with sample {i + 1} -> PATHOLOGY: {pat.PATHOLOGY} =====")
+            logging.info(f"===== Running with sample {i + 1} -> PATHOLOGY: {PatientProfile.release_conditions[pat.PATHOLOGY]['cond-name-eng']} =====")
             # Initialize the patient
             patient = PatientBot(
                 instruction=self._pat_instruction,
@@ -112,7 +115,6 @@ class Experiment(object):
                 mode=self._group
             )
             logging.info(f"Doctor initialized.")
-            # logging.info(patient._dialogue_history is doctor._dialogue_history)
             # History taking
             a = patient.answer(question=doctor.greeting(), answer=patient.inform_initial_evidence())
             r, q = doctor.ask(prev_answer=a, question=doctor.ask_basic_info())
@@ -125,9 +127,12 @@ class Experiment(object):
                 logging.info(f"Turn {j + 1} completed:")
                 logging.info(f"Doctor: [reasoning] {r}[question] {q}")
                 logging.info(f"Patient: {a}")
-            doctor.inform_diagnosis(prev_answer=a, utter='D' if self._debug else '')
+            inform = doctor.inform_diagnosis(prev_answer=a, utter='D' if self._debug else '')
+            logging.info(f"Doctor: {inform}")
             logging.info(f"===== Sample {i + 1} completed =====")
-            (self._log_path / f"{i + 1}.txt").write_text(str(doctor._dialogue_history))
+            # Save dialogues
+            self.save_dialogues(role="patient", idx=i + 1, dialogue=patient._dialogue_history)
+            self.save_dialogues(role="doctor", idx=i + 1, dialogue=doctor._dialogue_history)
     
 if __name__ == "__main__":
     logging.basicConfig(
@@ -140,5 +145,5 @@ if __name__ == "__main__":
         config = yaml.safe_load(f)
         logging.info(f"Configuration loaded: {json.dumps(config, indent=4)}")
     
-    exp = Experiment(**config, debug=False)
-    exp.run(api_interval=10)
+    exp = Experiment(**config, debug=True)
+    exp.run(api_interval=0)
