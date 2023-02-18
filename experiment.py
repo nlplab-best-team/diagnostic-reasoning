@@ -127,6 +127,9 @@ class Experiment(object):
                 logging.info(f"Turn {j + 1} completed:")
                 logging.info(f"Doctor: [reasoning] {r}[question] {q}")
                 logging.info(f"Patient: {a}")
+                # Save dialogues
+                self.save_dialogues(role="patient", idx=i + 1, dialogue=patient._dialogue_history)
+                self.save_dialogues(role="doctor", idx=i + 1, dialogue=doctor._dialogue_history)
             inform = doctor.inform_diagnosis(prev_answer=a, utter='D' if self._debug else '')
             logging.info(f"Doctor: {inform}")
             logging.info(f"===== Sample {i + 1} completed =====")
@@ -145,5 +148,5 @@ if __name__ == "__main__":
         config = yaml.safe_load(f)
         logging.info(f"Configuration loaded: {json.dumps(config, indent=4)}")
     
-    exp = Experiment(**config, debug=True)
-    exp.run(api_interval=0)
+    exp = Experiment(**config, debug=False)
+    exp.run(api_interval=10)

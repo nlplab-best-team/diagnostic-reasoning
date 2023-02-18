@@ -1,5 +1,5 @@
 # experiment
-name: sanity_check-baseline
+name: sanity_check-reasoning
 log_path: "./experiments/log"
 
 # samples
@@ -9,7 +9,7 @@ sample_size: 5
 initial_evidence: "toux"
 
 # group
-group: "baseline"
+group: "reasoning"
 
 # patient simulator
 pat_config_path: "./patient_simulator/exemplars"
