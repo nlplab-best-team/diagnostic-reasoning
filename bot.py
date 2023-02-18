@@ -168,6 +168,9 @@ class DoctorBot(Bot):
             
         return reasoning, question
     
-    def inform_diagnosis(self, prev_answer: str) -> str:
+    def inform_diagnosis(self, prev_answer: str, utter: str = '') -> str:
         self._dialogue_history.add_patient_utter(prev_answer)
-        return "Not Implemented Yet"
+        if not utter:
+            utter = self.generate(prefix=f"\nDoctor: {self.inform_prefix} ").strip()
+        self._dialogue_history.add_doctor_utter(f"{self.inform_prefix} {utter}")
+        return utter
