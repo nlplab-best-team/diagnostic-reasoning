@@ -1,15 +1,15 @@
 # experiment
-name: sanity_check-reasoning
+name: preliminary-baseline
 log_path: "./experiments/log"
 
 # samples
 dataset_path: "./ddxplus/release_test_patients.csv"
-sample_id_path: "./experiments/sanity_check_ids.json"
-sample_size: 5
+sample_id_path: "./experiments/preliminary_ids.json"
+sample_size: 100
 initial_evidence: "toux"
 
 # group
-group: "reasoning"
+group: "baseline"
 
 # patient simulator
 pat_config_path: "./patient_simulator/exemplars"
