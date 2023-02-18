@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have fever?",
+        "Do you have chest pain or tightness?",
+        "Do you have a history of smoking?",
+        "Do you have a history of exposure to environmental pollutants or allergens?",
+        "",
+        "",
+        ""
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 70-year-old male.",
+        "Yes.",
+        "No.",
+        "No.",
+        "No.",
+        "Yes, I have asthma or have used a bronchodilator in the past and I am more likely to develop common allergies than the general population.",
+        "",
+        "",
+        ""
+    ]
+}

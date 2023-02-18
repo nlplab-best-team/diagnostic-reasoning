@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute laryngitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, Tuberculosis, Bronchitis, Pancreatic neoplasm, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have sore throat, runny nose, or nasal congestion?",
+        "[ask] Positive clinical findings: 'cough and sore throat'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Bronchitis, Ebola, and GERD'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a productive cough?",
+        "[ask] Positive clinical findings: 'cough, sore throat, and productive cough'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchitis, URTI, Influenza, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have shortness of breath?",
+        "[ask] Positive clinical findings: 'cough, sore throat, productive cough, and dyspnea'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchitis, URTI, and Influenza'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have chest pain or chest tightness?",
+        "[ask] Positive clinical findings: 'cough, sore throat, productive cough, dyspnea, and chest pain'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchitis and URTI'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of asthma or allergies?",
+        "[ask] Positive clinical findings: 'cough, sore throat, productive cough, dyspnea, and chest pain'. Negative clinical findings: 'fever' and 'history of asthma or allergies'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchitis and URTI'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of smoking?",
+        "[ask] Positive clinical findings: 'cough, sore throat, productive cough, dyspnea, chest pain, and the habit of smoking'. Negative clinical findings: 'fever' and 'history of asthma or allergies'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchitis and URTI'. To narrow down the differential diagnosis, the next question to ask is [Question] Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "[inform] Positive clinical findings: 'cough, sore throat, productive cough, dyspnea, chest pain, the habit of smoking, and no contact with people with similar symptoms in the past 2 weeks'. Negative clinical findings: 'fever' and 'history of asthma or allergies'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchitis and URTI'. Since the patient has productive cough, dyspnea, chest pain, and the habit of smoking, the most likely diagnosis is Bronchitis."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 20-year-old female.",
+        "No.",
+        "Yes, I have a sore throat.",
+        "Yes, I have a cough that produces colored or more abundant sputum than usual.",
+        "Yes, I am experiencing shortness of breath or difficulty breathing in a significant way.",
+        "Yes, I have pain in my upper chest, pharynx, breast, posterior chest wall (right and left).",
+        "No, I do not have a history of asthma or allergies.",
+        "Yes, I smoke cigarettes.",
+        "No, I have not been in contact with people with similar symptoms in the past 2 weeks."
+    ]
+}

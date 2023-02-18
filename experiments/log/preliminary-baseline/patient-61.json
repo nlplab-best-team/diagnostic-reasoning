@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have shortness of breath?",
+        "Do you have chest pain or tightness?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "Have you been exposed to any environmental irritants such as smoke, dust, or pollen?",
+        "Have you traveled recently?",
+        "Have you been exposed to any animals recently?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 45-year-old male.",
+        "Yes, I have a fever.",
+        "No, I don't have shortness of breath.",
+        "No, I don't have chest pain or tightness.",
+        "No, I don't have a productive cough with yellow or green sputum.",
+        "No, I haven't been in contact with people with similar symptoms in the past 2 weeks.",
+        "No, I haven't been exposed to any environmental irritants.",
+        "No, I haven't traveled recently.",
+        "No, I haven't been exposed to any animals recently."
+    ]
+}

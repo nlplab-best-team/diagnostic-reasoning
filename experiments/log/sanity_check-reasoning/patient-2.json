@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have fever?",
+        "Do you have a headache?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Do you have a rash?",
+        "",
+        ""
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 30-year-old male.",
+        "No.",
+        "Yes, I have nasal congestion.",
+        "Yes, I have a fever.",
+        "Yes, I have a headache.",
+        "No.",
+        "No.",
+        "",
+        ""
+    ]
+}

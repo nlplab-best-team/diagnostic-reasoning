@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have fever?",
+        "Do you have a headache or facial pain?",
+        "Do you have a sore throat?",
+        "Do you have a history of allergies?",
+        "Do you have a history of asthma?",
+        "Do you have a history of smoking?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 31-year-old male.",
+        "No.",
+        "Yes, I have nasal congestion and a clear runny nose.",
+        "No.",
+        "Yes, I have pain related to my reason for consulting.",
+        "No.",
+        "No.",
+        "No.",
+        "No."
+    ]
+}

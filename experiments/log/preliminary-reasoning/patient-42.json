@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have chest pain or tightness?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have fever?",
+        "Do you have a history of allergies?",
+        "Do you have itchy eyes, sneezing, or a runny nose with a thick yellow or green discharge?",
+        "Do you have a history of exposure to environmental allergens such as dust, pollen, or animal dander?",
+        ""
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 39-year-old male.",
+        "No.",
+        "No.",
+        "Yes, I have nasal congestion and a clear runny nose.",
+        "No.",
+        "Yes, I have close family members who suffer from allergies (any type), hay fever, or eczema. I also have family members who have asthma.",
+        "No, I only have nasal congestion and a clear runny nose.",
+        "Yes, I live in a big city.",
+        "No, that's all the information I have."
+    ]
+}

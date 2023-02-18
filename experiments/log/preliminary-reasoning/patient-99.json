@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have a productive cough?",
+        "Do you have a headache?",
+        "Do you have a sore throat?",
+        "Do you have a history of asthma or allergies?",
+        "Do you have a history of exposure to environmental pollutants or irritants?",
+        ""
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 23-year-old female.",
+        "No.",
+        "Yes, I have nasal congestion.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        ""
+    ]
+}

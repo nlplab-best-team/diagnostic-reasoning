@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have fever?",
+        "Do you have a history of asthma or COPD?",
+        "Do you have chest pain or tightness?",
+        "Do you have a history of smoking?",
+        "Do you have a fever or chills?",
+        "Do you have a history of cancer or any other chronic illnesses?",
+        ""
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 59-year-old female.",
+        "Yes.",
+        "No.",
+        "No.",
+        "Yes.",
+        "No.",
+        "No.",
+        "Yes, I am infected with the human immunodeficiency virus (HIV) and I have diabetes. I also take corticosteroids and I am currently using intravenous drugs.",
+        ""
+    ]
+}

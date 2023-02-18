@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have chest pain or tightness?",
+        "Do you have shortness of breath?",
+        "Do you have fever?",
+        "Is the chest pain or tightness worse when you take a deep breath or cough?",
+        "Does the chest pain or tightness radiate to your arms, neck, or jaw?",
+        "Is the chest pain or tightness worse when you are lying down or when you are active?",
+        "",
+        ""
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 56-year-old male.",
+        "Yes.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "The pain is worse when I am lying down and alleviated when I am sitting up.",
+        "",
+        ""
+    ]
+}

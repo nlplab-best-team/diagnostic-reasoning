@@ -1,0 +1,21 @@
+Doctor: [ask] How may I help you today?
+Patient: I have a cough.
+Doctor: [ask] What's your sex and age?
+Patient: I am a 1-year-old male.
+Doctor: [ask] Do you have fever?
+Patient: Yes.
+Doctor: [ask] What's your body temperature?
+Patient: My body temperature is measured with a thermometer.
+Doctor: [ask] Do you have a runny nose or nasal congestion?
+Patient: Yes, I have nasal congestion.
+Doctor: [ask] Do you have a barking cough?
+Patient: No.
+Doctor: [ask] Do you have a wheezing sound when you breathe?
+Patient: No.
+Doctor: [ask] Have you been in contact with people with similar symptoms in the past 2 weeks?
+Patient: Yes, I have been in contact with a person with similar symptoms in the past 2 weeks.
+Doctor: [ask] Have you been exposed to any environmental irritants such as smoke or dust?
+Patient: Yes, I am exposed to secondhand cigarette smoke on a daily basis.
+Doctor: [ask] Do you have difficulty breathing?
+Patient: No.
+Doctor: [inform] Based on your description, the most likely diagnosis is Bronchiolitis.

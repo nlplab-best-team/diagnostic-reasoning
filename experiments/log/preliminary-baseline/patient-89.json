@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have shortness of breath?",
+        "Do you have chest pain or tightness?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "Have you traveled recently?",
+        "Have you been exposed to any animals or birds recently?",
+        "Have you been exposed to any chemicals or dust recently?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 52-year-old female.",
+        "Yes, I have a fever.",
+        "No, I don't have shortness of breath.",
+        "No, I don't have chest pain or tightness.",
+        "Yes, I have a cough that produces colored or more abundant sputum than usual.",
+        "Yes, I live with 4 or more people and I attend or work in a daycare.",
+        "No, I have not traveled recently.",
+        "No, I have not been exposed to any animals or birds recently.",
+        "No, I have not been exposed to any chemicals or dust recently."
+    ]
+}

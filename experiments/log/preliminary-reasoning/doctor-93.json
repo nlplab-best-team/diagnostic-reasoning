@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have shortness of breath?",
+        "[ask] Positive clinical findings: 'cough and dyspnea'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Tuberculosis, Pneumonia, Pulmonary neoplasm, Acute pulmonary edema, and Bronchiectasis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough and dyspnea'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Tuberculosis, Pneumonia, Pulmonary neoplasm, and Bronchiectasis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have wheezing or a whistling sound when you breathe?",
+        "[ask] Positive clinical findings: 'cough and dyspnea'. Negative clinical findings: 'fever and wheezing'. Based on the clinical findings, the ranked differential diagnosis is 'Acute COPD exacerbation / infection, Tuberculosis, Pneumonia, Pulmonary neoplasm, and Bronchiectasis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of smoking?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, and history of smoking'. Negative clinical findings: 'fever and wheezing'. Based on the clinical findings, the ranked differential diagnosis is 'Acute COPD exacerbation / infection, Tuberculosis, Pneumonia, and Pulmonary neoplasm'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of exposure to environmental pollutants or occupational hazards?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, history of smoking, and history of exposure to environmental pollutants or occupational hazards'. Negative clinical findings: 'fever and wheezing'. Based on the clinical findings, the ranked differential diagnosis is 'Acute COPD exacerbation / infection, Tuberculosis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a productive cough with sputum?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, history of smoking, history of exposure to environmental pollutants or occupational hazards, and productive cough with sputum'. Negative clinical findings: 'fever and wheezing'. Based on the clinical findings, the ranked differential diagnosis is 'Tuberculosis and Pneumonia'. Since the patient has been coughing up blood, the most likely diagnosis is Tuberculosis.",
+        "[ask] Do you have any other symptoms that you would like to discuss?",
+        "[inform] If you have any other symptoms that you would like to discuss, please let me know."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 48-year-old female.",
+        "Yes.",
+        "No.",
+        "No.",
+        "Yes, I am a former smoker.",
+        "Yes, I am exposed to secondhand cigarette smoke on a daily basis.",
+        "Yes, I have been coughing up blood.",
+        "",
+        ""
+    ]
+}

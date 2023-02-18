@@ -1,0 +1,21 @@
+Doctor: [ask] How may I help you today?
+Patient: I have a cough.
+Doctor: [ask] What's your sex and age?
+Patient: I am a 54-year-old female.
+Doctor: [ask] Do you have fever?
+Patient: Yes, I have a fever.
+Doctor: [ask] Do you have shortness of breath?
+Patient: Yes, I am experiencing shortness of breath.
+Doctor: [ask] Do you have chest pain or tightness?
+Patient: Yes, I have pain in my lower chest, pharynx, and posterior chest wall (right and left).
+Doctor: [ask] Do you have a history of heart disease or any other chronic medical conditions?
+Patient: No, I do not have a history of heart disease or any other chronic medical conditions.
+Doctor: [ask] Have you been exposed to any environmental pollutants or allergens recently?
+Patient: No, I have not been exposed to any environmental pollutants or allergens recently.
+Doctor: [ask] Have you been coughing up any sputum or blood?
+Patient: No, I have not been coughing up any sputum or blood.
+Doctor: [ask] Have you been experiencing any other symptoms such as fatigue, chills, or night sweats?
+Patient: Yes, I have been experiencing fatigue, chills, and night sweats.
+Doctor: [ask] Have you been in contact with people with similar symptoms in the past 2 weeks?
+Patient: No, I have not been in contact with people with similar symptoms in the past 2 weeks.
+Doctor: [inform] Based on your description, the most likely diagnosis is Pneumonia.

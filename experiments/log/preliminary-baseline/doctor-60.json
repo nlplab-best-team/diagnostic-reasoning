@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Do you have fever?",
+        "[ask] Do you have shortness of breath?",
+        "[ask] Do you have chest pain or tightness?",
+        "[ask] Do you have a productive cough with yellow or green sputum?",
+        "[ask] Do you have a history of smoking or exposure to second-hand smoke?",
+        "[ask] Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "[ask] Have you been exposed to any environmental pollutants or allergens?",
+        "[ask] Do you have any other symptoms such as fatigue, chills, or body aches?",
+        "[inform] Based on your description, the most likely diagnosis is Acute bronchitis."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 60-year-old male.",
+        "Yes, I have a fever.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "Yes, I have pain in my ears."
+    ]
+}

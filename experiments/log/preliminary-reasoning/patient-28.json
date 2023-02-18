@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have fever?",
+        "Do you have a headache?",
+        "Do you have body aches or joint pain?",
+        "Do you have a rash?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "Do you have any other symptoms such as nausea, vomiting, or diarrhea?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 25-year-old female.",
+        "No.",
+        "Yes, I have a sore throat.",
+        "Yes, I have a fever.",
+        "Yes.",
+        "Yes, I have pain in my back of head, back of the neck, side of the neck (left), occiput, and pharynx.",
+        "Yes.",
+        "No.",
+        "No."
+    ]
+}

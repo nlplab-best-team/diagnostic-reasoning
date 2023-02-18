@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have chest pain or tightness?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have fever?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Do you have myalgia or muscle soreness?",
+        "Do you have a headache?",
+        "Do you have a rash?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 57-year-old male.",
+        "No.",
+        "No.",
+        "Yes, I have a sore throat and nasal congestion.",
+        "Yes, I have a fever.",
+        "No, I have a cough that produces colored or more abundant sputum than usual.",
+        "Yes, I have pain somewhere related to my reason for consulting.",
+        "Yes.",
+        "No."
+    ]
+}

@@ -1,0 +1,21 @@
+Doctor: [ask] How may I help you today?
+Patient: I have a cough.
+Doctor: [ask] What's your sex and age?
+Patient: I am a 20-year-old female.
+Doctor: [ask] Do you have fever?
+Patient: No.
+Doctor: [ask] Do you have shortness of breath?
+Patient: Yes.
+Doctor: [ask] Do you have chest pain or tightness?
+Patient: Yes.
+Doctor: [ask] Do you have a history of heart disease or any other chronic medical conditions?
+Patient: Yes, I have a chronic obstructive pulmonary disease (COPD).
+Doctor: [ask] Have you been exposed to any environmental irritants such as smoke or dust?
+Patient: Yes, I smoke cigarettes.
+Doctor: [ask] Have you been in contact with people with similar symptoms in the past 2 weeks?
+Patient: No.
+Doctor: [ask] Do you have any other symptoms such as wheezing, fatigue, or dizziness?
+Patient: Yes, I have a wheezing sound when I exhale.
+Doctor: [ask] Have you been coughing up any sputum?
+Patient: Yes, I have a cough that produces colored or more abundant sputum than usual.
+Doctor: [inform] Based on your description, the most likely diagnosis is Acute COPD exacerbation / infection.

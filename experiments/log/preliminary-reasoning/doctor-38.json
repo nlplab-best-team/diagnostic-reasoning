@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have shortness of breath?",
+        "[ask] Positive clinical findings: 'cough and dyspnea'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Pulmonary embolism, Acute pulmonary edema, Bronchiectasis, Tuberculosis, Pneumonia, and URTI'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough and dyspnea'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Pulmonary embolism, Bronchiectasis, Tuberculosis, Pneumonia, and URTI'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have wheezing or a whistling sound when you breathe?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, and wheezing'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, and Tuberculosis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of asthma or COPD?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, wheezing, and history of asthma or COPD'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchospasm / acute asthma exacerbation and Acute COPD exacerbation / infection'. Since the patient has a history of asthma or COPD, the most likely diagnosis is Bronchospasm / acute asthma exacerbation.",
+        "[ask] Is there anything else I should know?",
+        "[ask] Is there anything else you would like to tell me about your symptoms?",
+        "[ask] Are there any other symptoms that you have not mentioned?",
+        "[inform] If there is nothing else you would like to tell me, then I think we have covered all the important information. Thank you for your time."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 63-year-old female.",
+        "Yes, I am experiencing shortness of breath or difficulty breathing in a significant way.",
+        "No.",
+        "Yes, I have wheezing or a whistling sound when I breathe.",
+        "Yes, I have asthma or have used a bronchodilator in the past.",
+        "",
+        "",
+        "",
+        ""
+    ]
+}

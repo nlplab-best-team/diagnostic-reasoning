@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have shortness of breath?",
+        "[ask] Positive clinical findings: 'cough'. Negative clinical findings: 'dyspnea'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute laryngitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, Tuberculosis, Bronchitis, Pancreatic neoplasm, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have sore throat, runny nose, or nasal congestion?",
+        "[ask] Positive clinical findings: 'cough and nasal congestion'. Negative clinical findings: 'dyspnea, rhinorrhea, and sore throat'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute rhinosinusitis, Influenza, Bronchitis, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough and nasal congestion'. Negative clinical findings: 'dyspnea, rhinorrhea, sore throat, and fever'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute rhinosinusitis, Influenza, Bronchitis, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have wheezing or whistling sound when you breathe?",
+        "[ask] Positive clinical findings: 'cough and nasal congestion'. Negative clinical findings: 'dyspnea, rhinorrhea, sore throat, fever, and wheezing'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute rhinosinusitis, Influenza, Bronchitis, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of asthma or allergies?",
+        "[ask] Positive clinical findings: 'cough and nasal congestion'. Negative clinical findings: 'dyspnea, rhinorrhea, sore throat, fever, wheezing, and history of asthma or allergies'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Acute rhinosinusitis, Influenza, Bronchitis, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a productive cough with yellow or green sputum?",
+        "[ask] Positive clinical findings: 'cough and nasal congestion'. Negative clinical findings: 'dyspnea, rhinorrhea, sore throat, fever, wheezing, history of asthma or allergies, and productive cough with yellow or green sputum'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Acute rhinosinusitis, Influenza, Bronchitis, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a headache or body aches?",
+        "[ask] Positive clinical findings: 'cough, nasal congestion, and pain in the left ear'. Negative clinical findings: 'dyspnea, rhinorrhea, sore throat, fever, wheezing, history of asthma or allergies, and productive cough with yellow or green sputum'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Acute rhinosinusitis, Influenza, Acute otitis media, Bronchitis, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a fever?",
+        "[inform] Positive clinical findings: 'cough, nasal congestion, and pain in the left ear'. Negative clinical findings: 'dyspnea, rhinorrhea, sore throat, fever, wheezing, history of asthma or allergies, and productive cough with yellow or green sputum'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Acute rhinosinusitis, Influenza, Acute otitis media, Bronchitis, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. Since the patient has pain in the left ear, the most likely diagnosis is Acute otitis media."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 18-year-old male.",
+        "No.",
+        "Yes, I have nasal congestion.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "Yes, I have pain in my left ear.",
+        "No."
+    ]
+}

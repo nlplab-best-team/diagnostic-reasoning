@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have shortness of breath?",
+        "Do you have chest pain or tightness?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "Do you have a history of heart disease or any other chronic medical conditions?",
+        "Have you been exposed to any environmental irritants such as smoke or dust?",
+        "Have you traveled recently?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 77-year-old male.",
+        "Yes, I have a fever.",
+        "No.",
+        "No.",
+        "No.",
+        "Yes, I have been in contact with a person with similar symptoms in the past 2 weeks.",
+        "No.",
+        "No.",
+        "No."
+    ]
+}

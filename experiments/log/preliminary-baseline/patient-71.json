@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have a barking cough?",
+        "Do you have difficulty breathing or wheezing?",
+        "Have you been exposed to any animals recently?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "Have you been exposed to any environmental irritants such as smoke or dust?",
+        "Have you been coughing up any mucus or phlegm?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 7-year-old female.",
+        "No.",
+        "Yes, I have a runny nose.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "No."
+    ]
+}

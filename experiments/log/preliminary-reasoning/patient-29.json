@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have difficulty breathing or wheezing?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Do you have ear pain or earache?",
+        "Do you have a headache?",
+        "Do you have body aches or myalgia?",
+        "Do you have a rash?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 8-year-old female.",
+        "Yes, I have a fever.",
+        "Yes, I have a sore throat and nasal congestion.",
+        "No, I don't have difficulty breathing or wheezing.",
+        "No, I don't have a productive cough with yellow or green sputum.",
+        "No, I don't have ear pain or earache.",
+        "Yes, I have a headache.",
+        "No, I don't have body aches or myalgia.",
+        "No, I don't have a rash."
+    ]
+}

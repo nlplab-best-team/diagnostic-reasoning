@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have shortness of breath?",
+        "Do you have chest pain or tightness?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "Have you been exposed to any environmental irritants such as smoke, dust, or pollen?",
+        "Have you been travelling recently?",
+        "Have you had any contact with animals or birds?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 17-year-old male.",
+        "Yes, I have a fever.",
+        "Yes, I am experiencing shortness of breath.",
+        "Yes, I have pain on the side of my chest (right and left) and on the posterior chest wall (right).",
+        "No, I do not have a productive cough.",
+        "No, I have not been in contact with people with similar symptoms in the past 2 weeks.",
+        "No, I have not been exposed to any environmental irritants.",
+        "Yes, I have traveled out of the country to N in the last 4 weeks.",
+        "No, I have not had any contact with animals or birds."
+    ]
+}

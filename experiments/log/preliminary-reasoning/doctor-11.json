@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have shortness of breath?",
+        "[ask] Positive clinical findings: 'cough and dyspnea'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Tuberculosis, Pneumonia, Bronchiectasis, Acute laryngitis, URTI, Viral pharyngitis, Influenza, Acute rhinosinusitis, and Allergic sinusitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, and fever'. Based on the clinical findings, the ranked differential diagnosis is 'Pneumonia, Tuberculosis, URTI, Viral pharyngitis, Influenza, Acute rhinosinusitis, Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Acute laryngitis, and Allergic sinusitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have sore throat, runny nose, or nasal congestion?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, fever, and rhinorrhea'. Negative clinical findings: 'sore throat'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Pneumonia, Tuberculosis, Acute rhinosinusitis, Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Acute laryngitis, and Allergic sinusitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have myalgia or muscle soreness?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, fever, rhinorrhea, and myalgia'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Pneumonia, Tuberculosis, Acute rhinosinusitis, Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Acute laryngitis, and Allergic sinusitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a headache?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, fever, rhinorrhea, and myalgia'. Negative clinical findings: 'headache'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Pneumonia, Tuberculosis, Acute rhinosinusitis, Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Acute laryngitis, and Allergic sinusitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a productive cough with yellow or green sputum?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, fever, rhinorrhea, and myalgia'. Negative clinical findings: 'headache and productive cough with yellow or green sputum'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Pneumonia, Tuberculosis, Acute rhinosinusitis, Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Acute laryngitis, and Allergic sinusitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a rash?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, fever, rhinorrhea, myalgia, and rash'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Pneumonia, Tuberculosis, Acute rhinosinusitis, Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Acute laryngitis, and Allergic sinusitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have any other symptoms such as chills, nausea, vomiting, or diarrhea?",
+        "[inform] Positive clinical findings: 'cough, dyspnea, fever, rhinorrhea, myalgia, and rash'. Negative clinical findings: 'chills, nausea, vomiting, and diarrhea'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Pneumonia, Tuberculosis, Acute rhinosinusitis, Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Acute laryngitis, and Allergic sinusitis'. Since the patient has fever, dyspnea, and rash, the most likely diagnosis is Pneumonia."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 17-year-old male.",
+        "Yes, I am experiencing shortness of breath or difficulty breathing in a significant way.",
+        "Yes, I have a fever (either felt or measured with a thermometer).",
+        "Yes, I have nasal congestion or a clear runny nose.",
+        "Yes, I have diffuse (widespread) muscle pain.",
+        "No.",
+        "No.",
+        "Yes. The color of the rash is rose and my lesions peel off. On a scale of 0-10, the rash swelling is 1 and the pain intensity caused by the rash is 4. The lesion (or lesions) are larger than 1cm and on a scale of 0-10, the severity of the",
+        "No."
+    ]
+}

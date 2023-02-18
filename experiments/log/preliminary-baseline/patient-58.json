@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "Do you have any other symptoms such as wheezing, chest pain, or difficulty breathing?",
+        "Have you been exposed to any environmental irritants such as smoke, dust, or pollen?",
+        "Have you been vaccinated against the flu?",
+        "Have you been exposed to any animals recently?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 12-year-old female.",
+        "No.",
+        "Yes, I have nasal congestion and a clear runny nose.",
+        "No.",
+        "No.",
+        "No, but my nose or the back of my throat is itchy.",
+        "Yes, I have close family members who suffer from allergies (any type), hay fever, or eczema.",
+        "Yes.",
+        "No."
+    ]
+}

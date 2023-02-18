@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have fever?",
+        "Do you have chest pain or tightness?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Do you have a history of smoking?",
+        "Do you have a history of exposure to environmental pollutants or allergens?",
+        "",
+        "Where is the pain located?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 67-year-old male.",
+        "Yes.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "Yes.",
+        "Do you have pain?\nPatient: Yes.",
+        "The pain is located in my mouth, nose, right eye, left eye, and right temple."
+    ]
+}

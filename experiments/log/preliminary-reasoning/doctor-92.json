@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute laryngitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, Tuberculosis, Bronchitis, Pancreatic neoplasm, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have sore throat, runny nose, or nasal congestion?",
+        "[ask] Positive clinical findings: 'cough and nasal congestion'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute laryngitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, Tuberculosis, Bronchitis, Pancreatic neoplasm, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a productive cough?",
+        "[ask] Positive clinical findings: 'cough and nasal congestion'. Negative clinical findings: 'fever and productive cough'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute laryngitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, Tuberculosis, Bronchitis, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a headache?",
+        "[ask] Positive clinical findings: 'cough and nasal congestion'. Negative clinical findings: 'fever, productive cough, and headache'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute laryngitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, Tuberculosis, Bronchitis, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a sore throat?",
+        "[ask] Positive clinical findings: 'cough, nasal congestion, and sore throat'. Negative clinical findings: 'fever, productive cough, and headache'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Bronchitis, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of asthma or allergies?",
+        "[ask] Positive clinical findings: 'cough, nasal congestion, and sore throat'. Negative clinical findings: 'fever, productive cough, headache, and history of asthma or allergies'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Bronchitis, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of exposure to someone with a contagious illness in the past 2 weeks?",
+        "[ask] Positive clinical findings: 'cough, nasal congestion, sore throat, and history of exposure to someone with a contagious illness in the past 2 weeks'. Negative clinical findings: 'fever, productive cough, headache, and history of asthma or allergies'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, and Ebola'. Since the patient has a history of exposure to someone with a contagious illness in the past 2 weeks, the most likely diagnosis is URTI.",
+        "[inform] Based on the clinical findings, the most likely diagnosis is URTI."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 21-year-old female.",
+        "No.",
+        "Yes, I have nasal congestion.",
+        "No.",
+        "No.",
+        "Yes.",
+        "No.",
+        "Yes, I have been in contact with a person with similar symptoms in the past 2 weeks.",
+        ""
+    ]
+}

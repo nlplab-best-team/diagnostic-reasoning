@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have shortness of breath?",
+        "Do you have chest pain or tightness?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "Have you been exposed to any environmental irritants such as smoke, dust, or pollen?",
+        "Have you been travelling recently?",
+        "Do you have any other symptoms such as fever, chills, or body aches?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 64-year-old male.",
+        "No.",
+        "Yes, I am experiencing shortness of breath or difficulty breathing in a significant way.",
+        "No.",
+        "Yes, I have a cough that produces colored or more abundant sputum than usual.",
+        "No.",
+        "Yes, I work in agriculture and the mining sector.",
+        "No.",
+        "No, I only have a cough and wheezing when I exhale."
+    ]
+}

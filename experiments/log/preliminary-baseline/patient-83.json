@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "What's your body temperature?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have difficulty breathing?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "Do you have a barking cough?",
+        "Do you have a wheezing sound when you breathe?",
+        "Do you have a high-pitched whistling sound when you breathe?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 2-year-old female.",
+        "Yes.",
+        "My body temperature is 38 degrees Celsius.",
+        "Yes, I have a sore throat.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "No."
+    ]
+}

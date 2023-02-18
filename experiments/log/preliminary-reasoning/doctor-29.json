@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough and fever'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Viral pharyngitis, Tuberculosis, Acute laryngitis, Influenza, Bronchitis, Acute otitis media, Pneumonia, Acute rhinosinusitis, Ebola, Bronchiolitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have sore throat, runny nose, or nasal congestion?",
+        "[ask] Positive clinical findings: 'cough, fever, sore throat, and nasal congestion'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Bronchitis, Acute otitis media, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have difficulty breathing or wheezing?",
+        "[ask] Positive clinical findings: 'cough, fever, sore throat, and nasal congestion'. Negative clinical findings: 'dyspnea or wheezing'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Bronchitis, Acute otitis media, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a productive cough with yellow or green sputum?",
+        "[ask] Positive clinical findings: 'cough, fever, sore throat, and nasal congestion'. Negative clinical findings: 'dyspnea, wheezing, and productive cough with yellow or green sputum'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Bronchitis, and Acute otitis media'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have ear pain or earache?",
+        "[ask] Positive clinical findings: 'cough, fever, sore throat, and nasal congestion'. Negative clinical findings: 'dyspnea, wheezing, productive cough with yellow or green sputum, and ear pain or earache'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, and Bronchitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a headache?",
+        "[ask] Positive clinical findings: 'cough, fever, sore throat, nasal congestion, and headache'. Negative clinical findings: 'dyspnea, wheezing, productive cough with yellow or green sputum, and ear pain or earache'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, and Bronchitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have body aches or myalgia?",
+        "[ask] Positive clinical findings: 'cough, fever, sore throat, nasal congestion, and headache'. Negative clinical findings: 'dyspnea, wheezing, productive cough with yellow or green sputum, ear pain or earache, and body aches or myalgia'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, and Bronchitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a rash?",
+        "[inform] Positive clinical findings: 'cough, fever, sore throat, nasal congestion, and headache'. Negative clinical findings: 'dyspnea, wheezing, productive cough with yellow or green sputum, ear pain or earache, body aches or myalgia, and rash'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, and Bronchitis'. Since the patient has a fever, sore throat, and nasal congestion, the most likely diagnosis is URTI."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 8-year-old female.",
+        "Yes, I have a fever.",
+        "Yes, I have a sore throat and nasal congestion.",
+        "No, I don't have difficulty breathing or wheezing.",
+        "No, I don't have a productive cough with yellow or green sputum.",
+        "No, I don't have ear pain or earache.",
+        "Yes, I have a headache.",
+        "No, I don't have body aches or myalgia.",
+        "No, I don't have a rash."
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have shortness of breath?",
+        "Do you have chest pain or tightness?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Do you have a dry cough?",
+        "Have you been exposed to any environmental irritants such as smoke, dust, or pollen?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "Do you have any other symptoms such as fatigue, headache, or body aches?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 68-year-old female.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "Yes.",
+        "Yes, I live in a big city.",
+        "No.",
+        "Yes, my nose or the back of my throat is itchy and I have nasal congestion or a clear runny nose."
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have shortness of breath?",
+        "Do you have chest pain or tightness?",
+        "Does the chest pain worsen with deep breaths or when you move around?",
+        "Does the chest pain radiate to your arms, neck, or jaw?",
+        "Do you have a history of heart disease or high blood pressure?",
+        "Do you have a history of smoking?",
+        "Have you been coughing up any sputum or phlegm?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 61-year-old female.",
+        "No.",
+        "No.",
+        "Yes.",
+        "No, the pain does not worsen with deep breaths or when I move around.",
+        "No, the pain does not radiate to my arms, neck, or jaw.",
+        "No, I do not have a history of heart disease or high blood pressure.",
+        "Yes, I smoke cigarettes.",
+        "No, I have not been coughing up any sputum or phlegm."
+    ]
+}

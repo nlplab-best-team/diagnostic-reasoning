@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have shortness of breath?",
+        "[ask] Positive clinical findings: 'cough'. Negative clinical findings: 'dyspnea'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute laryngitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, Tuberculosis, Bronchitis, Pancreatic neoplasm, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have chest pain or tightness?",
+        "[ask] Positive clinical findings: 'cough'. Negative clinical findings: 'dyspnea, chest pain, and tightness'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute laryngitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, Tuberculosis, Bronchitis, Pancreatic neoplasm, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a fever?",
+        "[ask] Positive clinical findings: 'cough and fever'. Negative clinical findings: 'dyspnea, chest pain, and tightness'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Viral pharyngitis, Tuberculosis, Acute laryngitis, Influenza, Bronchitis, Acute otitis media, Pneumonia, Acute rhinosinusitis, Ebola, Bronchiolitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a productive cough with yellow or green sputum?",
+        "[ask] Positive clinical findings: 'cough and fever'. Negative clinical findings: 'dyspnea, chest pain, tightness, and productive cough with yellow or green sputum'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Viral pharyngitis, Acute laryngitis, Influenza, Acute otitis media, Tuberculosis, Bronchitis, Acute rhinosinusitis, Pneumonia, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have sore throat, runny nose, or nasal congestion?",
+        "[ask] Positive clinical findings: 'cough and fever'. Negative clinical findings: 'dyspnea, chest pain, tightness, productive cough with yellow or green sputum, sore throat, runny nose, and nasal congestion'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Bronchitis, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have myalgia or muscle soreness?",
+        "[ask] Positive clinical findings: 'cough and fever'. Negative clinical findings: 'dyspnea, chest pain, tightness, productive cough with yellow or green sputum, sore throat, runny nose, nasal congestion, and myalgia'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of chronic lung disease?",
+        "[ask] Positive clinical findings: 'cough and fever'. Negative clinical findings: 'dyspnea, chest pain, tightness, productive cough with yellow or green sputum, sore throat, runny nose, nasal congestion, myalgia, and history of chronic lung disease'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of travel to an area with a high prevalence of infectious diseases?",
+        "[inform] Positive clinical findings: 'cough and fever'. Negative clinical findings: 'dyspnea, chest pain, tightness, productive cough with yellow or green sputum, sore throat, runny nose, nasal congestion, myalgia, history of chronic lung disease, and history of travel to an area with a high prevalence of infectious diseases'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, and Ebola'. Since the patient does not have any other symptoms, the most likely diagnosis is URTI."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 78-year-old male.",
+        "No.",
+        "No.",
+        "Yes, I have a fever.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "No."
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have shortness of breath?",
+        "[ask] Positive clinical findings: 'cough'. Negative clinical findings: 'dyspnea'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute laryngitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, Tuberculosis, Bronchitis, Pancreatic neoplasm, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have sore throat, runny nose, or nasal congestion?",
+        "[ask] Positive clinical findings: 'cough, nasal congestion, and rhinorrhea'. Negative clinical findings: 'dyspnea'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute rhinosinusitis, Influenza, Bronchitis, Tuberculosis, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough, nasal congestion, and rhinorrhea'. Negative clinical findings: 'dyspnea and fever'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute rhinosinusitis, Influenza, Bronchitis, and Tuberculosis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a headache or facial pain?",
+        "[ask] Positive clinical findings: 'cough, nasal congestion, rhinorrhea, and headache or facial pain'. Negative clinical findings: 'dyspnea and fever'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute rhinosinusitis, Influenza, and Bronchitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a sore throat?",
+        "[ask] Positive clinical findings: 'cough, nasal congestion, rhinorrhea, headache or facial pain'. Negative clinical findings: 'dyspnea, fever, and sore throat'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute rhinosinusitis, and Influenza'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of allergies?",
+        "[ask] Positive clinical findings: 'cough, nasal congestion, rhinorrhea, headache or facial pain'. Negative clinical findings: 'dyspnea, fever, sore throat, and history of allergies'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Chronic rhinosinusitis, Acute rhinosinusitis, and Influenza'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of asthma?",
+        "[ask] Positive clinical findings: 'cough, nasal congestion, rhinorrhea, headache or facial pain'. Negative clinical findings: 'dyspnea, fever, sore throat, history of allergies, and history of asthma'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Chronic rhinosinusitis, Acute rhinosinusitis, and Influenza'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of smoking?",
+        "[inform] Positive clinical findings: 'cough, nasal congestion, rhinorrhea, headache or facial pain'. Negative clinical findings: 'dyspnea, fever, sore throat, history of allergies, history of asthma, and history of smoking'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Chronic rhinosinusitis, Acute rhinosinusitis, and Influenza'. Since the patient has nasal congestion, rhinorrhea, and headache or facial pain, the most likely diagnosis is URTI."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 31-year-old male.",
+        "No.",
+        "Yes, I have nasal congestion and a clear runny nose.",
+        "No.",
+        "Yes, I have pain related to my reason for consulting.",
+        "No.",
+        "No.",
+        "No.",
+        "No."
+    ]
+}

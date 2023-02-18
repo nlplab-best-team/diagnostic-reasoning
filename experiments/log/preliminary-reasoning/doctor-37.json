@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Croup, Stable angina, Sarcoidosis, Spontaneous pneumothorax, Pulmonary neoplasm, Whooping cough, Scombroid food poisoning, Acute otitis media, Acute rhinosinusitis, GERD, Bronchiolitis, SLE, Bronchitis, Guillain-Barr\u00e9 syndrome, Allergic sinusitis, Cluster headache, Viral pharyngitis, Boerhaave, Acute laryngitis, Unstable angina, Pulmonary embolism, Epiglottitis, Anaphylaxis, Acute COPD exacerbation / infection, Pancreatic neoplasm, Myocarditis, PSVT, Possible NSTEMI / STEMI, Pneumonia, Ebola, Acute dystonic reactions, Larygospasm, HIV (initial infection), Anemia, Influenza, Localized edema, URTI, Inguinal hernia, Atrial fibrillation, Pericarditis, Chagas, Myasthenia gravis, Bronchiectasis, Chronic rhinosinusitis, Tuberculosis,",
+        "[ask] To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'Croup, Stable angina, Sarcoidosis, Spontaneous pneumothorax, Pulmonary neoplasm, Whooping cough, Scombroid food poisoning, Acute otitis media, Acute rhinosinusitis, GERD, Bronchiolitis, SLE, Bronchitis, Guillain-Barr\u00e9 syndrome, Allergic sinusitis, Cluster headache, Viral pharyngitis, Boerhaave, Acute laryngitis, Unstable angina, Pulmonary embolism, Epiglottitis, Anaphylaxis, Acute COPD exacerbation / infection, Pancreatic neoplasm, Myocarditis, PSVT, Possible NSTEMI / STEMI, Pneumonia, Ebola, Acute dystonic reactions, Larygospasm, HIV (initial infection), Anemia, Influenza, Localized edema, URTI, Inguinal hernia, Atrial fibrillation, Pericarditis, Chagas, Myasthenia gravis, Bronchiectasis, Chronic rh",
+        "[ask] To narrow down the differential diagnosis, the next question to ask is [Question] Do you have sore throat, runny nose, or nasal congestion?",
+        "[ask] Positive clinical findings: 'cough and nasal congestion with clear runny nose'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Viral pharyngitis, Tuberculosis, Acute laryngitis, Influenza, Bronchitis, Acute otitis media, Pneumonia, Acute rhinosinusitis, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a hoarse voice?",
+        "[ask] Positive clinical findings: 'cough and nasal congestion with clear runny nose'. Negative clinical findings: 'fever and hoarse voice'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Viral pharyngitis, Tuberculosis, Acute laryngitis, Influenza, Bronchitis, Acute otitis media, Pneumonia, Acute rhinosinusitis, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a fever?",
+        "[ask] Positive clinical findings: 'cough and nasal congestion with clear runny nose'. Negative clinical findings: 'fever and hoarse voice'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Viral pharyngitis, Tuberculosis, Acute laryngitis, Influenza, Bronchitis, Acute otitis media, Pneumonia, Acute rhinosinusitis, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of exposure to someone with similar symptoms in the past 2 weeks?",
+        "[ask] Positive clinical findings: 'cough and nasal congestion with clear runny nose'. Negative clinical findings: 'fever, hoarse voice, and history of exposure to someone with similar symptoms in the past 2 weeks'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Viral pharyngitis, Tuberculosis, Acute laryngitis, Influenza, Bronchitis, Acute otitis media, Pneumonia, Acute rhinosinusitis, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of asthma or allergies?",
+        "[inform] Positive clinical findings: 'cough and nasal congestion with clear runny nose, history of asthma or allergies in the family'. Negative clinical findings: 'fever, hoarse voice, and history of exposure to someone with similar symptoms in the past 2 weeks'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Allergic sinusitis, Viral pharyngitis, Tuberculosis, Acute laryngitis, Influenza, Bronchitis, Acute otitis media, Pneumonia, Acute rhinosinusitis, and Ebola'. Since the patient has a history of asthma or allergies in the family, the most likely diagnosis is URTI."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 8-year-old female.",
+        "",
+        "No.",
+        "",
+        "Yes, I have nasal congestion and a clear runny nose.",
+        "No.",
+        "No.",
+        "No, I have not been exposed to anyone with similar symptoms.",
+        "Yes, I have close family members who suffer from allergies (any type), hay fever, or eczema, and family members who have asthma."
+    ]
+}

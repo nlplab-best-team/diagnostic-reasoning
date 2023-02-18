@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have a productive cough?",
+        "Do you have a history of asthma or allergies?",
+        "Do you have wheezing or difficulty breathing?",
+        "Do you have chest tightness or chest pain?",
+        "Do you have a history of exposure to environmental pollutants or allergens?",
+        "Do you have a history of smoking or second-"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 14-year-old female.",
+        "No.",
+        "No.",
+        "No.",
+        "Yes, I have a history of asthma and have used a bronchodilator in the past.",
+        "No.",
+        "Yes, I have chest pain.",
+        "No.",
+        "Yes, I smoke cigarettes."
+    ]
+}

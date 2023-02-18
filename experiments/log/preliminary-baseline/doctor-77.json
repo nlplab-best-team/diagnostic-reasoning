@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Do you have fever?",
+        "[ask] Do you have shortness of breath?",
+        "[ask] Do you have chest pain or tightness?",
+        "[ask] Do you have a productive cough with yellow or green sputum?",
+        "[ask] Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "[ask] Have you been exposed to any environmental irritants such as smoke, dust, or pollen?",
+        "[ask] Do you have any other symptoms such as wheezing, fatigue, or headache?",
+        "[ask] Have you been experiencing any other symptoms such as fever, chills, or body aches?",
+        "[inform] Based on your description, the most likely diagnosis is Bronchitis."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 26-year-old male.",
+        "No.",
+        "Yes, I am experiencing shortness of breath or difficulty breathing in a significant way.",
+        "No.",
+        "No.",
+        "No.",
+        "Yes, I am exposed to secondhand cigarette smoke on a daily basis.",
+        "Yes, I have noticed a wheezing sound when I exhale.",
+        "No."
+    ]
+}

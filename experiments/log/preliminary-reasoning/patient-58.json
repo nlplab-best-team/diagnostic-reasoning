@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have myalgia or muscle soreness?",
+        "Do you have a headache?",
+        "Do you have a sore throat?",
+        "Do you have itchy eyes or sneezing?",
+        "Do you have a history of allergies?",
+        ""
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 12-year-old female.",
+        "No.",
+        "Yes, I have nasal congestion and a clear runny nose.",
+        "No.",
+        "No.",
+        "No.",
+        "Yes, my nose or the back of my throat is itchy.",
+        "Yes, I have close family members who suffer from allergies (any type), hay fever, or eczema.",
+        "No, that's all."
+    ]
+}

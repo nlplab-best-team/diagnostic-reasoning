@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have shortness of breath?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "Do you have chest pain or tightness?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Do you have a history of asthma or allergies?",
+        "Have you been exposed to any environmental irritants such as smoke, dust, or pollen?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 23-year-old male.",
+        "No.",
+        "Yes, I have a runny nose and nasal congestion.",
+        "Yes, I am experiencing shortness of breath or difficulty breathing in a significant way.",
+        "Yes, I have had a cold in the last 2 weeks.",
+        "No.",
+        "No.",
+        "Yes, I have been diagnosed with chronic sinusitis and I am more likely to develop common allergies than the general population.",
+        "Yes, I live in a big city and I am exposed to secondhand cigarette smoke on a daily basis."
+    ]
+}

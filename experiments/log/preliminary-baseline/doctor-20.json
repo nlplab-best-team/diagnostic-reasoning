@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Do you have fever?",
+        "[ask] Do you have shortness of breath?",
+        "[ask] Do you have sore throat, runny nose, or nasal congestion?",
+        "[ask] Do you have chest pain or tightness?",
+        "[ask] Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "[ask] Do you have a productive cough with yellow or green sputum?",
+        "[ask] Do you have a history of asthma or other respiratory conditions?",
+        "[ask] Have you been exposed to any environmental irritants such as smoke or dust?",
+        "[inform] Based on your description, the most likely diagnosis is URTI."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 39-year-old female.",
+        "Yes, I have a fever.",
+        "No.",
+        "Yes, I have nasal congestion.",
+        "No.",
+        "Yes, I have been in contact with a person with similar symptoms in the past 2 weeks.",
+        "No.",
+        "No.",
+        "Yes, I smoke cigarettes."
+    ]
+}

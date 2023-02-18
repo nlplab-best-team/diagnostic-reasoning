@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have shortness of breath?",
+        "[ask] Positive clinical findings: 'cough'. Negative clinical findings: 'dyspnea'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute laryngitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, Tuberculosis, Bronchitis, Pancreatic neoplasm, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have chest pain or tightness?",
+        "[ask] Positive clinical findings: 'cough'. Negative clinical findings: 'dyspnea, chest pain, and tightness'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute laryngitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, Tuberculosis, Bronchitis, Pancreatic neoplasm, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have sore throat, runny nose, or nasal congestion?",
+        "[ask] Positive clinical findings: 'cough, rhinorrhea, and nasal congestion'. Negative clinical findings: 'dyspnea, chest pain, and tightness'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute rhinosinusitis, Influenza, Tuberculosis, Bronchitis, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough, rhinorrhea, and nasal congestion'. Negative clinical findings: 'dyspnea, chest pain, tightness, and fever'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute rhinosinusitis, Influenza, Tuberculosis, Bronchitis, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of asthma or allergies?",
+        "[ask] Positive clinical findings: 'cough, rhinorrhea, nasal congestion, family history of allergies and asthma, and severe itching in one or both eyes'. Negative clinical findings: 'dyspnea, chest pain, tightness, and fever'. Based on the clinical findings, the ranked differential diagnosis is 'Allergic sinusitis, URTI, Chronic rhinosinusitis, Acute rhinosinusitis, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of exposure to air pollution or other environmental allergens?",
+        "[ask] Positive clinical findings: 'cough, rhinorrhea, nasal congestion, family history of allergies and asthma, severe itching in one or both eyes, and history of exposure to air pollution and other environmental allergens'. Negative clinical findings: 'dyspnea, chest pain, tightness, and fever'. Based on the clinical findings, the ranked differential diagnosis is 'Allergic sinusitis, URTI, Chronic rhinosinusitis, Acute rhinosinusitis, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. Since the patient has a family history of allergies and asthma, severe itching in one or both eyes, and history of exposure to air pollution and other environmental allergens, the most likely diagnosis is Allergic sinusitis.",
+        "[ask] Is there anything else you would like to tell me?",
+        "[inform] No, that's all. Thank you for your time."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 47-year-old male.",
+        "No.",
+        "No.",
+        "Yes, I have a runny nose and nasal congestion.",
+        "No.",
+        "Yes, I have close family members who suffer from allergies (any type), hay fever, or eczema, and family members who have asthma. I also have severe itching in one or both eyes. I live in a big city and I am more likely to develop common allergies than the general population.",
+        "Yes, I live in a big city and I am more likely to be exposed to air pollution and other environmental allergens.",
+        "No, that's all.",
+        "Is there anything else I can help you with?"
+    ]
+}

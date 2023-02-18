@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Do you have fever?",
+        "[ask] Do you have shortness of breath?",
+        "[ask] Do you have chest pain or tightness?",
+        "[ask] Do you have a productive cough with yellow or green sputum?",
+        "[ask] Do you have a sore throat, runny nose, or nasal congestion?",
+        "[ask] Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "[ask] Have you been exposed to any environmental irritants such as smoke, dust, or pollen?",
+        "[ask] Have you traveled recently?",
+        "[inform] Based on your description, the most likely diagnosis is Bronchitis."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 29-year-old male.",
+        "Yes, I have a fever.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "No."
+    ]
+}

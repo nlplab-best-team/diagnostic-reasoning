@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have fever?",
+        "Do you have a headache?",
+        "Do you have a sore throat?",
+        "Do you have facial pain or pressure?",
+        "Do you have a history of allergies or asthma?",
+        ""
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 25-year-old male.",
+        "No.",
+        "Yes, I have lost my sense of smell and have greenish or yellowish nasal discharge.",
+        "No.",
+        "Yes.",
+        "No.",
+        "Yes. The pain is burning and is located in my mouth, forehead, right cheek, nose, and right eye. The pain radiates to the back of my head, forehead, nose, right temple, and left temple. On a scale of 0-10, the pain intensity is 2, the pain's location",
+        "Yes, I have asthma or have used a bronchodilator in the past and I am more likely to develop common allergies than the general population.",
+        ""
+    ]
+}

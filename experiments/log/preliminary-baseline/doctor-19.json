@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Do you have fever?",
+        "[ask] Do you have shortness of breath?",
+        "[ask] Do you have chest pain or tightness?",
+        "[ask] Is the chest pain worse when you take a deep breath or when you cough?",
+        "[ask] Does the chest pain radiate to your arms, neck, or jaw?",
+        "[ask] Does the chest pain come and go or is it constant?",
+        "[ask] Does the chest pain feel like pressure or squeezing?",
+        "[ask] Have you been under a lot of stress lately?",
+        "[inform] Based on your description, the most likely diagnosis is Stable angina."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 50-year-old male.",
+        "No.",
+        "No.",
+        "Yes.",
+        "No, the chest pain is not worse when I take a deep breath or when I cough.",
+        "No, the chest pain does not radiate to my arms, neck, or jaw.",
+        "The chest pain is constant.",
+        "No, the chest pain feels like sensitive, tugging, sickening, and scary.",
+        "No, I have not been under a lot of stress lately."
+    ]
+}

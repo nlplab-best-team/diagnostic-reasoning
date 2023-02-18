@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have shortness of breath?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "Do you have a history of asthma or allergies?",
+        "Have you been exposed to any environmental irritants such as smoke, dust, or pollen?",
+        "Have you been experiencing any chest pain or tightness?",
+        "Have you been experiencing any wheezing or difficulty breathing?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 21-year-old female.",
+        "No.",
+        "No.",
+        "Yes, I have a sore throat and nasal congestion.",
+        "No.",
+        "No.",
+        "Yes, I smoke cigarettes.",
+        "No.",
+        "No."
+    ]
+}

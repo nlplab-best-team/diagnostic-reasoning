@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough and fever'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Viral pharyngitis, Tuberculosis, Acute laryngitis, Influenza, Bronchitis, Acute otitis media, Pneumonia, Acute rhinosinusitis, Ebola, Bronchiolitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have difficulty breathing?",
+        "[ask] Positive clinical findings: 'cough and fever'. Negative clinical findings: 'dyspnea'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Viral pharyngitis, Acute laryngitis, Influenza, Acute otitis media, Tuberculosis, Bronchitis, Acute rhinosinusitis, Pneumonia, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have sore throat, runny nose, or nasal congestion?",
+        "[ask] Positive clinical findings: 'cough, fever, and sore throat'. Negative clinical findings: 'dyspnea'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Bronchitis, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a barking cough?",
+        "[ask] Positive clinical findings: 'cough, fever, and sore throat'. Negative clinical findings: 'dyspnea and barking cough'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Bronchitis, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a hoarse voice?",
+        "[ask] Positive clinical findings: 'cough, fever, and sore throat'. Negative clinical findings: 'dyspnea, barking cough, and hoarse voice'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, and Bronchitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a productive cough with yellow or green mucus?",
+        "[ask] Positive clinical findings: 'cough, fever, and sore throat'. Negative clinical findings: 'dyspnea, barking cough, hoarse voice, and productive cough with yellow or green mucus'. Based on the clinical findings, the ranked differential diagnosis is 'URTI and Influenza'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a rash?",
+        "[ask] Positive clinical findings: 'cough, fever, sore throat, and rash'. Negative clinical findings: 'dyspnea, barking cough, hoarse voice, and productive cough with yellow or green mucus'. Based on the clinical findings, the ranked differential diagnosis is 'URTI and Influenza'. To narrow down the differential diagnosis, the next question to ask is [Question] Is the rash itchy?",
+        "[inform] Positive clinical findings: 'cough, fever, sore throat, and itchy rash'. Negative clinical findings: 'dyspnea, barking cough, hoarse voice, and productive cough with yellow or green mucus'. Based on the clinical findings, the ranked differential diagnosis is 'URTI and Influenza'. Since the patient has an itchy rash, the most likely diagnosis is URTI."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 2-year-old female.",
+        "Yes.",
+        "No.",
+        "Yes, I have a sore throat.",
+        "No.",
+        "No.",
+        "No.",
+        "Yes.",
+        "Yes, on a scale of 0-10, the severity of the rash itching is 2."
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Do you have fever?",
+        "[ask] Do you have shortness of breath?",
+        "[ask] Do you have chest pain or tightness?",
+        "[ask] Does the chest pain worsen with deep breaths or when you move around?",
+        "[ask] Does the chest pain radiate to your arms, neck, or jaw?",
+        "[ask] Do you have a history of heart disease or high blood pressure?",
+        "[ask] Have you been exposed to any environmental irritants such as smoke or dust?",
+        "[ask] Have you been coughing up any sputum or phlegm?",
+        "[inform] Based on your description, the most likely diagnosis is Stable angina."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 52-year-old male.",
+        "No.",
+        "No.",
+        "Yes.",
+        "No.",
+        "No, the pain does not radiate to any other locations.",
+        "No.",
+        "No.",
+        "No."
+    ]
+}

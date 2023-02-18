@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have dyspnea or difficulty breathing?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Do you have myalgia or muscle soreness?",
+        "Do you have a headache?",
+        "Do you have chills or body aches?",
+        ""
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 0-year-old male.",
+        "Yes, I have a fever.",
+        "No, I don't have difficulty breathing.",
+        "Yes, I have a sore throat.",
+        "No, I don't have a productive cough.",
+        "No, I don't have muscle soreness.",
+        "No, I don't have a headache.",
+        "Yes, I have chills.",
+        ""
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Do you have fever?",
+        "[ask] Do you have shortness of breath?",
+        "[ask] Do you have sore throat, runny nose, or nasal congestion?",
+        "[ask] Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "[ask] Have you been exposed to any environmental irritants such as smoke, dust, or pollen?",
+        "[ask] Do you have any other symptoms such as chest pain, wheezing, or difficulty breathing?",
+        "[ask] Do you have any other medical conditions such as asthma, COPD, or heart disease?",
+        "[ask] Have you traveled recently?",
+        "[inform] Based on your description, the most likely diagnosis is URTI."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 25-year-old female.",
+        "Yes, I have a fever.",
+        "No, I don't have shortness of breath.",
+        "Yes, I have a sore throat.",
+        "No, I haven't been in contact with people with similar symptoms in the past 2 weeks.",
+        "Yes, I smoke cigarettes.",
+        "Yes, I have increased sweating and pain in the back of my head, back of the neck, side of the neck (left), occiput, and pharynx.",
+        "No, I don't have any other medical conditions.",
+        "No, I haven't traveled recently."
+    ]
+}

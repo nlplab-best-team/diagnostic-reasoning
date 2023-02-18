@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have shortness of breath?",
+        "Do you have chest pain or tightness?",
+        "Do you have a sore throat, runny nose, or nasal congestion?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "Have you been exposed to any environmental irritants such as smoke, dust, or pollen?",
+        "Have you traveled recently?",
+        "Have you been in contact with animals recently?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 26-year-old male.",
+        "Yes, I have a fever.",
+        "No.",
+        "No.",
+        "Yes, I have nasal congestion.",
+        "No.",
+        "No.",
+        "No.",
+        "No."
+    ]
+}

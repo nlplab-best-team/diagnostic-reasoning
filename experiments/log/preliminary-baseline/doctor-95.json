@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Do you have fever?",
+        "[ask] Do you have shortness of breath?",
+        "[ask] Do you have chest pain or tightness?",
+        "[ask] Have you had any recent contact with someone who has a respiratory infection?",
+        "[ask] Have you had any recent contact with someone who has a fever?",
+        "[ask] Have you had any recent contact with someone who has a cough?",
+        "[ask] Have you had any recent contact with someone who has traveled to an area with a high incidence of infectious diseases?",
+        "[ask] Have you had any recent contact with someone who has been exposed to environmental pollutants?",
+        "[inform] Based on your description, the most likely diagnosis is Bronchitis."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 51-year-old female.",
+        "No.",
+        "Yes, I am experiencing shortness of breath or difficulty breathing in a significant way.",
+        "Yes, I have pain somewhere related to my reason for consulting.",
+        "No.",
+        "No.",
+        "Yes.",
+        "No.",
+        "No."
+    ]
+}

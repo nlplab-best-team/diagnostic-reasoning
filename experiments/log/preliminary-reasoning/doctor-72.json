@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have shortness of breath?",
+        "[ask] Positive clinical findings: 'cough and dyspnea'. Negative clinical findings: 'none'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Tuberculosis, Bronchiectasis, Pneumonia, Pulmonary neoplasm, Acute laryngitis, Viral pharyngitis, URTI, and Allergic sinusitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, and fever'. Negative clinical findings: 'none'. Based on the clinical findings, the ranked differential diagnosis is 'Pneumonia, Tuberculosis, Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Acute laryngitis, Viral pharyngitis, URTI, and Allergic sinusitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a productive cough with yellow or green sputum?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, fever, and productive cough with yellow or green sputum'. Negative clinical findings: 'none'. Based on the clinical findings, the ranked differential diagnosis is 'Pneumonia, Tuberculosis, Acute laryngitis, Viral pharyngitis, URTI, and Allergic sinusitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have chest pain or tightness?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, fever, productive cough with yellow or green sputum, and chest pain or tightness'. Negative clinical findings: 'none'. Based on the clinical findings, the ranked differential diagnosis is 'Pneumonia, Tuberculosis, and Acute laryngitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of smoking?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, fever, productive cough with yellow or green sputum, chest pain or tightness, and history of smoking'. Negative clinical findings: 'none'. Based on the clinical findings, the ranked differential diagnosis is 'Pneumonia and Tuberculosis'. To narrow down the differential diagnosis, the next question to ask is [Question] Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, fever, productive cough with yellow or green sputum, chest pain or tightness, history of smoking, and no contact with people with similar symptoms in the past 2 weeks'. Negative clinical findings: 'none'. Based on the clinical findings, the ranked differential diagnosis is 'Pneumonia and Tuberculosis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of asthma or COPD?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, fever, productive cough with yellow or green sputum, chest pain or tightness, history of smoking, no contact with people with similar symptoms in the past 2 weeks, and history of COPD'. Negative clinical findings: 'none'. Based on the clinical findings, the ranked differential diagnosis is 'Pneumonia and Acute COPD exacerbation / infection'. Since the patient has a history of COPD, the most likely diagnosis is Acute COPD exacerbation / infection.",
+        "[inform] Based on the clinical findings, the most likely diagnosis is Acute COPD exacerbation / infection."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 24-year-old female.",
+        "Yes.",
+        "Yes.",
+        "Yes.",
+        "Yes.",
+        "Yes.",
+        "No.",
+        "Yes, I have a chronic obstructive pulmonary disease (COPD).",
+        ""
+    ]
+}

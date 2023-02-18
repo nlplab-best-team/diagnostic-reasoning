@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have fever?",
+        "Do you have wheezing or a whistling sound when you breathe?",
+        "Do you have a history of asthma or allergies?",
+        "Do you have a history of smoking?",
+        "Do you have a history of exposure to environmental pollutants or allergens?",
+        "Do you have a history of recurrent chest infections?",
+        ""
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 30-year-old female.",
+        "Yes, I am experiencing shortness of breath or difficulty breathing in a significant way.",
+        "No.",
+        "Yes, I have noticed a wheezing sound when I exhale.",
+        "Yes, I have had 2 or more asthma attacks in the past year, I have family members who have asthma, I have been hospitalized for an asthma attack in the past year, I have been diagnosed with chronic sinusitis, I have asthma or have used a bronchodilator in the past, and I",
+        "No.",
+        "Yes, I live in a big city and I am more likely to develop common allergies than the general population. I have also traveled out of the country to AmerN in the last 4 weeks.",
+        "No.",
+        "No."
+    ]
+}

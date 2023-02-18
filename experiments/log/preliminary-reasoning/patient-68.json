@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have chest pain or tightness?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have fever?",
+        "Do you have a history of asthma or allergies?",
+        "Do you have a history of exposure to air pollution or other environmental allergens?",
+        "",
+        ""
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 47-year-old male.",
+        "No.",
+        "No.",
+        "Yes, I have a runny nose and nasal congestion.",
+        "No.",
+        "Yes, I have close family members who suffer from allergies (any type), hay fever, or eczema, and family members who have asthma. I also have severe itching in one or both eyes. I live in a big city and I am more likely to develop common allergies than the general population.",
+        "Yes, I live in a big city and I am more likely to be exposed to air pollution and other environmental allergens.",
+        "No, that's all.",
+        "Is there anything else I can help you with?"
+    ]
+}

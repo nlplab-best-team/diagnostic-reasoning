@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have fever?",
+        "Do you have a history of asthma or allergies?",
+        "Do you have a history of smoking?",
+        "Do you have a history of sinus infections?",
+        "Do you have facial pain or pressure?",
+        ""
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 52-year-old female.",
+        "No.",
+        "Yes, I have lost my sense of smell and have polyps in my nose.",
+        "No.",
+        "Yes, I have asthma and am more likely to develop common allergies than the general population.",
+        "Yes, I smoke cigarettes.",
+        "Yes, I have a deviated nasal septum.",
+        "Yes. The pain is burning and is located in my mouth, forehead, left cheek, right eye, and right temple. The pain radiates to my nose. On a scale of 0-10, the pain intensity is 2, the pain's location precision is 3, and the pace at which the pain appear is",
+        "2."
+    ]
+}

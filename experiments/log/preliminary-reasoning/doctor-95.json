@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have shortness of breath?",
+        "[ask] Positive clinical findings: 'cough and dyspnea'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Pulmonary neoplasm, Acute pulmonary edema, Pneumonia, Tuberculosis, Bronchiectasis, and Pulmonary embolism'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough and dyspnea'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Pulmonary neoplasm, Acute pulmonary edema, Pneumonia, Tuberculosis, Bronchiectasis, and Pulmonary embolism'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of asthma or COPD?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, and history of COPD'. Based on the clinical findings, the ranked differential diagnosis is 'Acute COPD exacerbation / infection, Bronchospasm / acute asthma exacerbation, Pulmonary neoplasm, Acute pulmonary edema, Pneumonia, Tuberculosis, Bronchiectasis, and Pulmonary embolism'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have wheezing or a whistling sound when you breathe?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, and history of COPD'. Negative clinical findings: 'wheezing or whistling sound when breathing'. Based on the clinical findings, the ranked differential diagnosis is 'Acute COPD exacerbation / infection, Pulmonary neoplasm, Acute pulmonary edema, Pneumonia, Tuberculosis, Bronchiectasis, and Pulmonary embolism'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have chest pain or tightness?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, history of COPD, and chest pain or tightness'. Based on the clinical findings, the ranked differential diagnosis is 'Acute COPD exacerbation / infection, Pulmonary neoplasm, Acute pulmonary edema, Pneumonia, Tuberculosis, Pulmonary embolism, and Bronchiectasis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of smoking?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, history of COPD, chest pain or tightness, and the habit of smoking'. Based on the clinical findings, the ranked differential diagnosis is 'Acute COPD exacerbation / infection, Pulmonary neoplasm, Acute pulmonary edema, Pneumonia, Tuberculosis, Pulmonary embolism, and Bronchiectasis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a fever?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, history of COPD, chest pain or tightness, the habit of smoking'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'Acute COPD exacerbation / infection, Pulmonary neoplasm, Acute pulmonary edema, Pneumonia, Tuberculosis, Pulmonary embolism, and Bronchiectasis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a productive cough with sputum?",
+        "[inform] Positive clinical findings: 'cough, dyspnea, history of COPD, chest pain or tightness, the habit of smoking, and productive cough with sputum'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'Acute COPD exacerbation / infection, Pneumonia, Tuberculosis, and Bronchiectasis'. Since the patient has a history of COPD and a productive cough with sputum, the most likely diagnosis is Acute COPD exacerbation / infection."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 51-year-old female.",
+        "Yes, I am experiencing shortness of breath or difficulty breathing in a significant way.",
+        "No.",
+        "Yes, I have a chronic obstructive pulmonary disease (COPD).",
+        "No.",
+        "Yes.",
+        "Yes, I smoke cigarettes.",
+        "No.",
+        "Yes, I have a cough that produces colored or more abundant sputum than usual."
+    ]
+}

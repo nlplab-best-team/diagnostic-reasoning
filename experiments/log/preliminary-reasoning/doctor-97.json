@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have shortness of breath?",
+        "[ask] Positive clinical findings: 'cough and dyspnea'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Tuberculosis, Pneumonia, Pulmonary neoplasm, Acute pulmonary edema, and Bronchiectasis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough and dyspnea'. Negative clinical findings: 'fever'. Based on the clinical findings, the ranked differential diagnosis is 'Bronchospasm / acute asthma exacerbation, Acute COPD exacerbation / infection, Tuberculosis, Pneumonia, Pulmonary neoplasm, and Bronchiectasis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of asthma or COPD?",
+        "[ask] Positive clinical findings: 'cough and dyspnea'. Negative clinical findings: 'fever and history of asthma or COPD'. Based on the clinical findings, the ranked differential diagnosis is 'Tuberculosis, Pneumonia, Pulmonary neoplasm, and Bronchiectasis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have chest pain or tightness?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, and chest pain or tightness'. Negative clinical findings: 'fever and history of asthma or COPD'. Based on the clinical findings, the ranked differential diagnosis is 'Pneumonia, Pulmonary neoplasm, and Tuberculosis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of smoking?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, and chest pain or tightness'. Negative clinical findings: 'fever, history of asthma or COPD, and smoking'. Based on the clinical findings, the ranked differential diagnosis is 'Pneumonia and Pulmonary neoplasm'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a fever or chills?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, and chest pain or tightness'. Negative clinical findings: 'fever, history of asthma or COPD, smoking, and fever or chills'. Based on the clinical findings, the ranked differential diagnosis is 'Pneumonia and Pulmonary neoplasm'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a history of cancer or any other chronic illnesses?",
+        "[ask] Positive clinical findings: 'cough, dyspnea, chest pain or tightness, HIV infection, diabetes, corticosteroid use, and intravenous drug use'. Negative clinical findings: 'fever, history of asthma or COPD, smoking, and fever or chills'. Based on the clinical findings, the ranked differential diagnosis is 'Pneumonia, Pulmonary neoplasm, and Tuberculosis'. Since the patient has HIV infection, diabetes, corticosteroid use, and intravenous drug use, the most likely diagnosis is Pneumonia.",
+        "[inform] Based on the clinical findings, the most likely diagnosis is Pneumonia."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 59-year-old female.",
+        "Yes.",
+        "No.",
+        "No.",
+        "Yes.",
+        "No.",
+        "No.",
+        "Yes, I am infected with the human immunodeficiency virus (HIV) and I have diabetes. I also take corticosteroids and I am currently using intravenous drugs.",
+        ""
+    ]
+}

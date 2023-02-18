@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have shortness of breath?",
+        "Do you have chest pain or tightness?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Do you have a history of smoking?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have any other symptoms such as wheezing, fatigue, or muscle aches?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 44-year-old male.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "Yes, I have nasal congestion and a clear runny nose.",
+        "No, I don't have any other symptoms."
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have fever?",
+        "Do you have wheezing or a whistling sound when you breathe?",
+        "Do you have chest pain or tightness?",
+        "Do you have a history of smoking?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Do you have a history of COPD or asthma?",
+        "Do you have a history of exposure to environmental pollutants or toxins?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 40-year-old female.",
+        "Yes, I am experiencing shortness of breath or difficulty breathing in a significant way.",
+        "No.",
+        "No.",
+        "No.",
+        "Yes, I smoke cigarettes and I am a former smoker.",
+        "No.",
+        "No.",
+        "Yes, I am exposed to secondhand cigarette smoke on a daily basis."
+    ]
+}

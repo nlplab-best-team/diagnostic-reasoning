@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have fever?",
+        "Do you have a history of asthma or COPD?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "Do you have wheezing or a whistling sound when you breathe?",
+        "",
+        "",
+        ""
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 55-year-old female.",
+        "Yes, I am experiencing shortness of breath or difficulty breathing in a significant way.",
+        "No.",
+        "Yes, I have been diagnosed with asthma and have used a bronchodilator in the past.",
+        "No.",
+        "Yes, I have noticed a wheezing sound when I exhale.",
+        "",
+        "",
+        ""
+    ]
+}

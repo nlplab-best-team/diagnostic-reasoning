@@ -1,0 +1,21 @@
+Doctor: [ask] How may I help you today?
+Patient: I have a cough.
+Doctor: [ask] What's your sex and age?
+Patient: I am a 30-year-old male.
+Doctor: [ask] Do you have fever?
+Patient: Yes, I have a fever.
+Doctor: [ask] Do you have shortness of breath?
+Patient: No, I don't have shortness of breath.
+Doctor: [ask] Do you have chest pain or tightness?
+Patient: No, I don't have chest pain or tightness.
+Doctor: [ask] Do you have a productive cough with yellow or green sputum?
+Patient: No, I don't have a productive cough with yellow or green sputum.
+Doctor: [ask] Have you been in contact with people with similar symptoms in the past 2 weeks?
+Patient: No, I haven't been in contact with people with similar symptoms in the past 2 weeks.
+Doctor: [ask] Have you been exposed to any environmental pollutants or allergens?
+Patient: No, I haven't been exposed to any environmental pollutants or allergens.
+Doctor: [ask] Do you have a history of asthma or other respiratory conditions?
+Patient: No, I don't have a history of asthma or other respiratory conditions.
+Doctor: [ask] Have you traveled recently?
+Patient: Yes, I have traveled out of the country to N in the last 4 weeks.
+Doctor: [inform] Based on your description, the most likely diagnosis is Viral pharyngitis.

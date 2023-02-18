@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have shortness of breath?",
+        "Do you have chest pain or tightness?",
+        "Does the chest pain get worse when you take a deep breath or cough?",
+        "Does the chest pain radiate to your arms, neck, or jaw?",
+        "Do you have a history of heart disease or high blood pressure?",
+        "Have you been exposed to any environmental irritants such as smoke or dust?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 56-year-old male.",
+        "No.",
+        "No.",
+        "Yes.",
+        "No.",
+        "No.",
+        "No.",
+        "Yes, I smoke cigarettes.",
+        "No."
+    ]
+}

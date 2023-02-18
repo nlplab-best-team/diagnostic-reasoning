@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have fever?",
+        "Do you have chest pain or tightness?",
+        "Do you have a history of smoking?",
+        "Do you have a history of heart disease or any other chronic medical conditions?",
+        "",
+        "",
+        ""
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 70-year-old female.",
+        "Yes, I am experiencing shortness of breath or difficulty breathing in a significant way.",
+        "Yes, I have a fever (either felt or measured with a thermometer).",
+        "Yes, I have pain somewhere related to my reason for consulting.",
+        "Yes, I smoke cigarettes.",
+        "Yes, I have Parkinson's disease and I have had a stroke. I also have a chronic obstructive pulmonary disease (COPD).",
+        "",
+        "",
+        ""
+    ]
+}

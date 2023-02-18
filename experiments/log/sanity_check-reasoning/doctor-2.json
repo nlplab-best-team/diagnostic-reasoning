@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have shortness of breath?",
+        "[ask] Positive clinical findings: 'cough'. Negative clinical findings: 'dyspnea'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute laryngitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, Tuberculosis, Bronchitis, Pancreatic neoplasm, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have sore throat, runny nose, or nasal congestion?",
+        "[ask] Positive clinical findings: 'cough and nasal congestion'. Negative clinical findings: 'dyspnea, rhinorrhea, and sore throat'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Allergic sinusitis, Acute rhinosinusitis, Influenza, Bronchitis, Tuberculosis, and GERD'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough, nasal congestion, and fever'. Negative clinical findings: 'dyspnea, rhinorrhea, and sore throat'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Bronchitis, Tuberculosis, and Acute rhinosinusitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a headache?",
+        "[ask] Positive clinical findings: 'cough, nasal congestion, fever, and headache'. Negative clinical findings: 'dyspnea, rhinorrhea, and sore throat'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, and Bronchitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a productive cough with yellow or green sputum?",
+        "[ask] Positive clinical findings: 'cough, nasal congestion, fever, and headache'. Negative clinical findings: 'dyspnea, rhinorrhea, sore throat, and productive cough with yellow or green sputum'. Based on the clinical findings, the ranked differential diagnosis is 'URTI and Influenza'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a rash?",
+        "[ask] Positive clinical findings: 'cough, nasal congestion, fever, and headache'. Negative clinical findings: 'dyspnea, rhinorrhea, sore throat, productive cough with yellow or green sputum, and rash'. Based on the clinical findings, the ranked differential diagnosis is 'URTI and Influenza'. Since the patient has fever and headache, the most likely diagnosis is Influenza.",
+        "[ask] Is there anything else I should know?",
+        "[inform] If there is anything else you would like to tell me, please do not hesitate to let me know."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 30-year-old male.",
+        "No.",
+        "Yes, I have nasal congestion.",
+        "Yes, I have a fever.",
+        "Yes, I have a headache.",
+        "No.",
+        "No.",
+        "",
+        ""
+    ]
+}

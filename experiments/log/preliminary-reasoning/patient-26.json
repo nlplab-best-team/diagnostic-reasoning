@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have shortness of breath?",
+        "Do you have fever?",
+        "Do you have chest pain or tightness?",
+        "Do you have sore throat, runny nose, or nasal congestion?",
+        "Do you have myalgia or muscle soreness?",
+        "Do you have a productive cough with yellow or green sputum?",
+        "",
+        ""
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 53-year-old male.",
+        "Yes.",
+        "Yes, I have a fever.",
+        "No.",
+        "Yes, I have a sore throat.",
+        "No.",
+        "No, I have been coughing up blood.",
+        "",
+        ""
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have shortness of breath?",
+        "Do you have chest pain or tightness?",
+        "Is the chest pain sharp or dull?",
+        "Does the chest pain worsen with deep breaths or when you move?",
+        "Do you have any other symptoms such as nausea, vomiting, or sweating?",
+        "Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "Have you been under any stress or anxiety lately?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 24-year-old female.",
+        "No.",
+        "No.",
+        "Yes.",
+        "The pain is haunting, sensitive, tugging, burning, and sickening.",
+        "No, the pain does not worsen with deep breaths or when I move.",
+        "No, I do not have any other symptoms.",
+        "No, I have not been in contact with people with similar symptoms in the past 2 weeks.",
+        "Yes, I have been under some stress and anxiety lately."
+    ]
+}

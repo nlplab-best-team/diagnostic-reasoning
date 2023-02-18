@@ -1,0 +1,27 @@
+{
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Do you have fever?",
+        "[ask] Do you have shortness of breath?",
+        "[ask] Do you have chest pain or tightness?",
+        "[ask] Do you have a productive cough with yellow or green sputum?",
+        "[ask] Do you have a dry cough?",
+        "[ask] Have you been exposed to any environmental irritants such as smoke, dust, or pollen?",
+        "[ask] Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "[ask] Do you have any other symptoms such as fatigue, headache, or body aches?",
+        "[inform] Based on your description, the most likely diagnosis is Chronic rhinosinusitis."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 53-year-old female.",
+        "No.",
+        "No.",
+        "No.",
+        "No.",
+        "Yes.",
+        "Yes, I smoke cigarettes.",
+        "No.",
+        "Yes, I have pain in my mouth, forehead, right cheek, nose, and right eye. The pain is sharp and radiates to the back of my head, nose, and right temple."
+    ]
+}

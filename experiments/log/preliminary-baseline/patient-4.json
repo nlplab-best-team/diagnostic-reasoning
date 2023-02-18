@@ -1,0 +1,26 @@
+{
+    "doctor_utters": [
+        "How may I help you today?",
+        "What's your sex and age?",
+        "Do you have fever?",
+        "Do you have shortness of breath?",
+        "Do you have chest pain or tightness?",
+        "Is the pain worse when you take a deep breath or cough?",
+        "Does the pain radiate to your shoulder, arm, or jaw?",
+        "Does the pain come and go or is it constant?",
+        "Have you had any recent changes in your diet or lifestyle?",
+        "Have you been exposed to any new allergens or irritants?"
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 60-year-old male.",
+        "No.",
+        "No.",
+        "Yes, I have pain related to my reason for consulting.",
+        "No.",
+        "No, the pain does not radiate to any other locations.",
+        "The pain is constant.",
+        "Yes, I have been traveling out of the country to N in the last 4 weeks.",
+        "No, I have not been exposed to any new allergens or irritants."
+    ]
+}
