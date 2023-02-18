@@ -3,6 +3,7 @@ import openai
 from argparse import Namespace
 
 class ModelAPI(object):
+    cost_per_1000tokens = 0.02
 
     def __init__(self, config: Namespace):
         self._config = config

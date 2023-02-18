@@ -72,12 +72,19 @@ class Experiment(object):
         self._doc_model = ModelAPI(self._doc_config["model_config"])
 
     def estimate_cost(self) -> float:
-        raise NotImplementedError
+        return 2 * len(self._samples) * 2048 * self._ask_turns * ModelAPI.cost_per_1000tokens / 1000
     
     def run(self, api_interval: int) -> None:
         """
             Run the experiment. The interval between API calls is set to [api_interval] seconds.
         """
+        # Cost estimation
+        cost = self.estimate_cost()
+        flag = input(f"Estimated cost: {cost} USD (~{cost * 30} TWD). Continue? (Y)")
+        if flag != 'Y':
+            logging.info("Experiment aborted.")
+            return
+        
         for i, pat in enumerate(self._samples.itertuples()):
             logging.info(f"===== Running with sample {i + 1} -> PATHOLOGY: {pat.PATHOLOGY} =====")
             # Initialize the patient
@@ -104,7 +111,6 @@ class Experiment(object):
                 mode=self._group
             )
             logging.info(f"Doctor initialized.")
-            logging.info(doctor.get_prompt())
             # logging.info(patient._dialogue_history is doctor._dialogue_history)
             # History taking
             a = patient.answer(question=doctor.greeting(), answer=patient.inform_initial_evidence())
@@ -118,7 +124,7 @@ class Experiment(object):
                 logging.info(f"Turn {j + 1} completed:")
                 logging.info(f"Doctor: [reasoning] {r}[question] {q}")
                 logging.info(f"Patient: {a}")
-            doctor.inform_diagnosis(prev_answer=a)
+            doctor.inform_diagnosis(prev_answer=a, utter='D' if self._debug else '')
             logging.info(f"===== Sample {i + 1} completed =====")
             (self._log_path / f"{i + 1}.txt").write_text(str(doctor._dialogue_history))
     
