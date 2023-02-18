@@ -142,9 +142,8 @@ class DoctorBot(Bot):
         self._prompt = prefix + '\n\n' + '\n'.join(shots + current_dialogue).strip()
 
     def greeting(self) -> str:
-        greeting_text = self.ask_prefix + ' ' + self._greeting
-        self._dialogue_history.add_doctor_utter(greeting_text)
-        return greeting_text
+        self._dialogue_history.add_doctor_utter(self.ask_prefix + ' ' + self._greeting)
+        return self._greeting
     
     def ask_basic_info(self) -> str:
         return self._basic_info_q
