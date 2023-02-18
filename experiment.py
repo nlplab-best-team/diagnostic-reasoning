@@ -6,6 +6,7 @@ import yaml
 import logging
 import pandas as pd
 from pathlib import Path
+from argparse import Namespace
 
 from bot import PatientBot, DoctorBot
 from utils import load_all_diagnoses
@@ -59,7 +60,7 @@ class Experiment(object):
             profile=Profile(self._pat_config["shots"][0]["profile"]),
             dialogue=Dialogue(**self._pat_config["shots"][0]["dialogue"])
         )]
-        self._pat_model = ModelAPI(self._pat_config["model_config"])
+        self._pat_model = ModelAPI(Namespace(**self._pat_config["model_config"]))
 
         # Doctor
         self._doc_config = json.loads((Path(doc_config_path) / f"{name}.json").read_bytes())
@@ -69,7 +70,7 @@ class Experiment(object):
             profile=self._doc_profile,
             dialogue=Dialogue(**json.loads((Path(doc_config_path) / group / f"{shot}.json").read_bytes()))
         ) for shot in self._doc_config["shots"]]
-        self._doc_model = ModelAPI(self._doc_config["model_config"])
+        self._doc_model = ModelAPI(Namespace(**self._doc_config["model_config"]))
 
     def estimate_cost(self) -> float:
         return 2 * len(self._samples) * 2048 * self._ask_turns * ModelAPI.cost_per_1000tokens / 1000
@@ -114,7 +115,7 @@ class Experiment(object):
             # logging.info(patient._dialogue_history is doctor._dialogue_history)
             # History taking
             a = patient.answer(question=doctor.greeting(), answer=patient.inform_initial_evidence())
-            q = doctor.ask(prev_answer=a, question=doctor.ask_basic_info())
+            r, q = doctor.ask(prev_answer=a, question=doctor.ask_basic_info())
             a = patient.answer(question=q, answer=patient.inform_basic_info())
             for j in range(self._ask_turns):
                 r, q = doctor.ask(prev_answer=a, question=f"{'R [Question] ' if (self._group == 'reasoning') else ''}Q{j}" if self._debug else '')
@@ -139,5 +140,5 @@ if __name__ == "__main__":
         config = yaml.safe_load(f)
         logging.info(f"Configuration loaded: {json.dumps(config, indent=4)}")
     
-    exp = Experiment(**config, debug=True)
-    exp.run(api_interval=0)
+    exp = Experiment(**config, debug=False)
+    exp.run(api_interval=10)
