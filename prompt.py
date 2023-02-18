@@ -96,6 +96,8 @@ class PatientProfile(Profile):
                 if data_type not in ['C', 'M']:
                     raise ValueError(f"The date_type of evidence {evidence_name} should be either categorical (C) or multichoice (M). Please check!")
                 evidence_value = evidence[1]
+                if evidence_value == 'N': # the bug in the DDxPlus dataset
+                    continue
                 if data_type == 'C': # categorical
                     d[data_type][evidence_name] = evidence_value
                 else: # multichoice
