@@ -163,3 +163,15 @@ common_mappings = {
     "voice change": "volume_parole",
     "chest pain": "douleurxx_endroitducorps_@_c\u00f4t\u00e9_du_thorax_D_"
 }
+
+"""
+For selecting the data subset with pathology in the top k ddx.
+"""
+def get_topk_subset(
+        df: pd.DataFrame,
+        k: int = 1
+    ) -> pd.DataFrame:
+
+    subset_df = df[df.apply(lambda df: df.PATHOLOGY_ENG in df.DIFFERENTIAL_DIAGNOSIS_WITHOUT_PROB_ENG[:k], axis=1)]
+
+    return subset_df
