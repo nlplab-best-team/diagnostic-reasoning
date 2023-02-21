@@ -141,8 +141,6 @@ class Experiment(object):
             return
         
         for i, pat in enumerate(self._samples.itertuples()):
-            if (i < 63): # NOTE: conduct the subset
-                continue
             logging.info(f"===== Running with sample {i + 1} -> PATHOLOGY: {self.pathology_to_eng(pat.PATHOLOGY)} =====")
             # Initialize the patient
             patient = PatientBot(
@@ -201,7 +199,7 @@ if __name__ == "__main__":
         config = yaml.safe_load(f)
         logging.info(f"Configuration loaded: {json.dumps(config, indent=4)}")
     
-    exp = Experiment(**config, debug=False)
-    # exp.run(api_interval=15)
-    acc = exp.calc_acc(count=100, verbose=True)
-    print(f"Accuracy: {acc * 100:.2f}%")
+    exp = Experiment(**config, debug=True)
+    exp.run(api_interval=5)
+    # acc = exp.calc_acc(count=100, verbose=True)
+    # print(f"Accuracy: {acc * 100:.2f}%")
