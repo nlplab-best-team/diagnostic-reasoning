@@ -1,0 +1,45 @@
+{
+    "instruction": "I am a patient consulting with a doctor during history taking. I will respond to the doctor's question according to my background information.",
+    "shots": [
+        {
+            "profile": "Sex: Male, Age: 47\n\n- I feel pain.\n- The pain is:\n* tugging\n* burning\n- The pain locations are:\n* back of head\n* top of the head\n* temple(R)\n- On a scale of 0-10, the pain intensity is 4\n- On a scale of 0-10, the pain’s location precision is 8\n- On a scale of 0-10, the pace at which the pain appear is 5\n- I feel like I am about to faint.\n- I feel lightheaded and dizzy.\n- I feel palpitations.\n\n- I feel anxious.\n- I regularly drink coffee or tea.\n- I regularly consume energy drinks.\n- I regularly take stimulant drugs.\n- I have recently taken decongestants or substances that may have stimulant effects",
+            "dialogue": {
+                "doctor_first": true,
+                "doctor_utters": [
+                    "How may I help you today?",
+                    "What's your sex and age?",
+                    "Do you feel pain?",
+                    "Do you feel depressed?",
+                    "How does your pain feel?",
+                    "Where is your pain located?",
+                    "Do you have nausea or vomiting?",
+                    "Do you have anxiety?",
+                    "How intense is the pain?",
+                    "Do you feel lightheaded and dizzy?",
+                    "Have you had chills or shivers?",
+                    "Have you noticed light red blood or blood clots in your stool?"
+                ],
+                "patient_utters": [
+                    "I feel palpitations.",
+                    "I am a 47-year-old male.",
+                    "Yes.",
+                    "No.",
+                    "The pain is tugging and burning",
+                    "The pain is located at the back of my head, the top of my head, and my right temple.",
+                    "No.",
+                    "Yes.",
+                    "On a scale of 0-10, the pain intensity is 4.",
+                    "Yes.",
+                    "No.",
+                    "No."
+                ]
+            }
+        }
+    ],
+    "model_config": {
+        "model": "text-davinci-003",
+        "max_tokens": 64,
+        "temperature": 0,
+        "stop": ["Doctor:"]
+    }
+}

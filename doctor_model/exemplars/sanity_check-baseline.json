@@ -1,0 +1,13 @@
+{
+    "instruction": {
+        "baseline": "I am a doctor taking a medical history from a patient. I will try my best to ask comprehensive and important questions in order to make an accurate final diagnosis. The diagnosis should be selected from the possible diagnoses.",
+        "reasoning": "I am a doctor taking a medical history from a patient. I will first review the patient's positive and negative clinical findings, formulate ranked differential diagnosis, and ask comprehensive and important questions to narrow down the differential diagnosis. Finally, I will make an accurate final diagnosis based on the collected clinical findings. The diagnosis should be selected from the possible diagnoses."
+    },
+    "shots": ["influenza", "laryngitis"],
+    "model_config": {
+        "model": "text-davinci-003",
+        "max_tokens": 192,
+        "temperature": 0,
+        "stop": ["Patient:"]
+    }
+}

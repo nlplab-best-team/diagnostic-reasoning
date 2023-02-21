@@ -15,6 +15,7 @@ class Profile(object):
 class PatientProfile(Profile):
     delimiter = "_@_"
     release_evidences = json.loads((Path(__file__).parent / "ddxplus/release_evidences.json").read_bytes())
+    release_conditions = json.loads((Path(__file__).parent / "ddxplus/release_conditions.json").read_bytes())
     evidence2desc = json.loads((Path(__file__).parent / "ddxplus/our_evidences_to_qa.json").read_bytes())
     desc_field = "affirmative_en"
     
@@ -95,6 +96,8 @@ class PatientProfile(Profile):
                 if data_type not in ['C', 'M']:
                     raise ValueError(f"The date_type of evidence {evidence_name} should be either categorical (C) or multichoice (M). Please check!")
                 evidence_value = evidence[1]
+                if evidence_value == 'N': # the bug in the DDxPlus dataset
+                    continue
                 if data_type == 'C': # categorical
                     d[data_type][evidence_name] = evidence_value
                 else: # multichoice
@@ -108,6 +111,10 @@ class PatientProfile(Profile):
     @property
     def initial_evidence(self) -> str:
         return self.evidence2desc[self._initial_evidence][self.desc_field]
+    
+    @property
+    def basic_info(self) -> str:
+        return f"I am a {self._age}-year-old {'male' if self._sex == 'M' else 'female'}."
 
 class DoctorProfile(Profile):
     diagnoses_prefix: str = "Possible diagnoses: "

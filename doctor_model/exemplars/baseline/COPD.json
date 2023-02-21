@@ -1,0 +1,26 @@
+{
+    "doctor_first": true,
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Do you have difficulty breathing?",
+        "[ask] Do you have fever?",
+        "[ask] Do you wheeze when you breathe?",
+        "[ask] Do you have past history of COPD?",
+        "[ask] Do you have past history of allergy or asthma?",
+        "[ask] Do you smoke cigarettes?",
+        "[ask] Does your cough come with sputum or blood?",
+        "[inform] Based on your symptoms, the most likely diagnosis is Acute COPD exacerbation / infection."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 68-year-old female.",
+        "Yes.",
+        "No.",
+        "Yes, I have noticed a wheezing sound when I exhale.",
+        "No.",
+        "No.",
+        "Yes.",
+        "No."
+    ]
+}

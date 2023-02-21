@@ -1,0 +1,28 @@
+{
+    "doctor_first": true,
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] How old are you?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough and fever'. Based on the clinical findings, the differential diagnosis is 'URTI, Viral pharyngitis, Tuberculosis, Acute laryngitis, Influenza, Bronchitis, Acute otitis media, Pneumonia, Acute rhinosinusitis, Ebola, and Bronchiolitis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have difficulty breathing or shortness of breath?",
+        "[ask] Positive clinical findings: 'cough, fever, and dyspnea'. Based on the clinical findings, the differential diagnosis is 'Tuberculosis, Bronchitis, Pneumonia, Bronchiolitis, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have myalgia (muscular aches)?",
+        "[ask] Positive clinical findings: 'cough, fever, and dyspnea'. Negative clinical findings: 'myalgia'. Based on the clinical findings, the differential diagnosis is 'Tuberculosis, Bronchitis, Pneumonia, Bronchiolitis, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have productive cough?",
+        "[ask] Positive clinical findings: 'productive cough with colored sputum, fever, and dyspnea'. Negative clinical findings: 'myalgia'. Based on the clinical findings, the differential diagnosis is 'Bronchitis, Pneumonia, and Bronchiectasis'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you feel pain? If yes, where is the pain located?",
+        "[ask] Positive clinical findings: 'productive cough with colored sputum, fever, dyspnea, and chest pain'. Negative clinical findings: 'myalgia'. Based on the clinical findings, the differential diagnosis is 'Bronchitis and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Did you have any respiratory diseases before?",
+        "[ask] Positive clinical findings: 'productive cough with colored sputum, fever, dyspnea, chest pain, and history of chronic obstructive pulmonary disease (COPD)'. Negative clinical findings: 'myalgia'. Based on the clinical findings, the differential diagnosis is 'Bronchitis and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you smoke?",
+        "[ask] Positive clinical findings: 'productive cough with colored sputum, fever, dyspnea, chest pain, and history of chronic obstructive pulmonary disease (COPD)'. Negative clinical findings: 'myalgia and habit of smoking'. Based on the clinical findings, the differential diagnosis is 'Bronchitis and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Have you been in contact with many people or people of similar symptoms before?",
+        "[inform] Positive clinical findings: 'productive cough with colored sputum, fever, dyspnea, and chest pain, history of chronic obstructive pulmonary disease (COPD)'. Negative clinical findings: 'myalgia, habit of smoking, and contact history'. It is likely that this patient has Bronchitis or Pneumonia. Based on the collected clinical findings, the most likely diagnosis is Bronchitis."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am 51 years old.",
+        "Yes, I have a fever.",
+        "Yes, I am experiencing shortness of breath.",
+        "No.",
+        "Yes, I have a cough that produces colored or more abundant sputum than usual.",
+        "Yes, I feel pain. The pain is located on the side of my chest, my pharynx, my right and left breast, and my right posterior chest wall.",
+        "Yes, I have a chronic obstructive pulmonary disease (COPD).",
+        "No.",
+        "No, I have not been in contact with many people or people of similar symptoms before."
+    ]
+}

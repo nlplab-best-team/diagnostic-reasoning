@@ -1,0 +1,21 @@
+# experiment
+name: preliminary-baseline
+log_path: "./experiments/log"
+
+# samples
+dataset_path: "./ddxplus/release_test_patients.csv"
+sample_id_path: "./experiments/preliminary_ids.json"
+sample_size: 100
+initial_evidence: "toux"
+
+# group
+group: "baseline"
+
+# patient simulator
+pat_config_path: "./patient_simulator/exemplars"
+
+# doctor
+doc_config_path: "./doctor_model/exemplars"
+
+# history taking
+ask_turns: 8

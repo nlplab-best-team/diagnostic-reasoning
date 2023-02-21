@@ -1,0 +1,26 @@
+{
+    "doctor_first": true,
+    "doctor_utters": [
+        "[ask] How may I help you today?",
+        "[ask] What's your sex and age?",
+        "[ask] Positive clinical findings: 'cough'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Bronchospasm / acute asthma exacerbation, Allergic sinusitis, Tuberculosis, Bronchiectasis, Chronic rhinosinusitis, Acute COPD exacerbation / infection, Acute laryngitis, Bronchitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have shortness of breath?",
+        "[ask] Positive clinical findings: 'cough'. Negative clinical findings: 'dyspnea'. Based on the clinical findings, the ranked differential diagnosis is 'Viral pharyngitis, URTI, Allergic sinusitis, Chronic rhinosinusitis, Acute laryngitis, GERD, Acute otitis media, Influenza, Acute rhinosinusitis, Tuberculosis, Bronchitis, Pancreatic neoplasm, Bronchospasm / acute asthma exacerbation, Bronchiectasis, Acute COPD exacerbation / infection, and Pneumonia'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have sore throat, runny nose, or nasal congestion?",
+        "[ask] Positive clinical findings: 'cough and sore throat'. Negative clinical findings: 'dyspnea, rhinorrhea, and nasal congestion'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Influenza, Bronchitis, Ebola, and GERD'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have fever?",
+        "[ask] Positive clinical findings: 'cough and sore throat'. Negative clinical findings: 'dyspnea, rhinorrhea, nasal congestion, and fever'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Bronchitis, Influenza, Ebola, and GERD'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth?",
+        "[ask] Positive clinical findings: 'cough and sore throat'. Negative clinical findings: 'dyspnea, rhinorrhea, nasal congestion, fever, and burning sensation in the chest'. Based on the clinical findings, the ranked differential diagnosis is 'URTI, Bronchitis, Influenza, and Ebola'. To narrow down the differential diagnosis, the next question to ask is [Question] Have you noticed any changes in your voice like hoarseness?",
+        "[ask] Positive clinical findings: 'cough, sore throat, and voice change'. Negative clinical findings: 'dyspnea, rhinorrhea, nasal congestion, fever, or burning sensation in the chest'. Based on the clinical findings, the ranked differential diagnosis is 'Acute laryngitis, Viral pharyngitis, and URTI'. To narrow down the differential diagnosis, the next question to ask is [Question] Do you smoke?",
+        "[ask] Positive clinical findings: 'cough, sore throat, voice change, and the habit of smoking'. Negative clinical findings: 'dyspnea, rhinorrhea, nasal congestion, fever, or burning sensation in the chest'. Based on the clinical findings, the ranked differential diagnosis is 'Acute laryngitis, Viral pharyngitis, and URTI'. To narrow down the differential diagnosis, the next question to ask is [Question] Have you been in contact with people with similar symptoms in the past 2 weeks?",
+        "[inform] Positive clinical findings: 'cough, sore throat, voice change, the habit of smoking, and the history of common cold in the past 2 weeks'. Negative clinical findings: 'dyspnea, rhinorrhea, nasal congestion, fever, or burning sensation in the chest'. Based on the clinical findings, the ranked differential diagnosis is 'Acute laryngitis, Viral pharyngitis, or URTI'. Since the patient has voice change and the history of common cold in the past 2 weeks, the most likely diagnosis is Acute laryngitis."
+    ],
+    "patient_utters": [
+        "I have a cough.",
+        "I am a 24-year-old female.",
+        "No.",
+        "Yes, I have a sore throat.",
+        "No.",
+        "No.",
+        "Yes, I have noticed that the tone of my voice has become deeper, softer or hoarse.",
+        "Yes, I smoke cigarettes.",
+        "Yes, I have had a cold in the last 2 weeks."
+    ]
+}
