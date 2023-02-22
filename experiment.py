@@ -7,6 +7,7 @@ import json
 import yaml
 import logging
 import pandas as pd
+from typing import List
 from pathlib import Path
 from argparse import Namespace
 from colorama import Fore, Style
@@ -116,7 +117,7 @@ class Experiment(object):
                 elif len(dxs) > 1:
                     raise ValueError("There shouldn't be more than 1 match of 'dx_regex'. Please check.")
             if not dx:
-                raise ValueError("There should be at least 1 diagnosis in each dialouge.")
+                logging.warning(Fore.YELLOW + f"There should be at least 1 diagnosis in each dialouge. (Filename = {filename})" + Style.RESET_ALL)
             preds.append(dx)
         assert len(preds) == len(labels)
         # Comparison
@@ -128,10 +129,12 @@ class Experiment(object):
                 ncorrects += 1
         return ncorrects / len(preds)
 
-    def run(self, api_interval: int, start_with: int = 1) -> None:
+    def run(self, api_interval: int, start_end: List[int] = [1, int(1e8)]) -> None:
         """
             Run the experiment. The interval between API calls is set to [api_interval] seconds.
         """
+        if len(start_end) != 2:
+            raise ValueError("The length of 'start_end' must be 2.")
         # TODO: save experiment config (yml)
         # Cost estimation
         cost = self.estimate_cost()
@@ -141,7 +144,8 @@ class Experiment(object):
             return
         
         for i, pat in enumerate(self._samples.itertuples()):
-            if i < (start_with - 1): # Start with the [start_with]-th example
+            start, end = start_end
+            if (i < start - 1) or (i >= end): # Start with the [start]-th example and end with the [end]-th example
                 continue
             logging.info(f"===== Running with sample {i + 1} -> PATHOLOGY: {self.pathology_to_eng(pat.PATHOLOGY)} =====")
             # Initialize the patient
@@ -204,6 +208,6 @@ if __name__ == "__main__":
         logging.info(f"Configuration loaded: {json.dumps(config, indent=4)}")
     
     exp = Experiment(**config, debug=False)
-    exp.run(api_interval=10, start_with=23)
-    # acc = exp.calc_acc(count=10, verbose=True)
+    exp.run(api_interval=5, start_end=[1, 5])
+    # acc = exp.calc_acc(count=45, verbose=True)
     # print(f"Accuracy: {acc * 100:.2f}%")
