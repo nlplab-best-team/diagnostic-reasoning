@@ -128,7 +128,7 @@ class Experiment(object):
                 ncorrects += 1
         return ncorrects / len(preds)
 
-    def run(self, api_interval: int) -> None:
+    def run(self, api_interval: int, start_with: int = 1) -> None:
         """
             Run the experiment. The interval between API calls is set to [api_interval] seconds.
         """
@@ -141,6 +141,8 @@ class Experiment(object):
             return
         
         for i, pat in enumerate(self._samples.itertuples()):
+            if i < (start_with - 1): # Start with the [start_with]-th example
+                continue
             logging.info(f"===== Running with sample {i + 1} -> PATHOLOGY: {self.pathology_to_eng(pat.PATHOLOGY)} =====")
             # Initialize the patient
             patient = PatientBot(
@@ -170,6 +172,7 @@ class Experiment(object):
             a = patient.answer(question=doctor.greeting(), answer=patient.inform_initial_evidence())
             r, q = doctor.ask(prev_answer=a, question=doctor.ask_basic_info())
             a = patient.answer(question=q, answer=patient.inform_basic_info())
+            
             for j in range(self._ask_turns):
                 r, q = doctor.ask(prev_answer=a, question=f"{'R [Question] ' if (self._group == 'reasoning') else ''}Q{j}" if self._debug else '')
                 time.sleep(api_interval)
@@ -181,6 +184,7 @@ class Experiment(object):
                 # Save dialogues
                 self.save_dialogues(role="patient", idx=i + 1, dialogue=patient._dialogue_history)
                 self.save_dialogues(role="doctor", idx=i + 1, dialogue=doctor._dialogue_history)
+
             inform = doctor.inform_diagnosis(prev_answer=a, utter='D' if self._debug else '')
             logging.info(f"Doctor: {inform}")
             logging.info(f"===== Sample {i + 1} completed =====")
@@ -199,7 +203,7 @@ if __name__ == "__main__":
         config = yaml.safe_load(f)
         logging.info(f"Configuration loaded: {json.dumps(config, indent=4)}")
     
-    exp = Experiment(**config, debug=True)
-    exp.run(api_interval=5)
-    # acc = exp.calc_acc(count=100, verbose=True)
+    exp = Experiment(**config, debug=False)
+    exp.run(api_interval=10, start_with=23)
+    # acc = exp.calc_acc(count=10, verbose=True)
     # print(f"Accuracy: {acc * 100:.2f}%")
