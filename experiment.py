@@ -55,9 +55,11 @@ class Experiment(object):
         logging.info(f"Sample size: {len(self._samples)}")
         logging.info(f"Examples:")
         logging.info(self._samples.head()[["AGE", "SEX", "PATHOLOGY", "INITIAL_EVIDENCE"]])
+        logging.info(f"Diagnosis stats:")
+        logging.info(self._samples.groupby("PATHOLOGY").size().sort_values(ascending=False) / len(self._samples))
 
         # Patient
-        self._pat_config = json.loads((Path(pat_config_path) / f"{name}.json").read_bytes())
+        self._pat_config = json.loads((Path(pat_config_path) / f"{group}.json").read_bytes())
         self._pat_instruction = self._pat_config["instruction"]
         self._pat_shots = [Shot(
             profile=Profile(self._pat_config["shots"][0]["profile"]),
@@ -66,7 +68,7 @@ class Experiment(object):
         self._pat_model = ModelAPI(Namespace(**self._pat_config["model_config"]))
 
         # Doctor
-        self._doc_config = json.loads((Path(doc_config_path) / f"{name}.json").read_bytes())
+        self._doc_config = json.loads((Path(doc_config_path) / f"{group}.json").read_bytes())
         self._doc_instruction = self._doc_config["instruction"][group]
         self._doc_profile = DoctorProfile(possible_diagnoses=load_all_diagnoses())
         self._doc_shots = [Shot(
@@ -208,6 +210,6 @@ if __name__ == "__main__":
         logging.info(f"Configuration loaded: {json.dumps(config, indent=4)}")
     
     exp = Experiment(**config, debug=False)
-    exp.run(api_interval=5, start_end=[1, 5])
-    # acc = exp.calc_acc(count=45, verbose=True)
-    # print(f"Accuracy: {acc * 100:.2f}%")
+    # exp.run(api_interval=15, start_end=[50, 50])
+    acc = exp.calc_acc(count=50, verbose=True)
+    print(f"Accuracy: {acc * 100:.2f}%")
