@@ -1,6 +1,8 @@
 import re
+import openai
 from typing import List
 from pathlib import Path
+from colorama import Fore, Style
 
 from model import ModelAPI
 from prompt import Shot, Profile, PatientProfile, DoctorProfile, Dialogue
@@ -60,15 +62,12 @@ class Bot(object):
             Generate completion according to the current prompt and an additional prefix.
         """
         self._refresh_prompt()
-        # TODO: call the api
-        res = self._model.complete(prompt=self._prompt + prefix)
-        return res["choices"][0]["text"]
-        
-    # def add_to_history(self, utterance: str) -> None:
-    #     """
-    #         Append an utterance to the dialogue history.
-    #     """
-    #     raise NotImplementedError
+        try:
+            res = self._model.complete(prompt=self._prompt + prefix)["choices"][0]["text"]
+        except openai.error.InvalidRequestError:
+            print(Fore.YELLOW + "Invalid request. Stop the dialogue." + Style.RESET_ALL)
+            res = "(End of dialogue.)"
+        return res
 
     def log(self, mode: str, file: str) -> None:
         if mode == "text":

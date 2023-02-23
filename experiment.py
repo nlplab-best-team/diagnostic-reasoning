@@ -7,6 +7,7 @@ import json
 import yaml
 import logging
 import pandas as pd
+from typing import List
 from pathlib import Path
 from argparse import Namespace
 from colorama import Fore, Style
@@ -54,9 +55,11 @@ class Experiment(object):
         logging.info(f"Sample size: {len(self._samples)}")
         logging.info(f"Examples:")
         logging.info(self._samples.head()[["AGE", "SEX", "PATHOLOGY", "INITIAL_EVIDENCE"]])
+        logging.info(f"Diagnosis stats:")
+        logging.info(self._samples.groupby("PATHOLOGY").size().sort_values(ascending=False) / len(self._samples))
 
         # Patient
-        self._pat_config = json.loads((Path(pat_config_path) / f"{name}.json").read_bytes())
+        self._pat_config = json.loads((Path(pat_config_path) / f"{group}.json").read_bytes())
         self._pat_instruction = self._pat_config["instruction"]
         self._pat_shots = [Shot(
             profile=Profile(self._pat_config["shots"][0]["profile"]),
@@ -65,7 +68,7 @@ class Experiment(object):
         self._pat_model = ModelAPI(Namespace(**self._pat_config["model_config"]))
 
         # Doctor
-        self._doc_config = json.loads((Path(doc_config_path) / f"{name}.json").read_bytes())
+        self._doc_config = json.loads((Path(doc_config_path) / f"{group}.json").read_bytes())
         self._doc_instruction = self._doc_config["instruction"][group]
         self._doc_profile = DoctorProfile(possible_diagnoses=load_all_diagnoses())
         self._doc_shots = [Shot(
@@ -116,7 +119,7 @@ class Experiment(object):
                 elif len(dxs) > 1:
                     raise ValueError("There shouldn't be more than 1 match of 'dx_regex'. Please check.")
             if not dx:
-                raise ValueError("There should be at least 1 diagnosis in each dialouge.")
+                logging.warning(Fore.YELLOW + f"There should be at least 1 diagnosis in each dialouge. (Filename = {filename})" + Style.RESET_ALL)
             preds.append(dx)
         assert len(preds) == len(labels)
         # Comparison
@@ -128,10 +131,12 @@ class Experiment(object):
                 ncorrects += 1
         return ncorrects / len(preds)
 
-    def run(self, api_interval: int) -> None:
+    def run(self, api_interval: int, start_end: List[int] = [1, int(1e8)]) -> None:
         """
             Run the experiment. The interval between API calls is set to [api_interval] seconds.
         """
+        if len(start_end) != 2:
+            raise ValueError("The length of 'start_end' must be 2.")
         # TODO: save experiment config (yml)
         # Cost estimation
         cost = self.estimate_cost()
@@ -141,6 +146,9 @@ class Experiment(object):
             return
         
         for i, pat in enumerate(self._samples.itertuples()):
+            start, end = start_end
+            if (i < start - 1) or (i >= end): # Start with the [start]-th example and end with the [end]-th example
+                continue
             logging.info(f"===== Running with sample {i + 1} -> PATHOLOGY: {self.pathology_to_eng(pat.PATHOLOGY)} =====")
             # Initialize the patient
             patient = PatientBot(
@@ -170,6 +178,7 @@ class Experiment(object):
             a = patient.answer(question=doctor.greeting(), answer=patient.inform_initial_evidence())
             r, q = doctor.ask(prev_answer=a, question=doctor.ask_basic_info())
             a = patient.answer(question=q, answer=patient.inform_basic_info())
+            
             for j in range(self._ask_turns):
                 r, q = doctor.ask(prev_answer=a, question=f"{'R [Question] ' if (self._group == 'reasoning') else ''}Q{j}" if self._debug else '')
                 time.sleep(api_interval)
@@ -181,6 +190,7 @@ class Experiment(object):
                 # Save dialogues
                 self.save_dialogues(role="patient", idx=i + 1, dialogue=patient._dialogue_history)
                 self.save_dialogues(role="doctor", idx=i + 1, dialogue=doctor._dialogue_history)
+
             inform = doctor.inform_diagnosis(prev_answer=a, utter='D' if self._debug else '')
             logging.info(f"Doctor: {inform}")
             logging.info(f"===== Sample {i + 1} completed =====")
@@ -199,7 +209,7 @@ if __name__ == "__main__":
         config = yaml.safe_load(f)
         logging.info(f"Configuration loaded: {json.dumps(config, indent=4)}")
     
-    exp = Experiment(**config, debug=True)
-    exp.run(api_interval=5)
-    # acc = exp.calc_acc(count=100, verbose=True)
-    # print(f"Accuracy: {acc * 100:.2f}%")
+    exp = Experiment(**config, debug=False)
+    # exp.run(api_interval=15, start_end=[50, 50])
+    acc = exp.calc_acc(count=50, verbose=True)
+    print(f"Accuracy: {acc * 100:.2f}%")
