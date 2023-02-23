@@ -124,9 +124,9 @@ class Experiment(object):
         assert len(preds) == len(labels)
         # Comparison
         ncorrects = 0
-        for pred, label in zip(preds, labels):
+        for i, (pred, label) in enumerate(zip(preds, labels), start=1):
             if verbose:
-                    logging.info(f"Ground Truth: {Fore.RED + label + Style.RESET_ALL} / Prediction: {Fore.BLUE + pred + Style.RESET_ALL}{f' {Fore.GREEN}✔{Style.RESET_ALL}' if (pred == label) else ''}")
+                    logging.info(f"{str(i).zfill(3)} -> Ground Truth: {Fore.RED + label + Style.RESET_ALL} / Prediction: {Fore.BLUE + pred + Style.RESET_ALL}{f' {Fore.GREEN}✔{Style.RESET_ALL}' if (pred == label) else ''}")
             if pred == label:
                 ncorrects += 1
         return ncorrects / len(preds)
@@ -210,6 +210,6 @@ if __name__ == "__main__":
         logging.info(f"Configuration loaded: {json.dumps(config, indent=4)}")
     
     exp = Experiment(**config, debug=False)
-    exp.run(api_interval=5, start_end=[1, 95])
-    # acc = exp.calc_acc(count=60, verbose=True)
-    # print(f"Accuracy: {acc * 100:.2f}%")
+    # exp.run(api_interval=10, start_end=[38, 95])
+    acc = exp.calc_acc(count=100, verbose=True)
+    print(f"Accuracy: {acc * 100:.2f}%")
