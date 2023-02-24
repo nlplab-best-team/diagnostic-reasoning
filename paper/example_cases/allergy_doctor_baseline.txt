@@ -1,0 +1,68 @@
+<Instruction>
+I am a doctor taking a medical history from a patient. I will try my best to ask comprehensive and important questions in order to make an accurate final diagnosis. The diagnosis should be selected from the possible diagnoses.
+
+<Background knowledge>
+Possible diagnoses: Bronchiolitis, Pericarditis, Myocarditis, HIV (initial infection), Bronchospasm / acute asthma exacerbation, Acute pulmonary edema, Pneumonia, Pancreatic neoplasm, Bronchitis, Atrial fibrillation, Anaphylaxis, Panic attack, Sarcoidosis, Pulmonary neoplasm, Spontaneous rib fracture, Viral pharyngitis, Croup, Possible NSTEMI / STEMI, Chagas, Cluster headache, Acute dystonic reactions, Scombroid food poisoning, Acute rhinosinusitis, Anemia, Spontaneous pneumothorax, Guillain-Barré syndrome, Whooping cough, Myasthenia gravis, SLE, Ebola, Pulmonary embolism, Boerhaave, Unstable angina, Acute otitis media, Stable angina, Inguinal hernia, Epiglottitis, PSVT, Tuberculosis, Acute laryngitis, Acute COPD exacerbation / infection, Localized edema, Larygospasm, Influenza, GERD, Bronchiectasis, Allergic sinusitis, Chronic rhinosinusitis, URTI
+
+<History taking>
+Doctor: [ask] How may I help you today?
+Patient: I have a cough.
+Doctor: [ask] What's your sex and age?
+Patient: I am an 81-year-old female.
+Doctor: [ask] Did you have fever?
+Patient: Yes, I have a fever.
+Doctor: [ask] Did you have dyspnea or difficulty breathing?
+Patient: No.
+Doctor: [ask] Do you have sore throat, runny nose, or nasal congestion?
+Patient: Yes, I have a sore throat.
+Doctor: [ask] What's your body temperature?
+Patient: My body temperature is not measured.
+Doctor: [ask] Do you have myalgia or muscle soreness?
+Patient: Yes, I have diffuse muscle pain.
+Doctor: [ask] Do you feel extremely fatigue?
+Patient: Yes, I am so tired that I am unable to do my usual activities or I am stuck in my bed all day long.
+Doctor: [inform] Based on your symptoms, the most likely diagnosis is Influenza.
+
+<History taking>
+Doctor: [ask] How may I help you today?
+Patient: I have a cough.
+Doctor: [ask] What's your sex and age?
+Patient: I am a 24-year-old female.
+Doctor: [ask] Do you have shortness of breath?
+Patient: No.
+Doctor: [ask] Do you have sore throat, runny nose, or nasal congestion?
+Patient: Yes, I have a sore throat.
+Doctor: [ask] Do you have fever?
+Patient: No.
+Doctor: [ask] Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth?
+Patient: No.
+Doctor: [ask] Have you noticed any changes in your voice like hoarseness?
+Patient: Yes, I have noticed that the tone of my voice has become deeper, softer or hoarse.
+Doctor: [ask] Do you smoke?
+Patient: Yes, I smoke cigarettes.
+Doctor: [ask] Have you been in contact with people with similar symptoms in the past 2 weeks?
+Patient: Yes, I have had a cold in the last 2 weeks.
+Doctor: [inform] Based on your description, the most likely diagnosis is Acute laryngitis.
+
+<History taking>
+Doctor: [ask] How may I help you today?
+Patient: I have a cough.
+Doctor: [ask] What's your sex and age?
+Patient: I am a 44-year-old male.
+Doctor: [ask] Do you have fever?
+Patient: No.
+Doctor: [ask] Do you have shortness of breath?
+Patient: No.
+Doctor: [ask] Do you have chest pain or tightness?
+Patient: No.
+Doctor: [ask] Do you have a productive cough with yellow or green sputum?
+Patient: No.
+Doctor: [ask] Do you have a history of smoking?
+Patient: No.
+Doctor: [ask] Have you been in contact with people with similar symptoms in the past 2 weeks?
+Patient: No.
+Doctor: [ask] Do you have sore throat, runny nose, or nasal congestion?
+Patient: Yes, I have nasal congestion and a clear runny nose.
+Doctor: [ask] Do you have any other symptoms such as wheezing, fatigue, or muscle aches?
+Patient: No, I don't have any other symptoms.
+Doctor: [inform] Based on your description, the most likely diagnosis is URTI.
