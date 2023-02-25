@@ -78,7 +78,7 @@ class Experiment(object):
         self._doc_model = ModelAPI(Namespace(**self._doc_config["model_config"]))
 
     def estimate_cost(self) -> float:
-        return 2 * len(self._samples) * 2048 * self._ask_turns * ModelAPI.cost_per_1000tokens / 1000
+        return 2 * len(self._samples) * 2048 * self._ask_turns * ModelAPI.cost_per_1000tokens / 1000 * ((1/2) if self._group == "baseline" else 1)
     
     def save_dialogues(self, role: str, idx: int, dialogue: Dialogue) -> None:
         assert role in ["patient", "doctor"]
@@ -124,9 +124,9 @@ class Experiment(object):
         assert len(preds) == len(labels)
         # Comparison
         ncorrects = 0
-        for pred, label in zip(preds, labels):
+        for i, (pred, label) in enumerate(zip(preds, labels), start=1):
             if verbose:
-                    logging.info(f"Ground Truth: {Fore.RED + label + Style.RESET_ALL} / Prediction: {Fore.BLUE + pred + Style.RESET_ALL}{f' {Fore.GREEN}✔{Style.RESET_ALL}' if (pred == label) else ''}")
+                    logging.info(f"{str(i).zfill(3)} -> Ground Truth: {Fore.RED + label + Style.RESET_ALL} / Prediction: {Fore.BLUE + pred + Style.RESET_ALL}{f' {Fore.GREEN}✔{Style.RESET_ALL}' if (pred == label) else ''}")
             if pred == label:
                 ncorrects += 1
         return ncorrects / len(preds)
@@ -210,6 +210,6 @@ if __name__ == "__main__":
         logging.info(f"Configuration loaded: {json.dumps(config, indent=4)}")
     
     exp = Experiment(**config, debug=False)
-    # exp.run(api_interval=15, start_end=[50, 50])
-    acc = exp.calc_acc(count=50, verbose=True)
+    # exp.run(api_interval=10, start_end=[38, 95])
+    acc = exp.calc_acc(count=100, verbose=True)
     print(f"Accuracy: {acc * 100:.2f}%")
