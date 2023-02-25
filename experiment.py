@@ -9,7 +9,7 @@ import logging
 import pandas as pd
 from typing import List
 from pathlib import Path
-from argparse import Namespace
+from argparse import Namespace, ArgumentParser
 from colorama import Fore, Style
 
 from bot import PatientBot, DoctorBot
@@ -197,19 +197,58 @@ class Experiment(object):
             # Save dialogues
             self.save_dialogues(role="patient", idx=i + 1, dialogue=patient._dialogue_history)
             self.save_dialogues(role="doctor", idx=i + 1, dialogue=doctor._dialogue_history)
+
+def parse_args() -> Namespace:
+    parser = ArgumentParser()
     
+    parser.add_argument(
+        "--config_file",
+        type=str,
+        required=True
+    )
+    parser.add_argument(
+        "--interval",
+        type=int,
+        required=True
+    )
+    parser.add_argument(
+        "--start",
+        type=int,
+        default=1
+    )
+    parser.add_argument(
+        "--end",
+        type=int,
+        default=int(1e8)
+    )
+    parser.add_argument(
+        "--eval",
+        action="store_true"
+    )
+    parser.add_argument(
+        "--debug",
+        action="store_true"
+    )
+    
+    args = parser.parse_args()
+    return args
+
 if __name__ == "__main__":
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s [%(levelname)s] %(message)s",
         handlers=[logging.StreamHandler(sys.stdout)]
     )
+
+    args = parse_args()
     
-    with open(sys.argv[1], mode="rt") as f:
+    with open(args.config_file, mode="rt") as f:
         config = yaml.safe_load(f)
         logging.info(f"Configuration loaded: {json.dumps(config, indent=4)}")
     
-    exp = Experiment(**config, debug=False)
-    # exp.run(api_interval=10, start_end=[38, 95])
-    acc = exp.calc_acc(count=100, verbose=True)
-    print(f"Accuracy: {acc * 100:.2f}%")
+    exp = Experiment(**config, debug=args.debug)
+    if not args.eval:
+        exp.run(api_interval=args.interval, start_end=[args.start, args.end])
+    else:
+        acc = exp.calc_acc(count=config["sample_size"], verbose=True)
+        print(f"Accuracy: {acc * 100:.2f}%")
