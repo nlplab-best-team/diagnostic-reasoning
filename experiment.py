@@ -136,6 +136,7 @@ class Experiment(object):
                     logging.info(f"{str(i).zfill(3)} -> Ground Truth: {Fore.RED + label + Style.RESET_ALL} / Prediction: {Fore.BLUE + pred + Style.RESET_ALL}{f' {Fore.GREEN}✔{Style.RESET_ALL}' if (pred == label) else ''}")
             if pred == label:
                 ncorrects += 1
+        logging.info(f"Correct: {ncorrects} / Predicted: {len(preds)}")
         return ncorrects / len(preds)
     
     def initialize_patient(self, pat: pd.Series) -> PatientBot:
@@ -237,7 +238,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "--interval",
         type=int,
-        required=True
+        default=5
     )
     parser.add_argument(
         "--start",
