@@ -53,9 +53,8 @@ class Bot(object):
         ]
         self._prompt = '\n'.join(shots + current_dialogue).strip()
     
-    def set_model_config(self) -> None:
-        # TODO: delegate ModelAPI to set config
-        raise NotImplementedError
+    def set_dialogue_history(self, dialogue: Dialogue) -> None:
+        self._dialogue_history = dialogue
 
     def generate(self, prefix: str = '') -> str:
         """
