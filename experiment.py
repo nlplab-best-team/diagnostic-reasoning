@@ -33,12 +33,19 @@ class Experiment(object):
         pat_config_path: str,
         doc_config_path: str,
         ask_turns: int,
+        resume_path: str = None,
+        inform_at_turn: int = None,
         debug: bool = True # for sanity checking the script
     ):
         logging.info(f"Conducting experiment: {name}")
+        # Instance variables
         self._group = group
         self._ask_turns = ask_turns
+        self._resume_path = resume_path
+        self._inform_at_turn = inform_at_turn
         self._debug = debug
+
+        # Logging path
         self._log_path = Path(log_path) / name
         self._log_path.mkdir(parents=True, exist_ok=True)
 
@@ -129,6 +136,7 @@ class Experiment(object):
                     logging.info(f"{str(i).zfill(3)} -> Ground Truth: {Fore.RED + label + Style.RESET_ALL} / Prediction: {Fore.BLUE + pred + Style.RESET_ALL}{f' {Fore.GREEN}✔{Style.RESET_ALL}' if (pred == label) else ''}")
             if pred == label:
                 ncorrects += 1
+        logging.info(f"Correct: {ncorrects} / Predicted: {len(preds)}")
         return ncorrects / len(preds)
     
     def initialize_patient(self, pat: pd.Series) -> PatientBot:
@@ -179,27 +187,40 @@ class Experiment(object):
             # Initialize the doctor
             doctor = self.initialize_doctor()
             logging.info(f"Doctor initialized.")
-            # History taking
-            a = patient.answer(question=doctor.greeting(), answer=patient.inform_initial_evidence())
-            r, q = doctor.ask(prev_answer=a, question=doctor.ask_basic_info())
-            a = patient.answer(question=q, answer=patient.inform_basic_info())
-            
-            for j in range(self._ask_turns):
-                # Doctor: ask a question
-                r, q = doctor.ask(prev_answer=a, question=f"{'R [Question] ' if (self._group == 'reasoning') else ''}Q{j}" if self._debug else '')
-                time.sleep(api_interval)
-                # Patient: give an answer
-                a = patient.answer(question=q, answer=f"A{j}" if self._debug else '')
-                time.sleep(api_interval)
-                # Logging
-                logging.info(f"Turn {j + 1} completed:")
-                logging.info(f"Doctor: [reasoning] {r}[question] {q}")
-                logging.info(f"Patient: {a}")
-                # Save dialogues
-                self.save_dialogues(role="patient", idx=i + 1, dialogue=patient._dialogue_history)
-                self.save_dialogues(role="doctor", idx=i + 1, dialogue=doctor._dialogue_history)
+
+            if self._resume_path is None:
+                # History taking
+                a = patient.answer(question=doctor.greeting(), answer=patient.inform_initial_evidence())
+                r, q = doctor.ask(prev_answer=a, question=doctor.ask_basic_info())
+                a = patient.answer(question=q, answer=patient.inform_basic_info())
+                
+                for j in range(self._ask_turns):
+                    # Doctor: ask a question
+                    r, q = doctor.ask(prev_answer=a, question=f"{'R [Question] ' if (self._group == 'reasoning') else ''}Q{j}" if self._debug else '')
+                    time.sleep(api_interval)
+                    # Patient: give an answer
+                    a = patient.answer(question=q, answer=f"A{j}" if self._debug else '')
+                    time.sleep(api_interval)
+                    # Logging
+                    logging.info(f"Turn {j + 1} completed:")
+                    logging.info(f"Doctor: [reasoning] {r}[question] {q}")
+                    logging.info(f"Patient: {a}")
+                    # Save dialogues
+                    self.save_dialogues(role="patient", idx=i + 1, dialogue=patient._dialogue_history)
+                    self.save_dialogues(role="doctor", idx=i + 1, dialogue=doctor._dialogue_history)
+            else: # If there is a resume_path -> load previous dialogues and jump to inform_diagnosis
+                doc_dials = json.loads((Path(self._resume_path) / f"doctor-{i + 1}.json").read_bytes())
+                dial_length = self._inform_at_turn + Dialogue.greeting_length
+                doctor.set_dialogue_history(
+                    Dialogue(
+                        patient_utters=doc_dials["patient_utters"][:dial_length - 1], # preserve for the parameter 'prev_answer' in doctor.inform_diagnosis()
+                        doctor_utters=doc_dials["doctor_utters"][:dial_length]
+                    )
+                )
+                a = doc_dials["patient_utters"][dial_length - 1]
 
             inform = doctor.inform_diagnosis(prev_answer=a, utter='D' if self._debug else '')
+            time.sleep(api_interval)
             logging.info(f"Doctor: {inform}")
             logging.info(f"===== Sample {i + 1} completed =====")
             # Save dialogues
@@ -217,7 +238,7 @@ def parse_args() -> Namespace:
     parser.add_argument(
         "--interval",
         type=int,
-        required=True
+        default=5
     )
     parser.add_argument(
         "--start",

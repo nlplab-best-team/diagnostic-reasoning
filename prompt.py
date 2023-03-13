@@ -128,6 +128,7 @@ class DoctorProfile(Profile):
         return self.diagnoses_prefix + self.delimiter.join(diagnoses)
 
 class Dialogue(object):
+    greeting_length: int = 2
 
     def __init__(
         self,
