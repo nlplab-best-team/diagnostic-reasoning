@@ -9,7 +9,7 @@ import logging
 import pandas as pd
 from typing import List
 from pathlib import Path
-from argparse import Namespace
+from argparse import Namespace, ArgumentParser
 from colorama import Fore, Style
 
 from bot import PatientBot, DoctorBot
@@ -130,6 +130,30 @@ class Experiment(object):
             if pred == label:
                 ncorrects += 1
         return ncorrects / len(preds)
+    
+    def initialize_patient(self, pat: pd.Series) -> PatientBot:
+        return PatientBot(
+            instruction=self._pat_instruction,
+            shots=self._pat_shots,
+            profile=PatientProfile(
+                sex=pat.SEX,
+                age=pat.AGE,
+                initial_evidence=pat.INITIAL_EVIDENCE,
+                evidences=ast.literal_eval(pat.EVIDENCES)
+            ),
+            dialogue_history=Dialogue([], []),
+            model=self._pat_model
+        )
+    
+    def initialize_doctor(self) -> DoctorBot:
+        return DoctorBot(
+            instruction=self._doc_instruction,
+            shots=self._doc_shots,
+            profile=self._doc_profile,
+            dialogue_history=Dialogue([], []),
+            model=self._doc_model,
+            mode=self._group
+        )
 
     def run(self, api_interval: int, start_end: List[int] = [1, int(1e8)]) -> None:
         """
@@ -137,7 +161,6 @@ class Experiment(object):
         """
         if len(start_end) != 2:
             raise ValueError("The length of 'start_end' must be 2.")
-        # TODO: save experiment config (yml)
         # Cost estimation
         cost = self.estimate_cost()
         flag = input(f"Estimated cost: {cost} USD (~{cost * 30} TWD). Continue? (Y)")
@@ -151,28 +174,10 @@ class Experiment(object):
                 continue
             logging.info(f"===== Running with sample {i + 1} -> PATHOLOGY: {self.pathology_to_eng(pat.PATHOLOGY)} =====")
             # Initialize the patient
-            patient = PatientBot(
-                instruction=self._pat_instruction,
-                shots=self._pat_shots,
-                profile=PatientProfile(
-                    sex=pat.SEX,
-                    age=pat.AGE,
-                    initial_evidence=pat.INITIAL_EVIDENCE,
-                    evidences=ast.literal_eval(pat.EVIDENCES)
-                ),
-                dialogue_history=Dialogue([], []),
-                model=self._pat_model
-            )
+            patient = self.initialize_patient(pat)
             logging.info(f"Patient initialized. Chief complaint: {patient.inform_initial_evidence()}; Basic info: {patient.inform_basic_info()}")
             # Initialize the doctor
-            doctor = DoctorBot(
-                instruction=self._doc_instruction,
-                shots=self._doc_shots,
-                profile=self._doc_profile,
-                dialogue_history=Dialogue([], []),
-                model=self._doc_model,
-                mode=self._group
-            )
+            doctor = self.initialize_doctor()
             logging.info(f"Doctor initialized.")
             # History taking
             a = patient.answer(question=doctor.greeting(), answer=patient.inform_initial_evidence())
@@ -180,10 +185,13 @@ class Experiment(object):
             a = patient.answer(question=q, answer=patient.inform_basic_info())
             
             for j in range(self._ask_turns):
+                # Doctor: ask a question
                 r, q = doctor.ask(prev_answer=a, question=f"{'R [Question] ' if (self._group == 'reasoning') else ''}Q{j}" if self._debug else '')
                 time.sleep(api_interval)
+                # Patient: give an answer
                 a = patient.answer(question=q, answer=f"A{j}" if self._debug else '')
                 time.sleep(api_interval)
+                # Logging
                 logging.info(f"Turn {j + 1} completed:")
                 logging.info(f"Doctor: [reasoning] {r}[question] {q}")
                 logging.info(f"Patient: {a}")
@@ -197,19 +205,58 @@ class Experiment(object):
             # Save dialogues
             self.save_dialogues(role="patient", idx=i + 1, dialogue=patient._dialogue_history)
             self.save_dialogues(role="doctor", idx=i + 1, dialogue=doctor._dialogue_history)
+
+def parse_args() -> Namespace:
+    parser = ArgumentParser()
     
+    parser.add_argument(
+        "--config_file",
+        type=str,
+        required=True
+    )
+    parser.add_argument(
+        "--interval",
+        type=int,
+        required=True
+    )
+    parser.add_argument(
+        "--start",
+        type=int,
+        default=1
+    )
+    parser.add_argument(
+        "--end",
+        type=int,
+        default=int(1e8)
+    )
+    parser.add_argument(
+        "--eval",
+        action="store_true"
+    )
+    parser.add_argument(
+        "--debug",
+        action="store_true"
+    )
+    
+    args = parser.parse_args()
+    return args
+
 if __name__ == "__main__":
     logging.basicConfig(
         level=logging.INFO,
         format="%(asctime)s [%(levelname)s] %(message)s",
         handlers=[logging.StreamHandler(sys.stdout)]
     )
+
+    args = parse_args()
     
-    with open(sys.argv[1], mode="rt") as f:
+    with open(args.config_file, mode="rt") as f:
         config = yaml.safe_load(f)
         logging.info(f"Configuration loaded: {json.dumps(config, indent=4)}")
     
-    exp = Experiment(**config, debug=False)
-    # exp.run(api_interval=10, start_end=[38, 95])
-    acc = exp.calc_acc(count=100, verbose=True)
-    print(f"Accuracy: {acc * 100:.2f}%")
+    exp = Experiment(**config, debug=args.debug)
+    if not args.eval:
+        exp.run(api_interval=args.interval, start_end=[args.start, args.end])
+    else:
+        acc = exp.calc_acc(count=config["sample_size"], verbose=True)
+        print(f"Accuracy: {acc * 100:.2f}%")
