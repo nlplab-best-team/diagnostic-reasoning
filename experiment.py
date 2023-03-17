@@ -66,7 +66,7 @@ class Experiment(object):
         logging.info(self._samples.groupby("PATHOLOGY").size().sort_values(ascending=False) / len(self._samples))
 
         # Patient
-        self._pat_config = json.loads((Path(pat_config_path) / f"{group}.json").read_bytes())
+        self._pat_config = json.loads(Path(pat_config_path).read_bytes())
         self._pat_instruction = self._pat_config["instruction"]
         self._pat_shots = [Shot(
             profile=Profile(self._pat_config["shots"][0]["profile"]),
