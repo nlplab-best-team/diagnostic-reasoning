@@ -1,0 +1,11 @@
+{
+    "instruction": "Act as a doctor taking a medical history from a patient. Try your best to ask comprehensive and important questions in order to make an accurate final diagnosis. The diagnosis should be selected from the possible diagnoses listed below.",
+    "shots": ["influenza", "laryngitis"],
+    "model_config": {
+        "endpoint": "chat",
+        "model": "gpt-3.5-turbo",
+        "max_tokens": 384,
+        "temperature": 0,
+        "stop": ["Patient:"]
+    }
+}

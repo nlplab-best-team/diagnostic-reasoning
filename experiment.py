@@ -76,7 +76,7 @@ class Experiment(object):
 
         # Doctor
         self._doc_config = json.loads((Path(doc_config_path) / f"{group}.json").read_bytes())
-        self._doc_instruction = self._doc_config["instruction"][group]
+        self._doc_instruction = self._doc_config["instruction"]
         self._doc_profile = DoctorProfile(possible_diagnoses=load_all_diagnoses())
         self._doc_shots = [Shot(
             profile=self._doc_profile,
