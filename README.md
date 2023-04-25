@@ -1,33 +1,28 @@
 # Large Language Models Perform Diagnostic Reasoning
 
-Explore how well large language models (LLMs) perform history taking, and how to enhance such ability.
+This repository contains the source code for the paper [Large Language Models Perform Diagnostic Reasoning](https://openreview.net/forum?id=N0lQfjeNWOE), which is accepted as a Tiny Paper at The Eleventh International Conference on Learning Representations (ICLR 2023) in Kigali, Rwanda. In this work, we propose DR-CoT prompting, which elicits the diagnostic reasoning ability of LLMs and exhibit striking empirical improvements for automatic diagnosis.
 
-## How to Contribute
-The following documentation specify the standard formats for commit messages and pull requests.
-### Commit Message
-Inspired by [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), commit messages should be formatted as
+## Introduction
 
-    <type>(<contributor>): <description>
+We explore the extension of chain-of-thought (CoT) prompting to medical reasoning for the task of automatic diagnosis. Motivated by doctors' underlying reasoning process, we present Diagnostic-Reasoning CoT (DR-CoT). Empirical results demonstrate that by simply prompting large language models trained only on general text corpus with two DR-CoT exemplars, the diagnostic accuracy improves by 15% comparing to standard prompting. Moreover, the gap reaches a pronounced 18% in out-domain settings. Our findings suggest expert-knowledge reasoning in large language models can be elicited through proper promptings.
 
-#### Type
-* `feat`: A new feature (e.g., implement the initial patient simulator)
-* `fix`: A bug fix
-* `refact`: A code change that neither adds a new feature nor fixes bugs
-* `test`: A code change on testing written code (e.g., ensure prompt templates are formatted by template scripts correctly)
-* `doc`: A documentation change (e.g., add README)
+<!-- Show figures in ./figures/curve-6.pdf and ./figures/bar-3.pdf -->
+<p align="center">
+  <img src="./figures/curve-6.pdf" width="400" />
+  <img src="./figures/bar-3.pdf" width="400" />
+</p>
 
-#### Examples:
-* `feat(ckwu): improve performance of the patient simulator`
-* `feat(wlchen): exploratory data analysis (EDA) of DDxPlus subset`
-* `test(wlchen): test prompt template scripts`
-* `fix(ckwu): fix bugs for prompt template scripts`
+## Usage
+WIP
 
-### Pull Request
-Anyone wish to contribute has to create a pull request (PR):
-1. Create a new branch from `master` (e.g., `ckwu-feat-patient_simulator`, `wlchen-feat-exploratory_data_analysis`), and commit to this branch before finishing it
-2. After you finish this branch (potentially after several commits), create a pull request to `master` (e.g., `feat(ckwu): initial patient simulator completed`)
-3. The branch will merge to `master` only if another contributor have reviewed and approved the code
-
-#### Branch Name Format
-
-    <contributor>-<type>-<description>
+## Citation
+We will update the citation format once the paper is included in the proceedings.
+```
+@misc{
+    wu2023large,
+    title={Large Language Models Perform Diagnostic Reasoning},
+    author={Cheng-Kuang Wu and Wei-Lin Chen and Hsin-Hsi Chen},
+    year={2023},
+    url={https://openreview.net/forum?id=N0lQfjeNWOE}
+}
+```
