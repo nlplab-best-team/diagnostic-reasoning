@@ -1,0 +1,1 @@
+(Based on the new clinical information from the patient's response. Please update your diagnostic reasoning in JSON format with the following keys: positive_clinical_findings, negative_clinical_findings, ranked_differential_diagnosis, important_question.)
