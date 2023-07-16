@@ -34,14 +34,34 @@ class DDxDataset(object):
     def __len__(self):
         return len(self.df)
     
-    def get_evidence_set_of_initial_evidence(self, ie: str):
-        raise NotImplementedError
+    def get_evidence_set_of_initial_evidence(self, ie: str, field: str) -> list:
+        """field: 'EVIDENCES' or 'EVIDENCES_ENG' or 'EVIDENCES_UNCONVERTED'"""
+        evds = set()
+        for evd_l in self.df[self.df.INITIAL_EVIDENCE == ie][field].values:
+            for evd in evd_l:
+                evds.add(evd)
+        return list(evds)
     
-    def get_differential_of_initial_evidence(self, ie: str):
-        raise NotImplementedError
+    def get_differential_of_initial_evidence(self, ie: str) -> list:
+        return self.df[self.df.INITIAL_EVIDENCE == ie].PATHOLOGY.unique().tolist()
     
     def get_ddx_distribution_from_evidence(self, positives: List[str], negatives: List[str]) -> Dict[str, float]:
-        raise NotImplementedError
+        def list_contains(l: List[str], contents: List[str]) -> bool:
+            s = set(l)
+            for content in contents:
+                if not (content in s):
+                    return False
+            return True
+
+        def list_excludes(l: List[str], contents: List[str]) -> bool:
+            s = set(l)
+            for content in contents:
+                if content in s:
+                    return False
+            return True
+
+        ddx_count = self.df[self.df.EVIDENCES_ENG.map(lambda l: list_contains(l, positives) and list_excludes(l, negatives))].groupby("PATHOLOGY").size().sort_values(ascending=False)
+        return (ddx_count / ddx_count.sum()).to_dict() # return percentage
     
     @staticmethod
     def convert_evidence_to_eng(evidences_info: Dict[str, Dict], mode: str):
