@@ -3,3 +3,4 @@ release*.json
 release*.csv
 __pycache__
 *.pth
+log
