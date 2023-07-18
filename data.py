@@ -1,5 +1,6 @@
 import ast
 import json
+import numpy as np
 import pandas as pd
 from typing import List, Dict
 from pathlib import Path
@@ -34,18 +35,18 @@ class DDxDataset(object):
     def __len__(self):
         return len(self.df)
     
-    def get_evidence_set_of_initial_evidence(self, ie: str, field: str) -> list:
+    def get_evidence_set_of_initial_evidence(self, ie: str, field: str) -> set:
         """field: 'EVIDENCES' or 'EVIDENCES_ENG' or 'EVIDENCES_UNCONVERTED'"""
-        evds = set()
-        for evd_l in self.df[self.df.INITIAL_EVIDENCE == ie][field].values:
-            for evd in evd_l:
-                evds.add(evd)
-        return list(evds)
+        return self.get_evidence_set(df=self.df[self.df.INITIAL_EVIDENCE == ie], evidence_field=field)
     
     def get_differential_of_initial_evidence(self, ie: str) -> list:
         return self.df[self.df.INITIAL_EVIDENCE == ie].PATHOLOGY.unique().tolist()
     
     def get_ddx_distribution_from_evidence(self, positives: List[str], negatives: List[str]) -> Dict[str, float]:
+        ddx_count = self.get_subdf_from_evidence(positives, negatives).groupby("PATHOLOGY").size().sort_values(ascending=False)
+        return (ddx_count / ddx_count.sum()).to_dict() # return percentage
+
+    def get_subdf_from_evidence(self, positives: List[str], negatives: List[str]) -> pd.DataFrame:
         def list_contains(l: List[str], contents: List[str]) -> bool:
             s = set(l)
             for content in contents:
@@ -60,8 +61,45 @@ class DDxDataset(object):
                     return False
             return True
 
-        ddx_count = self.df[self.df.EVIDENCES_ENG.map(lambda l: list_contains(l, positives) and list_excludes(l, negatives))].groupby("PATHOLOGY").size().sort_values(ascending=False)
-        return (ddx_count / ddx_count.sum()).to_dict() # return percentage
+        return self.df[self.df.EVIDENCES_ENG.map(lambda l: list_contains(l, positives) and list_excludes(l, negatives))]
+
+    def calc_mutual_information_of_evidences(self, positives: List[str], negatives: List[str], evidence_field: str) -> Dict[str, float]:
+        """Calculate mutual information of each evidence with the grounding positive/negative evidences."""
+        df = self.get_subdf_from_evidence(positives, negatives)
+        evds = self.get_evidence_set(df, evidence_field)
+        exist_evds = set(positives) | set(negatives)
+        remain_evds = evds - exist_evds
+        mis = {}
+        for evd in remain_evds:
+            pos_df = self.get_subdf_from_evidence(positives + [evd], negatives)
+            neg_df = self.get_subdf_from_evidence(positives, negatives + [evd])
+            assert len(pos_df) + len(neg_df) == len(df)
+
+            pos_prob = len(pos_df) / len(df)
+            neg_prob = len(neg_df) / len(df)
+
+            parent_entorpy = self.calc_entropy(df.groupby("PATHOLOGY").size().apply(lambda x: x / len(df)).values)
+            pos_entropy = self.calc_entropy(pos_df.groupby("PATHOLOGY").size().apply(lambda x: x / len(pos_df)).values)
+            neg_entropy = self.calc_entropy(neg_df.groupby("PATHOLOGY").size().apply(lambda x: x / len(neg_df)).values)
+
+            mi = parent_entorpy - (pos_prob * pos_entropy + neg_prob * neg_entropy)
+            mis[evd] = mi
+
+        # sort by mutual information
+        mis = {k: v for k, v in sorted(mis.items(), key=lambda item: item[1], reverse=True)}
+        return mis
+
+    @staticmethod
+    def calc_entropy(probs: np.ndarray) -> float: # calculate Shannon entropy using natural log
+        return -np.sum(probs * np.log(probs))
+    
+    @staticmethod
+    def get_evidence_set(df: pd.DataFrame, evidence_field: str) -> set:
+        evds = set()
+        for evd_l in df[evidence_field].values:
+            for evd in evd_l:
+                evds.add(evd)
+        return evds
     
     @staticmethod
     def convert_evidence_to_eng(evidences_info: Dict[str, Dict], mode: str):
