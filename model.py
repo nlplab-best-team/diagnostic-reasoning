@@ -14,10 +14,10 @@ class ModelAPI(object):
         
     def retry_with_exponential_backoff(
         func,
-        initial_delay: float = 10,
+        initial_delay: float = 1,
         exponential_base: float = 2,
         max_retries: int = 5,
-        errors: tuple = (openai.error.RateLimitError,),
+        errors: tuple = (openai.error.RateLimitError, openai.error.ServiceUnavailableError, openai.error.APIError),
     ):
         """Retry a function with exponential backoff."""
     
@@ -52,6 +52,10 @@ class ModelAPI(object):
     @retry_with_exponential_backoff
     def complete(self, prompt: str) -> dict:
         return self._openai.Completion.create(prompt=prompt, **vars(self._config))
+    
+    @retry_with_exponential_backoff
+    def chat(self, messages: list) -> dict:
+        return self._openai.ChatCompletion.create(messages=messages, **vars(self._config))
     
     def set_api_key(self, key: str) -> None:
         self._openai.api_key = key

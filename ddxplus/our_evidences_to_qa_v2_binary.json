@@ -1,0 +1,1340 @@
+{
+    "fievre": {
+        "question_en": "Do you have a fever (either felt or measured with a thermometer)?",
+        "affirmative_en": "I have a fever (either felt or measured with a thermometer).",
+        "data_type": "B",
+        "abbr_en": "Fever"
+    },
+    "douleurxx_endroitducorps": {
+        "question_en": "Do you feel pain somewhere?",
+        "affirmative_en": "The pain locations are:",
+        "data_type": "M",
+        "abbr_en": "Pain locations"
+    },
+    "douleurxx": {
+        "question_en": "Do you have pain somewhere, related to your reason for consulting?",
+        "affirmative_en": "I have pain somewhere related to my reason for consulting.",
+        "data_type": "B",
+        "abbr_en": "Pain"
+    },
+    "douleurxx_irrad": {
+        "question_en": "Does the pain radiate to another location?",
+        "affirmative_en": "The pain radiates to these locations:",
+        "data_type": "M",
+        "abbr_en": "Pain radiation locations"
+    },
+    "douleurxx_carac": {
+        "question_en": "Characterize your pain:",
+        "affirmative_en": "The pain is:",
+        "data_type": "M",
+        "abbr_en": "Pain characteristics"
+    },
+    "douleurxx_soudain": {
+        "question_en": "How fast did the pain appear?",
+        "affirmative_en": "On a scale of 0-10, the pace at which the pain appear is [choice]",
+        "data_type": "C",
+        "abbr_en": "Pain onset pace"
+    },
+    "douleurxx_intens": {
+        "question_en": "How intense is the pain?",
+        "affirmative_en": "On a scale of 0-10, the pain intensity is [choice]",
+        "data_type": "C",
+        "abbr_en": "Pain intensity"
+    },
+    "douleurxx_precis": {
+        "question_en": "How precisely is the pain located?",
+        "affirmative_en": "On a scale of 0-10, the pain's location precision is [choice]",
+        "data_type": "C",
+        "abbr_en": "Pain location precision"
+    },
+    "pdc": {
+        "question_en": "Did you lose consciousness?",
+        "affirmative_en": "I lost consciousness.",
+        "data_type": "B",
+        "abbr_en": "Loss of consciousness"
+    },
+    "lesions_peau_endroitducorps": {
+        "question_en": "Where is the affected region located?",
+        "affirmative_en": "The affected regions are:",
+        "data_type": "M",
+        "abbr_en": "Affected regions"
+    },
+    "lesions_peau": {
+        "question_en": "Do you have any lesions, redness or problems on your skin that you believe are related to the condition you are consulting for?",
+        "affirmative_en": "I have lesions, redness, or problems on my skin that I believe are related to the condition I am consulting for.",
+        "data_type": "B",
+        "abbr_en": "Skin lesions"
+    },
+    "lesions_peau_couleur": {
+        "question_en": "What color is the rash?",
+        "affirmative_en": "The color of the rash is [choice].",
+        "data_type": "C",
+        "abbr_en": "Rash color"
+    },
+    "lesions_peau_intens": {
+        "question_en": "How intense is the pain caused by the rash?",
+        "affirmative_en": "On a scale of 0-10, the pain intensity caused by the rash is [choice]",
+        "data_type": "C",
+        "abbr_en": "Rash pain intensity"
+    },
+    "lesions_peau_elevee": {
+        "question_en": "How swollen is the rash?",
+        "affirmative_en": "On a scale of 0-10, the rash swelling is [choice]",
+        "data_type": "C",
+        "abbr_en": "Rash swelling"
+    },
+    "lesions_peau_prurit": {
+        "question_en": "How severe is the itching?",
+        "affirmative_en": "On a scale of 0-10, the severity of the rash itching is [choice]",
+        "data_type": "C",
+        "abbr_en": "Rash itching severity"
+    },
+    "lesions_peau_plusqu1cm": {
+        "question_en": "Is the lesion (or are the lesions) larger than 1cm?",
+        "affirmative_en": "The lesion (or lesions) are larger than 1cm.",
+        "data_type": "C",
+        "abbr_en": "Lesion size > 1cm"
+    },
+    "lesions_peau_desquame": {
+        "question_en": "Do your lesions peel off?",
+        "affirmative_en": "My lesions peel off.",
+        "data_type": "C",
+        "abbr_en": "Lesion peeling"
+    },
+    "pale": {
+        "question_en": "Is your skin much paler than usual?",
+        "affirmative_en": "My skin is much paler than usual.",
+        "data_type": "B",
+        "abbr_en": "Skin paleness"
+    },
+    "palpit": {
+        "question_en": "Do you feel your heart is beating fast (racing), irregularly (missing a beat) or do you feel palpitations?",
+        "affirmative_en": "My heart is beating fast (racing), irregularly (missing a beat), or I feel palpitations.",
+        "data_type": "B",
+        "abbr_en": "Palpitations"
+    },
+    "vo_sg": {
+        "question_en": "Have you recently thrown up blood or something resembling coffee beans?",
+        "affirmative_en": "I have recently thrown up blood or something resembling coffee beans.",
+        "data_type": "B",
+        "abbr_en": "Vomiting blood"
+    },
+    "melena": {
+        "question_en": "Have you recently had stools that were black (like coal)?",
+        "affirmative_en": "I have recently had stools that were black (like coal).",
+        "data_type": "B",
+        "abbr_en": "Tarry stools"
+    },
+    "diarrhee": {
+        "question_en": "Have you had diarrhea or an increase in stool frequency?",
+        "affirmative_en": "I have had diarrhea or an increase in stool frequency.",
+        "data_type": "B",
+        "abbr_en": "Diarrhea"
+    },
+    "etouff": {
+        "question_en": "Do you feel like you are (or were) choking or suffocating?",
+        "affirmative_en": "I feel like I am (or were) choking or suffocating.",
+        "data_type": "B",
+        "abbr_en": "Choking/suffocating sensation"
+    },
+    "fatig_mod": {
+        "question_en": "Do you constantly feel fatigued or do you have non-restful sleep?",
+        "affirmative_en": "I constantly feel fatigued or I have non-restful sleep.",
+        "data_type": "B",
+        "abbr_en": "Fatigue"
+    },
+    "irritable": {
+        "question_en": "Are you more irritable or has your mood been very unstable recently?",
+        "affirmative_en": "I am more irritable or my mood has been very unstable recently.",
+        "data_type": "B",
+        "abbr_en": "Irritability"
+    },
+    "faible": {
+        "question_en": "Do you feel lightheaded and dizzy or do you feel like you are about to faint?",
+        "affirmative_en": "I feel lightheaded and dizzy or I feel like I am about to faint.",
+        "data_type": "B",
+        "abbr_en": "Dizziness/lightheadedness"
+    },
+    "nausee": {
+        "question_en": "Are you feeling nauseous or do you feel like vomiting?",
+        "affirmative_en": "I am feeling nauseous or I feel like vomiting.",
+        "data_type": "B",
+        "abbr_en": "Nausea"
+    },
+    "friss": {
+        "question_en": "Have you had chills or shivers?",
+        "affirmative_en": "I have had chills or shivers.",
+        "data_type": "B",
+        "abbr_en": "Chills"
+    },
+    "ww_respi": {
+        "question_en": "Do you have pain that is increased when you breathe in deeply?",
+        "affirmative_en": "I have pain that is increased when I breathe in deeply.",
+        "data_type": "B",
+        "abbr_en": "Chest pain with deep breaths"
+    },
+    "perte_appet": {
+        "question_en": "Have you recently had a loss of appetite or do you get full more quickly then usually?",
+        "affirmative_en": "I have recently had a loss of appetite or I get full more quickly than usually.",
+        "data_type": "B",
+        "abbr_en": "Loss of appetite"
+    },
+    "rectorragie": {
+        "question_en": "Have you noticed light red blood or blood clots in your stool?",
+        "affirmative_en": "I have noticed light red blood or blood clots in my stool.",
+        "data_type": "B",
+        "abbr_en": "Rectal bleeding"
+    },
+    "perte_poids": {
+        "question_en": "Have you had an involuntary weight loss over the last 3 months?",
+        "affirmative_en": "I have had an involuntary weight loss over the last 3 months.",
+        "data_type": "B",
+        "abbr_en": "Involuntary weight loss"
+    },
+    "pyrosis": {
+        "question_en": "Do you have a burning sensation that starts in your stomach then goes up into your throat, and can be associated with a bitter taste in your mouth?",
+        "affirmative_en": "I have a burning sensation that starts in my stomach then goes up into my throat, and can be associated with a bitter taste in my mouth.",
+        "data_type": "B",
+        "abbr_en": "Heartburn"
+    },
+    "bw_bending": {
+        "question_en": "Do you have pain that improves when you lean forward?",
+        "affirmative_en": "I have pain that improves when I lean forward.",
+        "data_type": "B",
+        "abbr_en": "Pain improves when leaning forward"
+    },
+    "ww_effort": {
+        "question_en": "Do you have symptoms that are increased with physical exertion but alleviated with rest?",
+        "affirmative_en": "I have symptoms that are increased with physical exertion but alleviated with rest.",
+        "data_type": "B",
+        "abbr_en": "Exertional symptoms"
+    },
+    "footnumb": {
+        "question_en": "Do you have numbness, loss of sensation or tingling in the feet?",
+        "affirmative_en": "I have numbness, loss of sensation, or tingling in my feet.",
+        "data_type": "B",
+        "abbr_en": "Foot numbness"
+    },
+    "dyspn": {
+        "question_en": "Are you experiencing shortness of breath or difficulty breathing in a significant way?",
+        "affirmative_en": "I am experiencing shortness of breath or difficulty breathing in a significant way.",
+        "data_type": "B",
+        "abbr_en": "Shortness of breath"
+    },
+    "pertes_vag": {
+        "question_en": "Have you had any vaginal discharge?",
+        "affirmative_en": "I have had vaginal discharge.",
+        "data_type": "B",
+        "abbr_en": "Vaginal discharge"
+    },
+    "ballon_abdo": {
+        "question_en": "Do you feel your abdomen is bloated or distended (swollen due to pressure from inside)?",
+        "affirmative_en": "My abdomen is bloated or distended (swollen due to pressure from inside).",
+        "data_type": "B",
+        "abbr_en": "Abdominal bloating"
+    },
+    "larmes": {
+        "question_en": "Do you feel that your eyes produce excessive tears?",
+        "affirmative_en": "My eyes produce excessive tears.",
+        "data_type": "B",
+        "abbr_en": "Excessive tearing (epiphora)"
+    },
+    "rhino_clair": {
+        "question_en": "Do you have nasal congestion or a clear runny nose?",
+        "affirmative_en": "I have nasal congestion or a clear runny nose.",
+        "data_type": "B",
+        "abbr_en": "Nasal congestion"
+    },
+    "fatig_ext": {
+        "question_en": "Do you feel so tired that you are unable to do your usual activities or are you stuck in your bed all day long?",
+        "affirmative_en": "I am so tired that I am unable to do my usual activities or I am stuck in my bed all day long.",
+        "data_type": "B",
+        "abbr_en": "Extreme fatigue"
+    },
+    "convulsion": {
+        "question_en": "Have you lost consciousness associated with violent and sustained muscle contractions or had an absence episode?",
+        "affirmative_en": "I have lost consciousness associated with violent and sustained muscle contractions or I have had an absence episode.",
+        "data_type": "B",
+        "abbr_en": "Seizure"
+    },
+    "paralysie_visage": {
+        "question_en": "Have you had weakness or paralysis on one side of the face, which may still be present or completely resolved?",
+        "affirmative_en": "I have had weakness or paralysis on one side of my face, which may still be present or completely resolved.",
+        "data_type": "B",
+        "abbr_en": "Facial paralysis on one side"
+    },
+    "msk_dlr": {
+        "question_en": "Do you have diffuse (widespread) muscle pain?",
+        "affirmative_en": "I have diffuse (widespread) muscle pain.",
+        "data_type": "B",
+        "abbr_en": "Diffuse muscle pain"
+    },
+    "ww_bouger": {
+        "question_en": "Do you have pain that is increased with movement?",
+        "affirmative_en": "I have pain that is increased with movement.",
+        "data_type": "B",
+        "abbr_en": "Pain with movement"
+    },
+    "toux": {
+        "question_en": "Do you have a cough?",
+        "affirmative_en": "I have a cough.",
+        "data_type": "B",
+        "abbr_en": "Cough"
+    },
+    "ww_dd": {
+        "question_en": "Are your symptoms worse when lying down and alleviated while sitting up?",
+        "affirmative_en": "My symptoms are worse when lying down and alleviated while sitting up.",
+        "data_type": "B",
+        "abbr_en": "Symptoms worse when lying down and alleviated while sitting up"
+    },
+    "ww_bouffe": {
+        "question_en": "Do you have symptoms that get worse after eating?",
+        "affirmative_en": "My symptoms get worse after eating.",
+        "data_type": "B",
+        "abbr_en": "Symptoms worsen after eating"
+    },
+    "dysp_effort": {
+        "question_en": "Do you feel out of breath with minimal physical effort?",
+        "affirmative_en": "I feel out of breath with minimal physical effort.",
+        "data_type": "B",
+        "abbr_en": "Shortness of breath with minimal physical effort"
+    },
+    "gain_poids": {
+        "question_en": "Have you gained weight recently?",
+        "affirmative_en": "I have gained weight recently.",
+        "data_type": "B",
+        "abbr_en": "Weight gain"
+    },
+    "anxiete_s": {
+        "question_en": "Do you feel anxious?",
+        "affirmative_en": "I feel anxious.",
+        "data_type": "B",
+        "abbr_en": "Anxiety"
+    },
+    "diaph": {
+        "question_en": "Have you had significantly increased sweating?",
+        "affirmative_en": "I have had significantly increased sweating.",
+        "data_type": "B",
+        "abbr_en": "Increased sweating"
+    },
+    "gorge_dlr": {
+        "question_en": "Do you have a sore throat?",
+        "affirmative_en": "I have a sore throat.",
+        "data_type": "B",
+        "abbr_en": "Sore throat"
+    },
+    "adp_dlr": {
+        "question_en": "Do you have swollen or painful lymph nodes?",
+        "affirmative_en": "I have swollen or painful lymph nodes.",
+        "data_type": "B",
+        "abbr_en": "Swollen lymph nodes"
+    },
+    "etourdissement": {
+        "question_en": "Do you feel slightly dizzy or lightheaded?",
+        "affirmative_en": "I feel slightly dizzy or lightheaded.",
+        "data_type": "B",
+        "abbr_en": "Dizziness"
+    },
+    "hta": {
+        "question_en": "Are you consulting because you have high blood pressure?",
+        "affirmative_en": "I am consulting because I have high blood pressure.",
+        "data_type": "B",
+        "abbr_en": "High blood pressure"
+    },
+    "dysphagie": {
+        "question_en": "Do you have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing?",
+        "affirmative_en": "I have difficulty swallowing, or have a feeling of discomfort/blockage when swallowing.",
+        "data_type": "B",
+        "abbr_en": "Difficulty swallowing"
+    },
+    "erytheme_occ": {
+        "question_en": "Have you noticed a diffuse (widespread) redness in one or both eyes?",
+        "affirmative_en": "I have noticed a diffuse (widespread) redness in one or both eyes.",
+        "data_type": "B",
+        "abbr_en": "Red eyes"
+    },
+    "trismus": {
+        "question_en": "Do you suddenly have difficulty or an inability to open your mouth or have jaw pain when opening it?",
+        "affirmative_en": "I suddenly have difficulty or an inability to open my mouth or have jaw pain when opening it.",
+        "data_type": "B",
+        "abbr_en": "Jaw stiffness"
+    },
+    "dysarthrie": {
+        "question_en": "Do you have difficulty articulating words/speaking?",
+        "affirmative_en": "I have difficulty articulating words/speaking.",
+        "data_type": "B",
+        "abbr_en": "Speech difficulties"
+    },
+    "laryngospasme": {
+        "question_en": "Have you ever felt like you were suffocating for a very short time associated with inability to breathe or speak?",
+        "affirmative_en": "I have felt like I was suffocating for a very short time associated with inability to breathe or speak.",
+        "data_type": "B",
+        "abbr_en": "Laryngospasm"
+    },
+    "sialorhee": {
+        "question_en": "Have you noticed that you produce more saliva than usual?",
+        "affirmative_en": "I have noticed that I produce more saliva than usual.",
+        "data_type": "B",
+        "abbr_en": "Excessive salivation"
+    },
+    "confusion": {
+        "question_en": "Have you felt confused or disorientated lately?",
+        "affirmative_en": "I have felt confused or disorientated lately.",
+        "data_type": "B",
+        "abbr_en": "Confusion"
+    },
+    "volume_parole": {
+        "question_en": "Have you noticed that the tone of your voice has become deeper, softer or hoarse?",
+        "affirmative_en": "I have noticed that the tone of my voice has become deeper, softer or hoarse.",
+        "data_type": "B",
+        "abbr_en": "Changes in voice"
+    },
+    "ulc\u00e8res_bouche": {
+        "question_en": "Do you have painful mouth ulcers or sores?",
+        "affirmative_en": "I have painful mouth ulcers or sores.",
+        "data_type": "B",
+        "abbr_en": "Mouth ulcers"
+    },
+    "diplopie": {
+        "question_en": "Do you have the perception of seeing two images of a single object seen overlapping or adjacent to each other (double vision)?",
+        "affirmative_en": "I have the perception of seeing two images of a single object seen overlapping or adjacent to each other (double vision).",
+        "data_type": "B",
+        "abbr_en": "Double vision"
+    },
+    "toux_sev": {
+        "question_en": "Do you have intense coughing fits?",
+        "affirmative_en": "I have intense coughing fits.",
+        "data_type": "B",
+        "abbr_en": "Intense coughing fits"
+    },
+    "claud_m\u00e2choire": {
+        "question_en": "Do you have pain or weakness in your jaw?",
+        "affirmative_en": "I have pain or weakness in my jaw.",
+        "data_type": "B",
+        "abbr_en": "Jaw pain or weakness"
+    },
+    "ptose": {
+        "question_en": "Do you have a hard time opening/raising one or both eyelids?",
+        "affirmative_en": "I have a hard time opening/raising one or both eyelids.",
+        "data_type": "B",
+        "abbr_en": "Eyelid drooping (ptosis)"
+    },
+    "faiblesse_msmi": {
+        "question_en": "Do you feel weakness in both arms and/or both legs?",
+        "affirmative_en": "I feel weakness in both arms and/or both legs.",
+        "data_type": "B",
+        "abbr_en": "Bilateral weakness"
+    },
+    "fatigabilit\u00e9_msk": {
+        "question_en": "Do your symptoms of muscle weakness increase with fatigue and/or stress?",
+        "affirmative_en": "My symptoms of muscle weakness increase with fatigue and/or stress.",
+        "data_type": "B",
+        "abbr_en": "Muscle weakness with fatigue"
+    },
+    "vo_violent": {
+        "question_en": "Have you vomited several times or have you made several efforts to vomit?",
+        "affirmative_en": "I have vomited several times or have made several efforts to vomit.",
+        "data_type": "B",
+        "abbr_en": "Vomiting"
+    },
+    "posttus_emesis": {
+        "question_en": "Did you vomit after coughing?",
+        "affirmative_en": "I vomited after coughing.",
+        "data_type": "B",
+        "abbr_en": "Vomiting after coughing"
+    },
+    "insp_siffla": {
+        "question_en": "Do you wheeze while inhaling or is your breathing noisy after coughing spells?",
+        "affirmative_en": "I wheeze while inhaling or my breathing is noisy after coughing spells.",
+        "data_type": "B",
+        "abbr_en": "Wheezing during inhalation"
+    },
+    "rds_sg": {
+        "question_en": "Have you noticed any unusual bleeding or bruising related to your consultation today?",
+        "affirmative_en": "I have noticed unusual bleeding or bruising related to my consultation today.",
+        "data_type": "B",
+        "abbr_en": "Unusual bleeding or bruising"
+    },
+    "oedeme_endroitducorps": {
+        "question_en": "Where is the swelling located?",
+        "affirmative_en": "The swelling locations are:",
+        "data_type": "M",
+        "abbr_en": "Swelling location"
+    },
+    "oedeme": {
+        "question_en": "Do you have swelling in one or more areas of your body?",
+        "affirmative_en": "I have swelling in one or more areas of my body.",
+        "data_type": "B",
+        "abbr_en": "Edema"
+    },
+    "crach_sg": {
+        "question_en": "Have you been coughing up blood?",
+        "affirmative_en": "I have been coughing up blood.",
+        "data_type": "B",
+        "abbr_en": "Coughing up blood"
+    },
+    "stridor": {
+        "question_en": "Have you noticed a high pitched sound when breathing in?",
+        "affirmative_en": "I have noticed a high pitched sound when breathing in.",
+        "data_type": "B",
+        "abbr_en": "Stridor"
+    },
+    "faiblesse faciale": {
+        "question_en": "Have you noticed weakness in your facial muscles and/or eyes?",
+        "affirmative_en": "I have noticed weakness in my facial muscles and/or eyes.",
+        "data_type": "B",
+        "abbr_en": "Facial weakness"
+    },
+    "paresthesies_bilat": {
+        "question_en": "Have you recently had numbness, loss of sensation or tingling, in both arms and legs and around your mouth?",
+        "affirmative_en": "I have recently had numbness, loss of sensation or tingling, in both arms and legs and around my mouth.",
+        "data_type": "B",
+        "abbr_en": "Bilateral paresthesias"
+    },
+    "rds_paralys_gen": {
+        "question_en": "Did you previously, or do you currently, have any weakness/paralysis in one or more of your limbs or in your face?",
+        "affirmative_en": "I previously, or I currently, have any weakness/paralysis in one or more of my limbs or in my face.",
+        "data_type": "B",
+        "abbr_en": "Limb weakness/paralysis"
+    },
+    "contact_allergie": {
+        "question_en": "Have you been in contact with or ate something that you have an allergy to?",
+        "affirmative_en": "I have been in contact with or ate something that I have an allergy to.",
+        "data_type": "B",
+        "abbr_en": "Contact allergy"
+    },
+    "wheez": {
+        "question_en": "Have you noticed a wheezing sound when you exhale?",
+        "affirmative_en": "I have noticed a wheezing sound when I exhale.",
+        "data_type": "B",
+        "abbr_en": "Expiratory wheezing"
+    },
+    "obstipation": {
+        "question_en": "Have you been able to pass stools or gas since your symptoms increased?",
+        "affirmative_en": "I have been able to pass stools or gas since my symptoms increased.",
+        "data_type": "B",
+        "abbr_en": "Constipation"
+    },
+    "boire_ped": {
+        "question_en": "Do you have a decrease in appetite?",
+        "affirmative_en": "I have a decrease in appetite.",
+        "data_type": "B",
+        "abbr_en": "Decreased appetite"
+    },
+    "ww_valsalva": {
+        "question_en": "Are the symptoms or pain increased with coughing, with an effort like lifting a weight or from forcing a bowel movement?",
+        "affirmative_en": "The symptoms or pain are increased with coughing, with an effort like lifting a weight or from forcing a bowel movement.",
+        "data_type": "B",
+        "abbr_en": "Symptoms worsen with Valsava maneuver"
+    },
+    "toux_Aboy": {
+        "question_en": "Does the person have a whooping cough?",
+        "affirmative_en": "The person has a whooping cough.",
+        "data_type": "B",
+        "abbr_en": "Whooping cough"
+    },
+    "ww_nuit": {
+        "question_en": "Are your symptoms more prominent at night?",
+        "affirmative_en": "My symptoms are more prominent at night.",
+        "data_type": "B",
+        "abbr_en": "Nocturnal symptoms"
+    },
+    "surg1": {
+        "question_en": "Have you had surgery within the last month?",
+        "affirmative_en": "I have had surgery within the last month.",
+        "data_type": "B",
+        "abbr_en": "Recent surgery"
+    },
+    "prurit_occ": {
+        "question_en": "Do you have severe itching in one or both eyes?",
+        "affirmative_en": "I have severe itching in one or both eyes.",
+        "data_type": "B",
+        "abbr_en": "Eye itching"
+    },
+    "expecto": {
+        "question_en": "Do you have a cough that produces colored or more abundant sputum than usual?",
+        "affirmative_en": "I have a cough that produces colored or more abundant sputum than usual.",
+        "data_type": "B",
+        "abbr_en": "Productive cough"
+    },
+    "angor_accelere": {
+        "question_en": "Do you find that your symptoms have worsened over the last 2 weeks and that progressively less effort is required to cause the symptoms?",
+        "affirmative_en": "I find that my symptoms have worsened over the last 2 weeks and that progressivelly less effort is required to cause the symptoms.",
+        "data_type": "B",
+        "abbr_en": "Worsened angina"
+    },
+    "angor_repos": {
+        "question_en": "Do you have chest pain even at rest?",
+        "affirmative_en": "I have chest pain even at rest.",
+        "data_type": "B",
+        "abbr_en": "Resting chest pain"
+    },
+    "prurit_nasal": {
+        "question_en": "Is your nose or the back of your throat itchy?",
+        "affirmative_en": "My nose or the back of my throat is itchy.",
+        "data_type": "B",
+        "abbr_en": "Nasal or throat itching"
+    },
+    "rds_paresthesie_gen": {
+        "question_en": "Do you currently, or did you ever, have numbness, loss of sensitivity or tingling anywhere on your body?",
+        "affirmative_en": "I currently, or did I ever, have numbness, loss of sensitivity or tingling anywhere on my body.",
+        "data_type": "B",
+        "abbr_en": "Generalized paresthesias"
+    },
+    "rds_deg": {
+        "question_en": "Have you noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in your general well-being related to your consultation today?",
+        "affirmative_en": "I have noticed any new fatigue, generalized and vague discomfort, diffuse (widespread) muscle aches or a change in my general well-being related to my consultation today.",
+        "data_type": "B",
+        "abbr_en": "General fatigue or discomfort"
+    },
+    "rds_anorexie": {
+        "question_en": "Have you been unintentionally losing weight or have you lost your appetite?",
+        "affirmative_en": "I have been unintentionally losing weight or I have lost my appetite.",
+        "data_type": "B",
+        "abbr_en": "Weight loss or loss of appetite"
+    },
+    "m\u00e9norr": {
+        "question_en": "Do you have very abundant or very long menstruation periods?",
+        "affirmative_en": "I have very abundant or very long menstruation periods.",
+        "data_type": "B",
+        "abbr_en": "Heavy menstruation"
+    },
+    "flushing": {
+        "question_en": "Did your cheeks suddenly turn red?",
+        "affirmative_en": "My cheeks suddenly turned red.",
+        "data_type": "B",
+        "abbr_en": "Facial flushing"
+    },
+    "spasme_trapeze": {
+        "question_en": "Do you feel that muscle spasms or soreness in your neck are keeping you from turning your head to one side?",
+        "affirmative_en": "I feel that muscle spasms or soreness in my neck are keeping me from turning my head to one side.",
+        "data_type": "B",
+        "abbr_en": "Wryneck (torticollis)"
+    },
+    "selles_pale": {
+        "question_en": "Do you have pale stools and dark urine?",
+        "affirmative_en": "I have pale stools and dark urine.",
+        "data_type": "B",
+        "abbr_en": "Pale stools"
+    },
+    "pls_irreg": {
+        "question_en": "Do you feel your heart is beating very irregularly or in a disorganized pattern?",
+        "affirmative_en": "I feel my heart is beating very irregularly or in a disorganized pattern.",
+        "data_type": "B",
+        "abbr_en": "Irregular heartbeat"
+    },
+    "spasmes_msk": {
+        "question_en": "Do you have annoying muscle spasms in your face, neck or any other part of your body?",
+        "affirmative_en": "I have annoying muscle spasms in my face, neck or any other part of my body.",
+        "data_type": "B",
+        "abbr_en": "Muscle spasms"
+    },
+    "protu_langue": {
+        "question_en": "Do you have trouble keeping your tongue in your mouth?",
+        "affirmative_en": "I have trouble keeping my tongue in my mouth.",
+        "data_type": "B",
+        "abbr_en": "Protruding tongue"
+    },
+    "regard_d\u00e9vi\u00e9": {
+        "question_en": "Are you unable to control the direction of your eyes?",
+        "affirmative_en": "I am unable to control the direction of my eyes.",
+        "data_type": "B",
+        "abbr_en": "Deviated gaze"
+    },
+    "dyspn_noct": {
+        "question_en": "Do you have bouts of choking or shortness of breath that wake you up at night?",
+        "affirmative_en": "I have bouts of choking or shortness of breath that wake me up at night.",
+        "data_type": "B",
+        "abbr_en": "Nocturnal dyspnea"
+    },
+    "f10.129": {
+        "question_en": "Do you drink alcohol excessively or do you have an addiction to alcohol?",
+        "affirmative_en": "I drink alcohol excessively or I have an addiction to alcohol.",
+        "data_type": "B",
+        "abbr_en": "Excessive alcohol consumption"
+    },
+    "naco": {
+        "question_en": "Are you taking any new oral anticoagulants ((NOACs)?",
+        "affirmative_en": "I am taking any new oral anticoagulants (NOACs).",
+        "data_type": "B",
+        "abbr_en": "New oral anticoagulants (NOACs)"
+    },
+    "psy_depers": {
+        "question_en": "Do you feel like you are detached from your own body or your surroundings?",
+        "affirmative_en": "I feel like I am detached from my own body or my surroundings.",
+        "data_type": "B",
+        "abbr_en": "Depersonalization"
+    },
+    "impression_mort": {
+        "question_en": "Do you feel like you are dying or were you afraid that you were about do die?",
+        "affirmative_en": "I feel like I am dying or was I afraid that I was about do die.",
+        "data_type": "B",
+        "abbr_en": "Feeling of imminent death"
+    },
+    "rhino_pur": {
+        "question_en": "Do you have greenish or yellowish nasal discharge?",
+        "affirmative_en": "I have greenish or yellowish nasal discharge.",
+        "data_type": "B",
+        "abbr_en": "Purulent nasal discharge"
+    },
+    "hyponos": {
+        "question_en": "Have you lost your sense of smell?",
+        "affirmative_en": "I have lost my sense of smell.",
+        "data_type": "B",
+        "abbr_en": "Hyposmia (reduced sense of smell)"
+    },
+    "apnee": {
+        "question_en": "Do you ever temporarily stop breathing while you\u2019re asleep?",
+        "affirmative_en": "I temporarily stop breathing while I\u2019m asleep.",
+        "data_type": "B",
+        "abbr_en": "Sleep apnea"
+    },
+    "i25.1": {
+        "question_en": "Have you ever had a heart attack or do you have angina (chest pain)?",
+        "affirmative_en": "I have had a heart attack or I have angina (chest pain).",
+        "data_type": "B",
+        "abbr_en": "History of heart attack or angina"
+    },
+    "i73.9": {
+        "question_en": "Do you have a problem with poor circulation?",
+        "affirmative_en": "I have a problem with poor circulation.",
+        "data_type": "B",
+        "abbr_en": "Poor circulation"
+    },
+    "i10": {
+        "question_en": "Do you have high blood pressure or do you take medications to treat high blood pressure?",
+        "affirmative_en": "I have high blood pressure or do I take medications to treat high blood pressure.",
+        "data_type": "B",
+        "abbr_en": "High blood pressure"
+    },
+    "f17.210": {
+        "question_en": "Do you smoke cigarettes?",
+        "affirmative_en": "I smoke cigarettes.",
+        "data_type": "B",
+        "abbr_en": "Cigarette smoking"
+    },
+    "e78.5": {
+        "question_en": "Do you have high cholesterol or do you take medications to treat high cholesterol?",
+        "affirmative_en": "I have high cholesterol or do I take medications to treat high cholesterol.",
+        "data_type": "B",
+        "abbr_en": "High cholesterol"
+    },
+    "contact": {
+        "question_en": "Have you been in contact with a person with similar symptoms in the past 2 weeks?",
+        "affirmative_en": "I have been in contact with a person with similar symptoms in the past 2 weeks.",
+        "data_type": "B",
+        "abbr_en": "Recent contact with a symptomatic person"
+    },
+    "horm1": {
+        "question_en": "Do you currently take hormones?",
+        "affirmative_en": "I currently take hormones.",
+        "data_type": "B",
+        "abbr_en": "Hormone use"
+    },
+    "e10_e11": {
+        "question_en": "Do you have diabetes?",
+        "affirmative_en": "I have diabetes.",
+        "data_type": "B",
+        "abbr_en": "Diabetes"
+    },
+    "preg1": {
+        "question_en": "Do you think you are pregnant or are you currently pregnant?",
+        "affirmative_en": "I think I am pregnant or I am currently pregnant.",
+        "data_type": "B",
+        "abbr_en": "Pregnancy"
+    },
+    "itss_risque": {
+        "question_en": "Have you had unprotected sex with more than one partner in the last 6 months?",
+        "affirmative_en": "I have had unprotected sex with more than one partner in the last 6 months.",
+        "data_type": "B",
+        "abbr_en": "Unprotected sex with multiple sexual partners"
+    },
+    "e66": {
+        "question_en": "Are you significantly overweight compared to people of the same height as you?",
+        "affirmative_en": "I am significantly overweight compared to people of the same height as I.",
+        "data_type": "B",
+        "abbr_en": "Obesity"
+    },
+    "ains": {
+        "question_en": "Are you currently taking or have you recently taken anti-inflammatory drugs (NSAIDs)?",
+        "affirmative_en": "I am currently taking or I have recently taken anti-inflammatory drugs (NSAIDs).",
+        "data_type": "B",
+        "abbr_en": "Use of anti-inflammatory drugs (NSAIDs)"
+    },
+    "pneumothorax": {
+        "question_en": "Have any of your family members ever had a pneumothorax?",
+        "affirmative_en": "Some of my family members have had a pneumothorax.",
+        "data_type": "B",
+        "abbr_en": "Family history of pneumothorax"
+    },
+    "Z99.2": {
+        "question_en": "Do you currently undergo dialysis?",
+        "affirmative_en": "I currently undergo dialysis.",
+        "data_type": "B",
+        "abbr_en": "Undergoing dialysis"
+    },
+    "atcd_cluster": {
+        "question_en": "Have any of your family members been diagnosed with cluster headaches?",
+        "affirmative_en": "Some of my family members have been diagnosed with cluster headaches.",
+        "data_type": "B",
+        "abbr_en": "Family history of cluster headaches"
+    },
+    "rx_vasodil": {
+        "question_en": "Do you take medication that dilates your blood vessels?",
+        "affirmative_en": "I take medication that dilates my blood vessels.",
+        "data_type": "B",
+        "abbr_en": "Use of vasodilator medication"
+    },
+    "s09.90": {
+        "question_en": "Have you ever had a head trauma?",
+        "affirmative_en": "I have had a head trauma.",
+        "data_type": "B",
+        "abbr_en": "History of head trauma"
+    },
+    "histfammigraine": {
+        "question_en": "Have you ever had a migraine or is a member of your family known to have migraines?",
+        "affirmative_en": "I have had a migraine or some members of my family are known to have migraines.",
+        "data_type": "B",
+        "abbr_en": "Personal or family history of migraines"
+    },
+    "i60-i69": {
+        "question_en": "Have you ever had a stroke?",
+        "affirmative_en": "I have had a stroke.",
+        "data_type": "B",
+        "abbr_en": "History of stroke"
+    },
+    "z84.89": {
+        "question_en": "Are you more likely to develop common allergies than the general population?",
+        "affirmative_en": "I am more likely to develop common allergies than the general population.",
+        "data_type": "B",
+        "abbr_en": "Increased risk of common allergies"
+    },
+    "drogues_stimul": {
+        "question_en": "Do you regularly take stimulant drugs?",
+        "affirmative_en": "I regularly take stimulant drugs.",
+        "data_type": "B",
+        "abbr_en": "Regular use of stimulant drugs"
+    },
+    "dayc": {
+        "question_en": "Do you attend or work in a daycare?",
+        "affirmative_en": "I attend or work in a daycare.",
+        "data_type": "B",
+        "abbr_en": "Daycare attendance or work"
+    },
+    "g20": {
+        "question_en": "Do you have Parkinson\u2019s disease?",
+        "affirmative_en": "I have Parkinson's disease.",
+        "data_type": "B",
+        "abbr_en": "Parkinson's disease"
+    },
+    "trav1": {
+        "question_en": "Have you traveled out of the country in the last 4 weeks?",
+        "affirmative_en": "I have traveled out of the country to [choice] in the last 4 weeks.",
+        "data_type": "C",
+        "abbr_en": "Travel"
+    },
+    "cancer_m\u00e9ta": {
+        "question_en": "Do you have metastatic cancer?",
+        "affirmative_en": "I have metastatic cancer.",
+        "data_type": "B",
+        "abbr_en": "Metastatic cancer"
+    },
+    "osteoporose": {
+        "question_en": "Are you being treated for osteoporosis?",
+        "affirmative_en": "I am being treated for osteoporosis.",
+        "data_type": "B",
+        "abbr_en": "Osteoporosis treatment"
+    },
+    "j45": {
+        "question_en": "Do you have asthma or have you ever had to use a bronchodilator in the past?",
+        "affirmative_en": "I have asthma or have used a bronchodilator in the past.",
+        "data_type": "B",
+        "abbr_en": "Asthma or bronchodilator use"
+    },
+    "hernie_hiatale": {
+        "question_en": "Do you have a hiatal hernia?",
+        "affirmative_en": "I have a hiatal hernia.",
+        "data_type": "B",
+        "abbr_en": "Hiatal hernia"
+    },
+    "j06.9": {
+        "question_en": "Have you had a cold in the last 2 weeks?",
+        "affirmative_en": "I have had a cold in the last 2 weeks.",
+        "data_type": "B",
+        "abbr_en": "Recent cold"
+    },
+    "crowd": {
+        "question_en": "Do you live with 4 or more people?",
+        "affirmative_en": "I live with 4 or more people.",
+        "data_type": "B",
+        "abbr_en": "Living with 4 or more people"
+    },
+    "HIV": {
+        "question_en": "Are you infected with the human immunodeficiency virus (HIV)?",
+        "affirmative_en": "I am infected with the human immunodeficiency virus (HIV).",
+        "data_type": "B",
+        "abbr_en": "HIV infection"
+    },
+    "z92.25": {
+        "question_en": "Are you immunosuppressed?",
+        "affirmative_en": "I am immunosuppressed.",
+        "data_type": "B",
+        "abbr_en": "Immunosuppression"
+    },
+    "drogues_IV": {
+        "question_en": "Are you currently using intravenous drugs?",
+        "affirmative_en": "I am currently using intravenous drugs.",
+        "data_type": "B",
+        "abbr_en": "Intravenous drug use"
+    },
+    "crohn_cu": {
+        "question_en": "Do you suffer from Crohn\u2019s disease or ulcerative colitis (UC)?",
+        "affirmative_en": "I suffer from Crohn's disease or ulcerative colitis (UC).",
+        "data_type": "B",
+        "abbr_en": "Crohn's disease or ulcerative colitis"
+    },
+    "atcd_its": {
+        "question_en": "Have you ever had a sexually transmitted infection?",
+        "affirmative_en": "I have had a sexually transmitted infection.",
+        "data_type": "B",
+        "abbr_en": "History of sexually transmitted infection"
+    },
+    "move": {
+        "question_en": "Do you exercise regularly, 4 times per week or more?",
+        "affirmative_en": "I exercise regularly, 4 times per week or more.",
+        "data_type": "B",
+        "abbr_en": "Regular exercise"
+    },
+    "smokingpast": {
+        "question_en": "Are you a former smoker?",
+        "affirmative_en": "I am a former smoker.",
+        "data_type": "B",
+        "abbr_en": "Former smoker"
+    },
+    "v85.0": {
+        "question_en": "Is your BMI less than 18.5, or are you underweight?",
+        "affirmative_en": "My BMI is less than 18.5, or I am underweight.",
+        "data_type": "B",
+        "abbr_en": "Underweight (BMI less than 18.5)"
+    },
+    "k74": {
+        "question_en": "Do you have liver cirrhosis?",
+        "affirmative_en": "I have liver cirrhosis.",
+        "data_type": "B",
+        "abbr_en": "Liver cirrhosis"
+    },
+    "sex_vih": {
+        "question_en": "Have you had sexual intercourse with an HIV-positive partner in the past 12 months?",
+        "affirmative_en": "I have had sexual intercourse with an HIV-positive partner in the past 12 months.",
+        "data_type": "B",
+        "abbr_en": "Sexual intercourse with an HIV-positive partner"
+    },
+    "Mauv_aliment": {
+        "question_en": "Do you have a poor diet?",
+        "affirmative_en": "I have a poor diet.",
+        "data_type": "B",
+        "abbr_en": "Poor diet"
+    },
+    "atcd_anem": {
+        "question_en": "Have you ever had a diagnosis of anemia?",
+        "affirmative_en": "I have been diagnosed with anemia.",
+        "data_type": "B",
+        "abbr_en": "History of anemia"
+    },
+    "atcd_fam_anem": {
+        "question_en": "Do you have any family members who have been diagnosed with anemia?",
+        "affirmative_en": "Some of my family members have been diagnosed with anemia.",
+        "data_type": "B",
+        "abbr_en": "Family history of anemia"
+    },
+    "irc": {
+        "question_en": "Do you have chronic kidney failure?",
+        "affirmative_en": "I have chronic kidney failure.",
+        "data_type": "B",
+        "abbr_en": "Chronic kidney failure"
+    },
+    "perinatality": {
+        "question_en": "Were you born prematurely or did you suffer any complication at birth?",
+        "affirmative_en": "I was born prematurely or suffered a complication at birth.",
+        "data_type": "B",
+        "abbr_en": "Perinatal complications"
+    },
+    "atcdfam_mg": {
+        "question_en": "Are there any members of your family who have been diagnosed myasthenia gravis?",
+        "affirmative_en": "Some of my family members have been diagnosed with myasthenia gravis.",
+        "data_type": "B",
+        "abbr_en": "Family history of myasthenia gravis"
+    },
+    "ap_par": {
+        "question_en": "Do you have Rheumatoid Arthritis?",
+        "affirmative_en": "I have Rheumatoid Arthritis.",
+        "data_type": "B",
+        "abbr_en": "Rheumatoid arthritis"
+    },
+    "f32": {
+        "question_en": "Have you ever been diagnosed with depression?",
+        "affirmative_en": "I have been diagnosed with depression.",
+        "data_type": "B",
+        "abbr_en": "History of depression"
+    },
+    "cont_coq": {
+        "question_en": "Have you been in contact with someone who has had pertussis (whoooping cough)?",
+        "affirmative_en": "I have been in contact with someone who has had pertussis (whooping cough).",
+        "data_type": "B",
+        "abbr_en": "Contact with pertussis (whooping cough)"
+    },
+    "B34.9": {
+        "question_en": "Have you recently had a viral infection?",
+        "affirmative_en": "I have recently had a viral infection.",
+        "data_type": "B",
+        "abbr_en": "Recent viral infection"
+    },
+    "H6690": {
+        "question_en": "Are you currently being treated or have you recently been treated with an oral antibiotic for an ear infection?",
+        "affirmative_en": "I am currently being treated or have recently been treated with an oral antibiotic for an ear infection.",
+        "data_type": "B",
+        "abbr_en": "Oral antibiotic for ear infection"
+    },
+    "c00-d48": {
+        "question_en": "Do you have an active cancer?",
+        "affirmative_en": "I have an active cancer.",
+        "data_type": "B",
+        "abbr_en": "Active cancer"
+    },
+    "vaccination": {
+        "question_en": "Are your vaccinations up to date?",
+        "affirmative_en": "My vaccinations are up to date.",
+        "data_type": "B",
+        "abbr_en": "Vaccination status"
+    },
+    "malf_cardiaque": {
+        "question_en": "Do you have a known heart defect?",
+        "affirmative_en": "I have a known heart defect.",
+        "data_type": "B",
+        "abbr_en": "Known heart defect"
+    },
+    "ap_hypert4": {
+        "question_en": "Have you been diagnosed with hyperthyroidism?",
+        "affirmative_en": "I have been diagnosed with hyperthyroidism.",
+        "data_type": "B",
+        "abbr_en": "Hyperthyroidism diagnosis"
+    },
+    "bode": {
+        "question_en": "Do you have severe Chronic Obstructive Pulmonary Disease (COPD)?",
+        "affirmative_en": "I have severe Chronic Obstructive Pulmonary Disease (COPD).",
+        "data_type": "B",
+        "abbr_en": "Severe Chronic Obstructive Pulmonary Disease (COPD)"
+    },
+    "ap_valve": {
+        "question_en": "Do you have a known issue with one of your heart valves?",
+        "affirmative_en": "I have a known issue with one of my heart valves.",
+        "data_type": "B",
+        "abbr_en": "Heart valve issue"
+    },
+    "drink_energie": {
+        "question_en": "Do you consume energy drinks regularly?",
+        "affirmative_en": "I consume energy drinks regularly.",
+        "data_type": "B",
+        "abbr_en": "Regular consumption of energy drinks"
+    },
+    "cafe": {
+        "question_en": "Do you regularly drink coffee or tea?",
+        "affirmative_en": "I regularly drink coffee or tea.",
+        "data_type": "B",
+        "abbr_en": "Regular consumption of coffee or tea"
+    },
+    "wakeup": {
+        "question_en": "Have you recently taken decongestants or other substances that may have stimulant effects?",
+        "affirmative_en": "I have recently taken decongestants or other substances that may have stimulant effects.",
+        "data_type": "B",
+        "abbr_en": "Recent use of decongestants or stimulant substances"
+    },
+    "allergie_sev": {
+        "question_en": "Do you have a known severe food allergy?",
+        "affirmative_en": "I have a known severe food allergy.",
+        "data_type": "B",
+        "abbr_en": "Severe food allergy"
+    },
+    "cortico": {
+        "question_en": "Do you take corticosteroids?",
+        "affirmative_en": "I take corticosteroids.",
+        "data_type": "B",
+        "abbr_en": "Corticosteroid use"
+    },
+    "J05.0": {
+        "question_en": "Have you or any member of your family ever had croup?",
+        "affirmative_en": "I or some members of my family have had croup.",
+        "data_type": "B",
+        "abbr_en": "Family history of croup"
+    },
+    "f41.9": {
+        "question_en": "Do you suffer from chronic anxiety?",
+        "affirmative_en": "I suffer from chronic anxiety.",
+        "data_type": "B",
+        "abbr_en": "Chronic anxiety"
+    },
+    "i80": {
+        "question_en": "Have you ever had deep vein thrombosis (DVT)?",
+        "affirmative_en": "I have had deep vein thrombosis (DVT).",
+        "data_type": "B",
+        "abbr_en": "History of deep vein thrombosis (DVT)"
+    },
+    "immob1": {
+        "question_en": "Have you been unable to move or get up for more than 3 consecutive days within the last 4 weeks?",
+        "affirmative_en": "I have been unable to move or get up for more than 3 consecutive days within the last 4 weeks.",
+        "data_type": "B",
+        "abbr_en": "Prolonged immobility"
+    },
+    "ap_asian": {
+        "question_en": "Are you of Asian descent?",
+        "affirmative_en": "I am of Asian descent.",
+        "data_type": "B",
+        "abbr_en": "Asian descent"
+    },
+    "ap_fk": {
+        "question_en": "Do you have cystic fibrosis?",
+        "affirmative_en": "I have cystic fibrosis.",
+        "data_type": "B",
+        "abbr_en": "Cystic fibrosis"
+    },
+    "j17_j18": {
+        "question_en": "Have you ever had pneumonia?",
+        "affirmative_en": "I have had pneumonia.",
+        "data_type": "B",
+        "abbr_en": "History of pneumonia"
+    },
+    "j44_j42": {
+        "question_en": "Do you have a chronic obstructive pulmonary disease (COPD)?",
+        "affirmative_en": "I have a chronic obstructive pulmonary disease (COPD).",
+        "data_type": "B",
+        "abbr_en": "Chronic obstructive pulmonary disease (COPD)"
+    },
+    "urban1": {
+        "question_en": "Do you live in in a big city?",
+        "affirmative_en": "I live in a big city.",
+        "data_type": "B",
+        "abbr_en": "Residence in a big city"
+    },
+    "fam_atopie": {
+        "question_en": "Do you have any close family members who suffer from allergies (any type), hay fever or eczema?",
+        "affirmative_en": "I have close family members who suffer from allergies (any type), hay fever, or eczema.",
+        "data_type": "B",
+        "abbr_en": "Family history of allergies, hay fever, or eczema"
+    },
+    "fam_j45": {
+        "question_en": "Do you have any family members who have asthma?",
+        "affirmative_en": "I have family members who have asthma.",
+        "data_type": "B",
+        "abbr_en": "Family history of asthma"
+    },
+    "menarche_hat": {
+        "question_en": "Did you have your first menstrual period before the age of 12?",
+        "affirmative_en": "I had my first menstrual period before the age of 12.",
+        "data_type": "B",
+        "abbr_en": "Early menarche (first menstrual period before age 12)"
+    },
+    "allait_prol": {
+        "question_en": "Have you breastfed one of your children for more than 9 months?",
+        "affirmative_en": "I have breastfed one of my children for more than 9 months.",
+        "data_type": "B",
+        "abbr_en": "Extended breastfeeding duration (more than 9 months)"
+    },
+    "sahs": {
+        "question_en": "Have you ever been diagnosed with obstructive sleep apnea (OSA)?",
+        "affirmative_en": "I have been diagnosed with obstructive sleep apnea (OSA).",
+        "data_type": "B",
+        "abbr_en": "Obstructive sleep apnea (OSA) diagnosis"
+    },
+    "i50": {
+        "question_en": "Do you have heart failure?",
+        "affirmative_en": "I have heart failure.",
+        "data_type": "B",
+        "abbr_en": "Heart failure"
+    },
+    "patho_endo": {
+        "question_en": "Were you diagnosed with endocrine disease or a hormone dysfunction?",
+        "affirmative_en": "I was diagnosed with endocrine disease or a hormone dysfunction.",
+        "data_type": "B",
+        "abbr_en": "Endocrine disease or hormone dysfunction"
+    },
+    "scombroide": {
+        "question_en": "Did you eat dark-fleshed fish (such as tuna) or Swiss cheese before the reaction occurred?",
+        "affirmative_en": "I ate dark-fleshed fish (such as tuna) or Swiss cheese before the reaction occurred.",
+        "data_type": "B",
+        "abbr_en": "Scombrotoxin poisoning (from eating dark-fleshed fish or Swiss cheese)"
+    },
+    "K86.1": {
+        "question_en": "Do you have chronic pancreatitis?",
+        "affirmative_en": "I have chronic pancreatitis.",
+        "data_type": "B",
+        "abbr_en": "Chronic pancreatitis"
+    },
+    "k21": {
+        "question_en": "Have you ever been diagnosed with gastroesophageal reflux?",
+        "affirmative_en": "I have been diagnosed with gastroesophageal reflux.",
+        "data_type": "B",
+        "abbr_en": "Gastroesophageal reflux disease (GERD) diagnosis"
+    },
+    "ap_pneumothorax": {
+        "question_en": "Have you ever had a spontaneous pneumothorax?",
+        "affirmative_en": "I have had a spontaneous pneumothorax.",
+        "data_type": "B",
+        "abbr_en": "History of spontaneous pneumothorax"
+    },
+    "z77.22": {
+        "question_en": "Are you exposed to secondhand cigarette smoke on a daily basis?",
+        "affirmative_en": "I am exposed to secondhand cigarette smoke on a daily basis.",
+        "data_type": "B",
+        "abbr_en": "Daily exposure to secondhand cigarette smoke"
+    },
+    "antipsy_r\u00e9cent": {
+        "question_en": "Have you started or taken any antipsychotic medication within the last 7 days?",
+        "affirmative_en": "I have started or taken any antipsychotic medication within the last 7 days.",
+        "data_type": "B",
+        "abbr_en": "Recent antipsychotic medication use"
+    },
+    "nau_psy_recent": {
+        "question_en": "Have you been treated in hospital recently for nausea, agitation, intoxication or aggressive behavior and received medication via an intravenous or intramuscular route?",
+        "affirmative_en": "I have been treated in the hospital recently for nausea, agitation, intoxication, or aggressive behavior and received medication via an intravenous or intramuscular route.",
+        "data_type": "B",
+        "abbr_en": "Recent hospitalization for psychiatric reasons"
+    },
+    "lymphoed\u00e8me": {
+        "question_en": "Have you ever had surgery to remove lymph nodes?",
+        "affirmative_en": "I have had surgery to remove lymph nodes.",
+        "data_type": "B",
+        "abbr_en": "History of lymph node surgery resulting in lymphedema"
+    },
+    "norvasc": {
+        "question_en": "Do you take a calcium channel blockers (medication)?",
+        "affirmative_en": "I take calcium channel blockers (medication).",
+        "data_type": "B",
+        "abbr_en": "Use of calcium channel blockers medication (such as Norvasc)"
+    },
+    "synd_nephro": {
+        "question_en": "Do you have a known kidney problem resulting in an inability to retain proteins?",
+        "affirmative_en": "I have a known kidney problem resulting in an inability to retain proteins.",
+        "data_type": "B",
+        "abbr_en": "Kidney problem leading to protein loss"
+    },
+    "I30": {
+        "question_en": "Have you ever had a pericarditis?",
+        "affirmative_en": "I have had a pericarditis.",
+        "data_type": "B",
+        "abbr_en": "History of pericarditis"
+    },
+    "atcdpsyfam": {
+        "question_en": "Do any members of your immediate family have a psychiatric illness?",
+        "affirmative_en": "Some members of my immediate family have a psychiatric illness.",
+        "data_type": "B",
+        "abbr_en": "Family history of psychiatric illness"
+    },
+    "z82.49": {
+        "question_en": "Do you have close family members who had a cardiovascular disease problem before the age of 50?",
+        "affirmative_en": "I have close family members who had a cardiovascular disease problem before the age of 50.",
+        "data_type": "B",
+        "abbr_en": "Family history of cardiovascular disease before the age of 50"
+    },
+    "ebolacase": {
+        "question_en": "In the last month, have you been in contact with anyone infected with the Ebola virus?",
+        "affirmative_en": "In the last month, I have been in contact with someone infected with the Ebola virus.",
+        "data_type": "B",
+        "abbr_en": "Recent contact with someone infected with the Ebola virus"
+    },
+    "m79.7": {
+        "question_en": "Do you suffer from fibromyalgia?",
+        "affirmative_en": "I suffer from fibromyalgia.",
+        "data_type": "B",
+        "abbr_en": "Fibromyalgia"
+    },
+    "hosptisasm": {
+        "question_en": "Have you been hospitalized for an asthma attack in the past year?",
+        "affirmative_en": "I have been hospitalized for an asthma attack in the past year.",
+        "data_type": "B",
+        "abbr_en": "Hospitalization for asthma attack in the past year"
+    },
+    "criseasthm": {
+        "question_en": "Have you had 2 or more asthma attacks in the past year?",
+        "affirmative_en": "I have had 2 or more asthma attacks in the past year.",
+        "data_type": "B",
+        "abbr_en": "Multiple asthma attacks in the past year"
+    },
+    "j32": {
+        "question_en": "Have you been diagnosed with chronic sinusitis?",
+        "affirmative_en": "I have been diagnosed with chronic sinusitis.",
+        "data_type": "B",
+        "abbr_en": "Chronic sinusitis diagnosis"
+    },
+    "eampoc1": {
+        "question_en": "Have you had one or several flare ups of chronic obstructive pulmonary disease (COPD) in the past year?",
+        "affirmative_en": "I have had one or several flare ups of chronic obstructive pulmonary disease (COPD) in the past year.",
+        "data_type": "B",
+        "abbr_en": "Flare-ups of chronic obstructive pulmonary disease (COPD) in the past year"
+    },
+    "tagri": {
+        "question_en": "Do you work in agriculture?",
+        "affirmative_en": "I work in agriculture.",
+        "data_type": "B",
+        "abbr_en": "Occupation in agriculture"
+    },
+    "tmine": {
+        "question_en": "Do you work in the mining sector?",
+        "affirmative_en": "I work in the mining sector.",
+        "data_type": "B",
+        "abbr_en": "Occupation in the mining sector"
+    },
+    "tconst": {
+        "question_en": "Do you work in construction?",
+        "affirmative_en": "I work in construction.",
+        "data_type": "B",
+        "abbr_en": "Occupation in construction"
+    },
+    "j34.2": {
+        "question_en": "Do you have a deviated nasal septum?",
+        "affirmative_en": "I have a deviated nasal septum.",
+        "data_type": "B",
+        "abbr_en": "Deviated nasal septum"
+    },
+    "j33": {
+        "question_en": "Do you have polyps in your nose?",
+        "affirmative_en": "I have polyps in my nose.",
+        "data_type": "B",
+        "abbr_en": "Nasal polyps"
+    },
+    "momasthma": {
+        "question_en": "Does your mother suffer from asthma?",
+        "affirmative_en": "My mother suffers from asthma.",
+        "data_type": "B",
+        "abbr_en": "Maternal asthma"
+    },
+    "suburb": {
+        "question_en": "Do you live in the suburbs?",
+        "affirmative_en": "I live in the suburbs.",
+        "data_type": "B",
+        "abbr_en": "Residence in the suburbs"
+    },
+    "rural": {
+        "question_en": "Do you live in a rural area?",
+        "affirmative_en": "I live in a rural area.",
+        "data_type": "B",
+        "abbr_en": "Residence in a rural area"
+    },
+    "z80.1": {
+        "question_en": "Do you have family members who have had lung cancer?",
+        "affirmative_en": "I have family members who have had lung cancer.",
+        "data_type": "B",
+        "abbr_en": "Family history of lung cancer"
+    },
+    "z80.0": {
+        "question_en": "Are there members of your family who have been diagnosed with pancreatic cancer?",
+        "affirmative_en": "Some members of my family have been diagnosed with pancreatic cancer.",
+        "data_type": "B",
+        "abbr_en": "Family history of pancreatic cancer"
+    },
+    "J81": {
+        "question_en": "Have you ever had fluid in your lungs?",
+        "affirmative_en": "I have had fluid in my lungs.",
+        "data_type": "B",
+        "abbr_en": "History of pleural effusion (fluid in the lungs)"
+    }
+}
